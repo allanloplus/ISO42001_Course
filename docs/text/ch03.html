@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>條文 5 領導作為｜文字教材｜ISO 42001 線上課程</title>
+<link rel="icon" href="../assets/img/allan.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" onclick="document.querySelector('.toc').classList.toggle('open')" aria-label="章節選單">☰ 章節</button>
+  <a class="logo" href="../index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a class="active" href="ch00.html">文字教材</a>
+    <a href="../video.html?ch=ch03">互動影音</a>
+    <a href="../quiz.html">課後測驗</a>
+  </nav>
+</header>
+<div class="reader">
+  <aside class="toc" aria-label="章節選擇"><h4>課程導覽</h4>
+<a data-id="ch00" href="ch00.html">00｜課程導覽與 AI 治理趨勢</a>
+<h4>標準基礎</h4>
+<a data-id="ch01" href="ch01.html">01｜標準架構與用語定義</a>
+<h4>條文詳解</h4>
+<a data-id="ch02" href="ch02.html">02｜條文 4 組織全景</a>
+<a class="current" data-id="ch03" href="ch03.html">03｜條文 5 領導作為</a>
+<a data-id="ch04" href="ch04.html">04｜條文 6 風險評鑑與 SoA</a>
+<a data-id="ch05" href="ch05.html">05｜條文 6 衝擊評鑑與目標</a>
+<a data-id="ch06" href="ch06.html">06｜條文 7 支援</a>
+<a data-id="ch07" href="ch07.html">07｜條文 8 運作</a>
+<a data-id="ch08" href="ch08.html">08｜條文 9 績效評估</a>
+<a data-id="ch09" href="ch09.html">09｜條文 10 改善</a>
+<h4>附錄 A/B 控制措施</h4>
+<a data-id="ch10" href="ch10.html">10｜A.2–A.5 控制措施</a>
+<a data-id="ch11" href="ch11.html">11｜A.6 AI 生命週期</a>
+<a data-id="ch12" href="ch12.html">12｜A.7–A.10 控制措施</a>
+<h4>整合與導入</h4>
+<a data-id="ch13" href="ch13.html">13｜附錄 C/D 與整合導入</a>
+<h4>管理案例</h4>
+<a data-id="ch14" href="ch14.html">14｜六大產業管理案例</a>
+<h4>稽核實務</h4>
+<a data-id="ch15" href="ch15.html">15｜驗證流程與稽核技巧</a>
+<a data-id="ch16" href="ch16.html">16｜常見不符合與檢查表</a>
+<h4>總複習</h4>
+<a data-id="ch17" href="ch17.html">17｜總複習與測驗說明</a></aside>
+  <article class="doc">
+    <h1>第3章　條文 5：領導作為與人工智慧政策</h1>
+    <div class="doc-actions">
+      <a class="btn pink" href="../video.html?ch=ch03">▶ 觀看本章互動影音</a>
+      <button class="btn soft" id="markRead">✓ 標記本章已讀</button>
+      <button class="btn soft" onclick="window.print()">🖨 列印／存 PDF</button>
+    </div>
+    <details class="mini-toc" open><summary>📑 本章目錄</summary><ol><li><a href="#3.0-條文-5-在-AIMS-中的位置">3.0 條文 5 在 AIMS 中的位置</a></li><li><a href="#3.1-條文-5.1領導及承諾">3.1 條文 5.1：領導及承諾</a></li><li><a href="#3.2-條文-5.2人工智慧政策">3.2 條文 5.2：人工智慧政策</a></li><li><a href="#3.3-條文-5.3角色責任及權限">3.3 條文 5.3：角色、責任及權限</a></li><li><a href="#3.4-條文-5-整體連動圖文字版">3.4 條文 5 整體連動圖（文字版）</a></li><li><a href="#本章重點回顧">本章重點回顧</a></li><li><a href="#自我檢測">自我檢測</a></li></ol></details>
+    
+<blockquote>
+<p>學習目標：① 說明 5.1 最高管理階層展現領導及承諾的八項要求，並能舉出可稽核的證據；② 依 5.2 及附錄 A.2／B.2 撰寫人工智慧政策，掌握政策必備元素與審查機制；③ 依 5.3 及 A.3.2／B.3.2 設計 AI 治理組織與角色責任，並以 RACI 表呈現；④ 辨識條文 5 常見不符合事項與稽核員的提問方式。</p>
+</blockquote>
+<hr />
+<h2 id="3.0-條文-5-在-AIMS-中的位置">3.0 條文 5 在 AIMS 中的位置</h2>
+<p>條文 4 打好地基後，條文 5 要回答：「<strong>誰來帶頭？方向是什麼？誰負責什麼？</strong>」</p>
+<table>
+<thead>
+<tr>
+<th>條款</th>
+<th>主題</th>
+<th>關聯的附錄 A 控制措施</th>
+<th>主要產出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>領導及承諾</td>
+<td>——（貫穿全系統）</td>
+<td>管理階層的決策、資源配置、溝通紀錄</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>人工智慧政策</td>
+<td>A.2.2 政策、A.2.3 與其他政策一致性、A.2.4 政策審查</td>
+<td>AI 政策（文件化資訊）</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>角色、責任及權限</td>
+<td>A.3.2 AI 角色與責任（另 A.3.3 關注事項的通報）</td>
+<td>治理組織圖、職責說明、RACI</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 在稽核現場，條文 5 通常是由主導稽核員親自訪談總經理或執行長。我常說：「政策可以請顧問寫，但承諾沒辦法請人代打。」老闆講不出公司的 AI 政策重點、不知道公司用了哪些 AI，稽核員馬上就感覺得到。</p>
+</blockquote>
+<hr />
+<h2 id="3.1-條文-5.1領導及承諾">3.1 條文 5.1：領導及承諾</h2>
+<h3>條文要求</h3>
+<p>最高管理階層應藉由下列事項，展現對 AIMS 之領導及承諾：</p>
+<ol>
+<li>確保已建立 <strong>AI 政策</strong>（5.2）和 <strong>AI 目標</strong>（6.2），並與組織之<strong>策略方向相容</strong>；</li>
+<li>確保 AIMS 要求事項<strong>整合入組織之營運各項流程</strong>；</li>
+<li>確保 AIMS 所需<strong>資源可取得</strong>；</li>
+<li><strong>傳達</strong>有效之 AI 管理的重要性，以及符合 AIMS 要求事項之重要性；</li>
+<li>確保 AIMS <strong>達成其預期結果</strong>；</li>
+<li><strong>指揮及支援人員</strong>，以促進 AIMS 之有效性；</li>
+<li><strong>宣導持續改善</strong>；</li>
+<li>當適用其他相關管理角色之責任範圍時，<strong>加以支持以展現其領導</strong>。</li>
+</ol>
+<p>備考 1：「業務」（business）可廣義解釋為對組織存在的目的至關重要的活動。
+備考 2：「於組織內建立、鼓勵並樹立一種負責任之使用、開發與管理人工智慧系統的文化，為最高管理階層展現責任和領導的重要方式。」</p>
+<h3>白話解說</h3>
+<p>5.1 的關鍵字是「<strong>確保</strong>」和「<strong>展現</strong>」。最高管理階層不需要自己寫程序書，但要讓事情發生，而且要<strong>看得到</strong>。</p>
+<ul>
+<li><strong>策略相容</strong>：AI 政策和目標不能和公司策略打架。例如公司策略是「三年內全面 AI 化客服」，AI 政策卻只寫「審慎評估」，就不相容。</li>
+<li><strong>整合入營運流程</strong>：AI 審查關卡要嵌進產品開發、採購、變更管理等既有流程，而不是另起爐灶的「平行宇宙」。</li>
+<li><strong>資源</strong>：人力（AI 治理專責、資料科學人員）、預算（監控工具、外部評估）、時間。</li>
+<li><strong>文化</strong>：備考 2 特別強調<strong>負責任 AI 的文化</strong>，這是 42001 比其他 HS 標準多寫的一段。</li>
+</ul>
+<h4>八項承諾與可稽核證據對照</h4>
+<table>
+<thead>
+<tr>
+<th>承諾</th>
+<th>可能的證據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>政策與目標相容於策略</td>
+<td>董事會或經營會議核准 AI 政策的紀錄；AI 目標與年度經營計畫的對應</td>
+</tr>
+<tr>
+<td>整合入營運流程</td>
+<td>產品開發、採購、變更流程中加入 AI 審查關卡的程序與實際紀錄</td>
+</tr>
+<tr>
+<td>資源可取得</td>
+<td>AIMS 預算、人力配置、組織公告</td>
+</tr>
+<tr>
+<td>傳達重要性</td>
+<td>總經理信、全員大會簡報、內部公告、年度啟動會議</td>
+</tr>
+<tr>
+<td>達成預期結果</td>
+<td>管理審查紀錄中對 AIMS 績效的檢討與決議</td>
+</tr>
+<tr>
+<td>指揮及支援人員</td>
+<td>對 AI 治理小組的授權、對專案的指示與追蹤紀錄</td>
+</tr>
+<tr>
+<td>宣導持續改善</td>
+<td>管理審查改善決議、改善提案制度</td>
+</tr>
+<tr>
+<td>支持其他管理角色</td>
+<td>對 AI 治理負責人、資安長、個資長等角色的授權與支持紀錄</td>
+</tr>
+</tbody>
+</table>
+<h3>實務作法 / 建議產出文件</h3>
+<ul>
+<li><strong>AI 治理啟動會議紀錄</strong>：由最高管理階層主持，宣示導入 AIMS、指派負責人、核准預算。</li>
+<li><strong>最高管理階層 AI 承諾聲明</strong>（可併入 AI 政策）。</li>
+<li><strong>年度 AI 治理溝通計畫</strong>：何時、透過什麼管道、由誰傳達什麼訊息（連結 7.4）。</li>
+<li><strong>管理審查紀錄</strong>（9.3）：最高管理階層親自參與並做出決議。</li>
+</ul>
+<h3>管理案例（虛擬案例：樂購電商的「老闆不知道」危機）</h3>
+<ul>
+<li><strong>情境：</strong>「樂購電商」的 AIMS 由資訊部主導推動，總經理只在政策上簽名。驗證稽核訪談時，總經理說：「AI 客服是資訊部在弄的，細節我不清楚。」</li>
+<li><strong>風險／問題：</strong>無法展現 5.1 的領導與承諾；更實際的風險是，AI 客服出現錯誤承諾時，沒有人有權限決定暫停服務。</li>
+<li><strong>對應條文：</strong>5.1、5.3、9.3、A.3.2。</li>
+<li><strong>作法：</strong>
+  1. 成立由總經理擔任召集人的 AI 治理委員會，每季開會；
+  2. 明訂「AI 系統重大事故時的暫停決策權」由總經理授權 AI 治理負責人；
+  3. 總經理在年度全員大會上親自說明 AI 政策與負責任使用的期待。</li>
+<li><strong>產出文件：</strong>委員會設置辦法、會議紀錄、授權書、全員大會簡報與出席紀錄。</li>
+<li><strong>稽核證據：</strong>稽核員再次訪談總經理，請他說明 AI 政策重點、最近一次委員會的決議、公司最主要的 AI 風險。</li>
+</ul>
+<h3>稽核重點</h3>
+<ul>
+<li><strong>稽核員會問（對最高管理階層）：</strong>
+  1. 「公司為什麼要導入 AIMS？和公司策略有什麼關係？」
+  2. 「公司的 AI 政策最重要的承諾是什麼？」
+  3. 「您如何確保 AIMS 有足夠的資源？今年的投入有哪些？」
+  4. 「最近一次管理審查，您做了哪些決定？」
+  5. 「如果 AI 系統發生重大事故，誰有權決定暫停？」
+  6. 「您如何在公司內建立負責任 AI 的文化？」</li>
+<li><strong>要看的證據：</strong>核准紀錄、預算與人力配置、溝通紀錄、管理審查紀錄、授權文件。</li>
+<li><strong>常見缺失：</strong></li>
+<li>最高管理階層無法說明 AI 政策或 AIMS 目的；</li>
+<li>AIMS 完全由單一部門推動，沒有整合入營運流程；</li>
+<li>資源只在導入期投入，驗證後即撤除；</li>
+<li>管理審查由主管代理出席，最高管理階層未實際參與。</li>
+</ul>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 我不會期待總經理背出條文，但會期待他用自己的話講出「我們為什麼要管 AI、最在乎什麼風險、我做了什麼決定」。這比任何簽名都更能證明承諾。</p>
+</blockquote>
+<hr />
+<h2 id="3.2-條文-5.2人工智慧政策">3.2 條文 5.2：人工智慧政策</h2>
+<h3>條文要求</h3>
+<p>最高管理階層應建立包括下列事項之人工智慧政策：</p>
+<ul>
+<li>a) 適合於組織的目的；</li>
+<li>b) 提供設定 AI 目標（6.2）使用之框架；</li>
+<li>c) 包括對<strong>滿足適用要求事項</strong>的承諾；</li>
+<li>d) 包括對<strong>持續改善</strong> AIMS 之承諾。</li>
+</ul>
+<p>人工智慧政策應：</p>
+<ul>
+<li>以文件化資訊提供；</li>
+<li><strong>參考與其他組織政策的相關性</strong>；</li>
+<li>在組織內傳達；</li>
+<li>適切時，提供予關注方。</li>
+</ul>
+<p>條文並指出：建立 AI 政策的控制目標和控制措施參見表 A.1 中的 <strong>A.2</strong>，實作指引參見 <strong>B.2</strong>；制定政策時的考量事項參見 <strong>ISO/IEC 38507</strong>。</p>
+<h3>與附錄 A.2／B.2 的連結</h3>
+<table>
+<thead>
+<tr>
+<th>控制措施</th>
+<th>要求（表 A.1）</th>
+<th>實作指引重點（B.2）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.2.2 人工智慧政策</strong></td>
+<td>組織應制定並文件化一份關於 AI 系統開發或使用的政策</td>
+<td>政策宜考慮：營運策略；組織價值觀和文化及願意承擔或保留的風險程度；AI 系統帶來的風險等級；法律要求（包括合約）；組織的風險環境；對相關關注方的影響。政策宜包括（除 5.2 外）：指導所有 AI 相關活動的<strong>原則</strong>；處理<strong>政策偏離和例外</strong>情況的流程。可視需要涵蓋特定主題，如 AI 資源與資產、衝擊評鑑、AI 系統開發。</td>
+</tr>
+<tr>
+<td><strong>A.2.3 與組織其他政策之一致性</strong></td>
+<td>組織應決定其他政策可能受到影響或適用於組織關於 AI 系統的目標</td>
+<td>品質、資安、安全、隱私等領域與 AI 相互關聯，宜全面分析既有政策是否需要與 AI 政策關聯並更新；治理機構制定的政策宜為 AI 政策提供資訊（參見 ISO/IEC 38507）。</td>
+</tr>
+<tr>
+<td><strong>A.2.4 人工智慧政策之審查</strong></td>
+<td>應於所規劃之期間或根據需要審查 AI 政策，以確保其持續之合宜性、適切性及有效性</td>
+<td>經管理階層批准的角色負責政策的制定、審查和評估；審查宜考量組織環境、業務環境、法律條件或技術環境的變化；並宜考慮<strong>管理審查的結果</strong>。</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 5.2 已經要求寫 AI 政策了，A.2.2 又要求一次，這不是重複嗎？</p>
+<p><strong>Allan：</strong> 好眼力！5.2 規定的是政策「最少要有什麼」——適合目的、目標框架、兩個承諾。A.2／B.2 則補充「好的 AI 政策還該考慮什麼、包含什麼」，像 AI 原則、例外處理、與其他政策的一致性、定期審查。實務上兩邊寫進同一份政策就好，SoA 中 A.2 的適用理由就指向這份政策。</p>
+</blockquote>
+<h3>白話解說</h3>
+<p>AI 政策是<strong>組織對 AI 的「憲法」</strong>。它不是技術規範，而是告訴所有人：</p>
+<ol>
+<li>我們為什麼用 AI、用 AI 要達成什麼（目的與方向）；</li>
+<li>我們用 AI 的<strong>原則</strong>是什麼（例如公平、透明、人為監管、隱私、安全）；</li>
+<li>我們承諾遵守法規與持續改善；</li>
+<li>目標要怎麼定（框架）；</li>
+<li>和資安政策、個資政策、品質政策的關係；</li>
+<li>不照政策做的時候怎麼辦（例外與偏離處理）。</li>
+</ol>
+<p><strong>政策要「適切時，提供予關注方」</strong>：例如提供者可以把 AI 政策摘要公布在官網，讓客戶與 AI 主體了解；內部敏感細節則不必公開。</p>
+<h3>實務作法：AI 政策範本骨架</h3>
+<p>以下是一份可直接套用的 AI 政策骨架，括號內為對應的要求來源：</p>
+<pre><code>【XX 公司 人工智慧政策】
+文件編號：AIMS-POL-001　版次：1.0　核准：總經理　生效日：YYYY-MM-DD
+
+一、目的（5.2 a）
+   說明公司開發、提供或使用 AI 的目的，與公司策略方向之關聯。
+
+二、適用範圍
+   適用之 AI 系統、組織單位與人員；與 AIMS 範圍文件（4.3）一致。
+
+三、AI 原則（B.2.2「指導組織與 AI 相關所有活動之原則」）
+   1. 以人為本與人為監管：關鍵決策保留人類覆核與介入機制。
+   2. 公平與不歧視：評估並降低對個人或群體的不公平影響。
+   3. 透明與可解釋：讓使用者知悉 AI 的參與及其限制。
+   4. 隱私保護與資料治理：依法並以適當品質管理資料。
+   5. 安全與資安：確保 AI 系統穩健、安全並受保護。
+   6. 當責：明確界定 AI 系統生命週期中的角色與責任。
+   （可參考台灣《人工智慧基本法》七大原則自行調整）
+
+四、承諾（5.2 c、d）
+   1. 遵守適用之法律、法規、契約及其他要求事項。
+   2. 持續改善人工智慧管理系統。
+
+五、AI 目標框架（5.2 b、6.2）
+   AI 目標由各相關部門依本政策訂定，須可量測（若可行）、
+   受監控並定期檢討；目標類別例如：公平性、可靠性、
+   透明度、事故回應、人員能力。
+
+六、風險胃納與風險管理方向（B.2.2 風險程度、風險環境）
+   說明公司願意承擔的 AI 風險程度，以及禁止或須特別核准之 AI 用途。
+
+七、特定主題政策（B.2.2）
+   AI 資源與資產、AI 系統衝擊評鑑、AI 系統開發、
+   生成式 AI 使用規範……（可另訂子政策並交互參照）
+
+八、與其他政策之關係（5.2、A.2.3）
+   資訊安全政策、個人資料保護政策、品質政策、採購政策、
+   吹哨者保護政策之關聯與優先適用原則。
+
+九、角色與責任（5.3、A.3.2）
+   最高管理階層、AI 治理委員會、AI 治理負責人、各部門之責任。
+
+十、偏離與例外處理（B.2.2）
+   申請、評估、核准層級、有效期限與紀錄。
+
+十一、關注事項通報（A.3.3）
+   員工及契約人員通報 AI 相關疑慮之管道，提供保密或匿名選項並防止報復。
+
+十二、溝通與提供（5.2）
+   本政策於公司內部公告並納入教育訓練；摘要版適切時提供予客戶及其他關注方。
+
+十三、審查（A.2.4、B.2.4）
+   至少每年審查一次，並於組織環境、業務、法律或技術環境重大變化時，
+   以及參考管理審查結果進行審查。
+</code></pre>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 直接把資安政策的「資訊安全」全部替換成「人工智慧」就當作 AI 政策。這種政策通常缺少 AI 原則、缺少對個人與社會影響的考量，也沒有例外處理，稽核員一看就知道。</p>
+<p><strong>💡 Allan 講師說：</strong> AI 政策不用寫得很長，兩到三頁剛好。細節放到子政策或程序，例如「生成式 AI 使用規範」。我最推薦大家一定要寫清楚<strong>禁止或須特別核准的 AI 用途</strong>，這是員工最需要、也最常問的一段。</p>
+</blockquote>
+<h3>管理案例（虛擬案例：福爾摩沙銀行的政策一致性）</h3>
+<ul>
+<li><strong>情境：</strong>「福爾摩沙銀行」已有資訊安全政策、個資保護政策與委外管理政策。新訂的 AI 政策允許「經核准之外部生成式 AI 服務」使用，但委外管理政策規定所有雲端服務都要經過資安評估，兩份政策互不相認。</li>
+<li><strong>風險／問題：</strong>員工不知道該依哪一份；外部 AI 服務繞過資安評估。</li>
+<li><strong>對應條文：</strong>5.2「參考與其他組織政策的相關性」、A.2.3、B.2.3。</li>
+<li><strong>作法：</strong>進行「政策關聯分析」，列出既有政策中受 AI 影響的條款；修訂委外管理政策，將 AI 服務納入並增加 AI 特有評估項目；AI 政策中交互參照。</li>
+<li><strong>產出文件：</strong>政策關聯分析表、修訂後的委外管理政策、AI 政策第八節。</li>
+<li><strong>稽核證據：</strong>分析表、政策修訂紀錄、外部 AI 服務的評估紀錄。</li>
+</ul>
+<h3>稽核重點</h3>
+<ul>
+<li><strong>稽核員會問：</strong>
+  1. 「AI 政策由誰核准？如何確認它與公司目的相符？」
+  2. 「政策如何作為設定 AI 目標的框架？請舉一個目標說明。」
+  3. 「AI 政策和資安、個資政策的關係如何處理？」
+  4. 「員工如何得知 AI 政策？」（並抽訪員工）
+  5. 「政策是否提供給關注方？如何決定提供範圍？」
+  6. 「上一次政策審查是什麼時候？審查了什麼？」</li>
+<li><strong>要看的證據：</strong>AI 政策（含版次與核准）、政策關聯分析、公告與訓練紀錄、官網公布內容、政策審查紀錄。</li>
+<li><strong>常見缺失：</strong></li>
+<li>政策缺少「滿足適用要求事項」或「持續改善」承諾之一；</li>
+<li>政策與 AI 目標沒有連結；</li>
+<li>員工不知道政策存在；</li>
+<li>政策多年未審查，或審查沒有考慮管理審查結果；</li>
+<li>無例外處理機制，導致實務上大量「默默例外」。</li>
+</ul>
+<hr />
+<h2 id="3.3-條文-5.3角色責任及權限">3.3 條文 5.3：角色、責任及權限</h2>
+<h3>條文要求</h3>
+<ul>
+<li>「最高管理階層應確保相關角色之責任及權限已指派，並於組織內傳達。」</li>
+<li>最高管理階層應指派下列責任及權限：</li>
+<li>a) 確保 AIMS 符合本文件之要求事項；</li>
+<li>b) 向最高管理階層報告 AIMS 之績效。</li>
+<li>備考：定義和分配角色與責任的控制措施參見表 A.1 中的 <strong>A.3.2</strong>，實作指引參見 <strong>B.3.2</strong>。</li>
+</ul>
+<h3>與 A.3.2／B.3.2 的連結</h3>
+<p>A.3.2 要求「應依據組織的需要，定義及配置人工智慧角色與責任」。B.3.2 指出，分配角色時宜考量 AI 政策、AI 目標和已識別的風險，並列出可能需要定義角色與責任的領域：</p>
+<table>
+<thead>
+<tr>
+<th>領域</th>
+<th>典型負責角色（示例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>風險管理</td>
+<td>風險管理部、AI 治理負責人</td>
+</tr>
+<tr>
+<td>AI 系統衝擊評鑑</td>
+<td>衝擊評鑑小組（跨部門）</td>
+</tr>
+<tr>
+<td>資產和資源管理</td>
+<td>資訊部、AI 平台負責人</td>
+</tr>
+<tr>
+<td>資訊安全</td>
+<td>資安長／資安部</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>產品安全負責人</td>
+</tr>
+<tr>
+<td>隱私性</td>
+<td>個資長／個資保護窗口</td>
+</tr>
+<tr>
+<td>開發</td>
+<td>AI 研發團隊</td>
+</tr>
+<tr>
+<td>績效表現</td>
+<td>模型負責人、產品經理</td>
+</tr>
+<tr>
+<td>人為監管</td>
+<td>業務單位覆核人員</td>
+</tr>
+<tr>
+<td>供應商關係</td>
+<td>採購部</td>
+</tr>
+<tr>
+<td>展現持續遵守法律要求的能力</td>
+<td>法務／法遵</td>
+</tr>
+<tr>
+<td>資料品質管理（於整個生命週期中）</td>
+<td>資料治理部、資料負責人</td>
+</tr>
+</tbody>
+</table>
+<p>B.3.2 也提醒：「宜將各種角色的責任定義為適合個人履行其職責的等級。」也就是說，責任要具體到人能執行的程度。</p>
+<h3>白話解說</h3>
+<p>5.3 有兩個「一定要指派」的責任：<strong>確保符合標準</strong>和<strong>向最高管理階層報告績效</strong>。實務上常由一位「AI 治理負責人」（或 AIMS 管理代表）承擔。但 42001 的精神不只如此，透過 A.3.2，AI 生命週期中每個關鍵環節都要有人負責。</p>
+<p><strong>權限</strong>常被忽略：負責人不只要有責任，還要有權力，例如暫停高風險 AI 系統上線、要求補做衝擊評鑑。</p>
+<h3>實務作法：AI 治理組織</h3>
+<h4>AI 治理委員會組織圖（文字描述，虛擬案例：仁心醫院）</h4>
+<pre><code>董事會（治理機構）
+  └─ 院長（最高管理階層）
+       └─ AI 治理委員會（召集人：副院長）
+            ├─ AI 治理負責人／AIMS 管理代表（醫務企劃室主任）
+            │     └─ AIMS 推動小組（文件管理、內部稽核協調）
+            ├─ 臨床 AI 倫理與衝擊評鑑小組（醫師、護理、病人權益代表、法務）
+            ├─ AI 技術與資料小組（資訊室、醫學影像部、資料治理）
+            ├─ 資訊安全與個資保護（資安長、個資保護窗口）
+            └─ 採購與供應商管理（總務／採購）
+       各使用單位：放射科、心臟內科……（AI 系統負責人、人為監管覆核醫師）
+</code></pre>
+<p>說明：</p>
+<ul>
+<li><strong>董事會</strong>作為治理機構，接收 AI 重大議題報告（建議作法）；</li>
+<li><strong>院長</strong>為最高管理階層，核准 AI 政策、主持管理審查；</li>
+<li><strong>AI 治理委員會</strong>每季開會，審議高衝擊 AI 系統上線、重大事故、政策例外；</li>
+<li><strong>AI 治理負責人</strong>承擔 5.3 a)、b) 的責任，定期向院長報告 AIMS 績效；</li>
+<li><strong>各使用單位</strong>的 AI 系統負責人與覆核醫師負責日常運作與人為監管。</li>
+</ul>
+<h4>RACI 範例</h4>
+<p>R＝執行（Responsible）、A＝當責（Accountable）、C＝諮詢（Consulted）、I＝告知（Informed）</p>
+<table>
+<thead>
+<tr>
+<th>活動</th>
+<th>院長</th>
+<th>AI 治理委員會</th>
+<th>AI 治理負責人</th>
+<th>衝擊評鑑小組</th>
+<th>AI 技術與資料小組</th>
+<th>資安／個資</th>
+<th>使用單位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核准 AI 政策</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>AI 政策年度審查</td>
+<td>A</td>
+<td>C</td>
+<td><strong>R</strong></td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>AI 系統清冊維護</td>
+<td>I</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>AI 風險評鑑</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>AI 系統衝擊評鑑</td>
+<td>I</td>
+<td>C</td>
+<td>A</td>
+<td><strong>R</strong></td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>高衝擊 AI 上線核准</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>資料品質管理</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>人為監管與覆核</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+</tr>
+<tr>
+<td>AI 事故通報與暫停決策</td>
+<td>I</td>
+<td>A</td>
+<td><strong>R</strong></td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>向最高管理階層報告 AIMS 績效</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>關注事項通報受理（A.3.3）</td>
+<td>I</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> RACI 表中同一項活動出現兩個 A。RACI 的原則是<strong>每一項活動只能有一個 A（當責者）</strong>，否則出事時又會互相推責。</p>
+<p><strong>🎀 阿拉蕾發問：</strong> 小公司只有二十個人，也要搞一個委員會嗎？</p>
+<p><strong>Allan：</strong> 不一定！標準沒有規定一定要委員會。小公司可以由總經理加兩三位主管組成「AI 治理會議」，在既有主管會議中排一個固定議程。重點是 5.3 的兩項責任要有人扛，A.3.2 的關鍵角色要有人負責，而且大家都知道。</p>
+</blockquote>
+<h3>關注事項的通報（A.3.3）——角色責任的好搭檔</h3>
+<p>A.3.3 要求組織「定義並實施一個流程，以通報組織在人工智慧系統整個生命週期中的角色的關注事項」。B.3.3 建議通報機制宜提供保密或匿名選項、推廣給僱用和契約人員、由具資格的人負責並有調查權限、可及時向管理層報告與升級、防止報復、在適當時間內回應；可利用現有通報機制，並參考 ISO 37002。在設計治理組織時，建議一併指定通報受理的負責人。</p>
+<h3>管理案例（虛擬案例：才庫人力的「沒人有權按暫停」）</h3>
+<ul>
+<li><strong>情境：</strong>「才庫人力」的 AI 履歷篩選系統被客戶反映疑似對某年齡層排序偏低。資料科學團隊發現問題，但不確定自己能否暫停功能，層層上報花了兩週，期間系統持續運作。</li>
+<li><strong>風險／問題：</strong>角色與權限不清，延誤處置，擴大對求職者的衝擊。</li>
+<li><strong>對應條文：</strong>5.3、A.3.2、A.3.3、A.8.4 事故溝通。</li>
+<li><strong>作法：</strong>
+  1. 在 AI 治理辦法中明訂「AI 系統暫停權限」：模型負責人可先行暫停並於 24 小時內向 AI 治理負責人報告；
+  2. 更新 RACI，「AI 事故暫停決策」的 A 指定為 AI 治理負責人；
+  3. 在內部公告與訓練中傳達新的權限。</li>
+<li><strong>產出文件：</strong>AI 治理辦法、授權書、更新後的 RACI、公告紀錄。</li>
+<li><strong>稽核證據：</strong>授權文件、事故處理紀錄中暫停時間與報告時間、訪談模型負責人是否知道自己的權限。</li>
+</ul>
+<h3>稽核重點</h3>
+<ul>
+<li><strong>稽核員會問：</strong>
+  1. 「誰負責確保 AIMS 符合標準？誰向最高管理階層報告 AIMS 績效？怎麼報告？多久一次？」
+  2. 「AI 生命週期中風險管理、衝擊評鑑、資料品質、人為監管等角色由誰擔任？」
+  3. 「這些角色與責任如何傳達？當事人知道嗎？」（並抽訪）
+  4. 「發生 AI 事故時，誰有權暫停系統？」
+  5. 「員工若對 AI 系統有疑慮，可以向誰通報？」</li>
+<li><strong>要看的證據：</strong>組織圖、職務說明書、任命書或授權書、RACI 表、AIMS 績效報告、公告紀錄、通報管道與受理紀錄。</li>
+<li><strong>常見缺失：</strong></li>
+<li>只有任命 AIMS 管理代表，其他 AI 角色未定義；</li>
+<li>職責寫在文件中，但當事人不知道；</li>
+<li>有責任沒有權限；</li>
+<li>未定期向最高管理階層報告 AIMS 績效；</li>
+<li>人員異動後未更新指派。</li>
+</ul>
+<hr />
+<h2 id="3.4-條文-5-整體連動圖文字版">3.4 條文 5 整體連動圖（文字版）</h2>
+<pre><code>5.1 最高管理階層承諾
+   ├─▶ 5.2 AI 政策（A.2.2／A.2.3／A.2.4）
+   │       └─▶ 6.2 AI 目標（政策提供框架）
+   │       └─▶ 7.3 認知（員工須知道政策）
+   │       └─▶ 7.4 溝通（對內傳達、對關注方提供）
+   ├─▶ 5.3 角色、責任及權限（A.3.2／A.3.3）
+   │       └─▶ 7.2 能力（擔任角色者須勝任）
+   │       └─▶ 9.1、9.3 報告 AIMS 績效 → 管理審查
+   └─▶ 7.1 資源
+9.3 管理審查結果 ─▶ 回饋 A.2.4 政策審查與 5.1 決策
+</code></pre>
+<hr />
+<h2 id="本章重點回顧">本章重點回顧</h2>
+<ul>
+<li>5.1：最高管理階層須<strong>確保</strong>政策與目標相容於策略、整合入營運流程、提供資源、傳達重要性、確保達成預期結果、指揮支援人員、宣導持續改善、支持其他管理角色；並建立<strong>負責任 AI 的文化</strong>。</li>
+<li>5.2：AI 政策須適合組織目的、提供目標框架、承諾滿足適用要求與持續改善；須<strong>文件化、參考其他政策、內部傳達、適切時提供予關注方</strong>。</li>
+<li>A.2／B.2 補充：AI 原則、例外處理、風險程度考量、與其他政策一致性（A.2.3）、定期審查並考慮管理審查結果（A.2.4）。</li>
+<li>5.3：須指派「確保 AIMS 符合標準」與「向最高管理階層報告績效」的責任及權限，並在組織內傳達。</li>
+<li>A.3.2／B.3.2：依需要定義風險管理、衝擊評鑑、資安、隱私、開發、人為監管、供應商、法遵、資料品質等角色；RACI 每項活動只有一個 A。</li>
+<li>A.3.3：建立 AI 關注事項通報流程，提供保密或匿名、防止報復。</li>
+</ul>
+<h2 id="自我檢測">自我檢測</h2>
+<details>
+<summary>Q1. 依 5.2，AI 政策必須包含哪兩項「承諾」？</summary>
+<p><strong>答案：</strong> ① 對滿足適用要求事項的承諾；② 對持續改善 AIMS 的承諾。解析：此外，政策還須適合組織目的，並提供設定 AI 目標的框架。</p>
+</details>
+<details>
+<summary>Q2. B.2.2 建議 AI 政策除了 5.2 的要求外，宜額外包括哪兩項內容？</summary>
+<p><strong>答案：</strong> ① 指導組織與 AI 相關所有活動之原則；② 處理政策偏離和例外情況的流程。</p>
+</details>
+<details>
+<summary>Q3. 5.3 要求最高管理階層必須指派哪兩項責任及權限？</summary>
+<p><strong>答案：</strong> a) 確保 AIMS 符合本文件之要求事項；b) 向最高管理階層報告 AIMS 之績效。解析：其他 AI 相關角色則透過 A.3.2 依組織需要定義與配置。</p>
+</details>
+<details>
+<summary>Q4. 稽核員訪談總經理，總經理表示「AI 的事都交給資訊部，我不清楚」。可能涉及哪個條款的問題？</summary>
+<p><strong>答案：</strong> 5.1 領導及承諾。解析：最高管理階層須展現對 AIMS 的領導與承諾，包括確保政策與目標相容於策略、提供資源、傳達重要性等。無法說明 AIMS 的目的與重點，難以證明承諾的有效性。</p>
+</details>
+<details>
+<summary>Q5. 在 RACI 表中，為什麼每一項活動只應有一個 A？</summary>
+<p><strong>答案：</strong> A 代表最終當責者。解析：若同一活動有多個 A，出現問題時責任歸屬不清，違背 A.3 控制目標「在組織內建立當責機制」的精神。</p>
+</details>
+    <div class="pager"><a href="ch02.html"><small>← 上一章</small>條文 4 組織全景</a><a class="next" href="ch04.html"><small>下一章 →</small>條文 6 風險評鑑與 SoA</a></div>
+  </article>
+</div>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<script src="../assets/js/chapters.js"></script>
+<script>
+(function () {
+  var id = "ch03", btn = document.getElementById("markRead");
+  function refresh() {
+    var p = Progress.load();
+    document.querySelectorAll(".toc a[data-id]").forEach(function (a) {
+      a.classList.toggle("ok", !!(p[a.dataset.id] && p[a.dataset.id].text));
+    });
+    if (p[id] && p[id].text) btn.textContent = "✓ 本章已讀完";
+  }
+  btn.onclick = function () { Progress.mark(id, "text"); refresh(); };
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) { Progress.mark(id, "text"); refresh(); }
+  }, { passive: true });
+  document.querySelectorAll(".toc a").forEach(function (a) { a.addEventListener("click", function () { document.querySelector(".toc").classList.remove("open"); }); });
+  refresh();
+})();
+</script>
+</body>
+</html>

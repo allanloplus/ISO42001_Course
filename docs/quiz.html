@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課後測驗｜ISO 42001 線上課程</title>
+<link rel="icon" href="assets/img/allan.webp">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="text/ch00.html">文字教材</a>
+    <a href="video.html">互動影音</a>
+    <a class="active" href="quiz.html">課後測驗</a>
+  </nav>
+</header>
+<main class="wrap quiz-box">
+
+  <!-- 步驟 1：學員資料 -->
+  <section id="stepInfo" class="panel">
+    <h1 style="margin-top:0">🏅 課後測驗</h1>
+    <p>共 <b>10 題</b>單選題，每題 10 分，<b>80 分（含）以上通過</b>。通過後可下載結業證書（附測驗題目與解答）；未通過請重新閱讀建議章節或再次測驗。</p>
+    <h3>請先填寫學員資料（將印製於證書上）</h3>
+    <form id="infoForm" novalidate>
+      <div class="form-grid">
+        <div class="field"><label for="company">公司名稱 *</label><input id="company" name="company" required maxlength="60" placeholder="例：福爾摩沙科技股份有限公司" autocomplete="organization"><div class="err"></div></div>
+        <div class="field"><label for="unit">單位 *</label><input id="unit" name="unit" required maxlength="40" placeholder="例：資訊安全部"><div class="err"></div></div>
+        <div class="field"><label for="name">姓名 *</label><input id="name" name="name" required maxlength="30" placeholder="例：王小明" autocomplete="name"><div class="err"></div></div>
+        <div class="field"><label for="title">職稱 *</label><input id="title" name="title" required maxlength="30" placeholder="例：資安經理" autocomplete="organization-title"><div class="err"></div></div>
+        <div class="field" style="grid-column:1/-1"><label for="email">E-mail *</label><input id="email" name="email" type="email" required maxlength="80" placeholder="name@example.com" autocomplete="email"><div class="err"></div></div>
+      </div>
+      <p class="notice" id="privacyNotice">🔒 <b>個人資料蒐集告知：</b>以上資料僅用於製作您的結業證書與課程結業紀錄，蒐集期間至課程結束後一年；未經您同意不會提供予第三人。您可隨時要求查詢、更正或刪除。若不提供，將無法核發證書。</p>
+      <label style="display:flex;gap:8px;align-items:flex-start;margin:10px 0 16px"><input type="checkbox" id="agree" style="margin-top:7px"> <span>我已閱讀並同意上述個人資料蒐集告知事項</span></label>
+      <button class="btn" type="submit">開始作答 ✍️</button>
+    </form>
+  </section>
+
+  <!-- 步驟 2：作答 -->
+  <section id="stepQuiz" class="panel" hidden>
+    <h2 style="margin-top:0">✍️ 作答中　<small style="font-size:15px;color:var(--muted)" id="who"></small></h2>
+    <div class="progress-q"><i id="qProg"></i></div>
+    <form id="quizForm"></form>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+      <button class="btn" id="submitQuiz">交卷 📮</button>
+      <button class="btn soft" id="backInfo" type="button">← 修改學員資料</button>
+    </div>
+  </section>
+
+  <!-- 步驟 3：結果 -->
+  <section id="stepResult" class="panel" hidden></section>
+
+</main>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜證書由本課程線上測驗系統自動產生</footer>
+<script src="assets/js/chapters.js"></script>
+<script src="assets/js/quiz-data.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>

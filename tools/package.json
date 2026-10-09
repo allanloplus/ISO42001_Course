@@ -1,0 +1,15 @@
+{
+  "name": "iso42001-course-tools",
+  "private": true,
+  "description": "建置實體課程簡報（PPTX）所需套件",
+  "scripts": {
+    "pptx": "node build_pptx.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-icons": "^5.7.0",
+    "sharp": "^0.35.5"
+  }
+}

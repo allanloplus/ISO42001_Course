@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>標準架構與用語定義｜文字教材｜ISO 42001 線上課程</title>
+<link rel="icon" href="../assets/img/allan.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" onclick="document.querySelector('.toc').classList.toggle('open')" aria-label="章節選單">☰ 章節</button>
+  <a class="logo" href="../index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a class="active" href="ch00.html">文字教材</a>
+    <a href="../video.html?ch=ch01">互動影音</a>
+    <a href="../quiz.html">課後測驗</a>
+  </nav>
+</header>
+<div class="reader">
+  <aside class="toc" aria-label="章節選擇"><h4>課程導覽</h4>
+<a data-id="ch00" href="ch00.html">00｜課程導覽與 AI 治理趨勢</a>
+<h4>標準基礎</h4>
+<a class="current" data-id="ch01" href="ch01.html">01｜標準架構與用語定義</a>
+<h4>條文詳解</h4>
+<a data-id="ch02" href="ch02.html">02｜條文 4 組織全景</a>
+<a data-id="ch03" href="ch03.html">03｜條文 5 領導作為</a>
+<a data-id="ch04" href="ch04.html">04｜條文 6 風險評鑑與 SoA</a>
+<a data-id="ch05" href="ch05.html">05｜條文 6 衝擊評鑑與目標</a>
+<a data-id="ch06" href="ch06.html">06｜條文 7 支援</a>
+<a data-id="ch07" href="ch07.html">07｜條文 8 運作</a>
+<a data-id="ch08" href="ch08.html">08｜條文 9 績效評估</a>
+<a data-id="ch09" href="ch09.html">09｜條文 10 改善</a>
+<h4>附錄 A/B 控制措施</h4>
+<a data-id="ch10" href="ch10.html">10｜A.2–A.5 控制措施</a>
+<a data-id="ch11" href="ch11.html">11｜A.6 AI 生命週期</a>
+<a data-id="ch12" href="ch12.html">12｜A.7–A.10 控制措施</a>
+<h4>整合與導入</h4>
+<a data-id="ch13" href="ch13.html">13｜附錄 C/D 與整合導入</a>
+<h4>管理案例</h4>
+<a data-id="ch14" href="ch14.html">14｜六大產業管理案例</a>
+<h4>稽核實務</h4>
+<a data-id="ch15" href="ch15.html">15｜驗證流程與稽核技巧</a>
+<a data-id="ch16" href="ch16.html">16｜常見不符合與檢查表</a>
+<h4>總複習</h4>
+<a data-id="ch17" href="ch17.html">17｜總複習與測驗說明</a></aside>
+  <article class="doc">
+    <h1>第1章　標準架構、適用範圍與用語定義（條文 1–3）</h1>
+    <div class="doc-actions">
+      <a class="btn pink" href="../video.html?ch=ch01">▶ 觀看本章互動影音</a>
+      <button class="btn soft" id="markRead">✓ 標記本章已讀</button>
+      <button class="btn soft" onclick="window.print()">🖨 列印／存 PDF</button>
+    </div>
+    <details class="mini-toc" open><summary>📑 本章目錄</summary><ol><li><a href="#1.1-先看地圖ISOIEC-42001-的整體結構">1.1 先看地圖：ISO/IEC 42001 的整體結構</a></li><li><a href="#1.2-調和結構HS所有-ISO-管理系統的共同骨架">1.2 調和結構（HS）：所有 ISO 管理系統的共同骨架</a></li><li><a href="#1.3-ISOIEC-42001-與-ISOIEC-27001-結構比較">1.3 ISO/IEC 42001 與 ISO/IEC 27001 結構比較</a></li><li><a href="#1.4-條文-1適用範圍">1.4 條文 1：適用範圍</a></li><li><a href="#1.5-條文-2引用標準ISOIEC-229892022">1.5 條文 2：引用標準——ISO/IEC 22989:2022</a></li><li><a href="#1.6-條文-3用語及定義全部-26-個">1.6 條文 3：用語及定義（全部 26 個）</a></li><li><a href="#1.7-應shall宜should可maycan的差異與稽核意義">1.7 應（shall）／宜（should）／可（may/can）的差異與稽核意義</a></li><li><a href="#1.8-管理案例智聯科技的用語統一專案虛擬案例">1.8 管理案例：智聯科技的「用語統一」專案（虛擬案例）</a></li><li><a href="#本章重點回顧">本章重點回顧</a></li><li><a href="#自我檢測">自我檢測</a></li></ol></details>
+    
+<blockquote>
+<p>學習目標：① 說明 ISO/IEC 42001 的整體結構（介紹、條文 1–10、附錄 A–D）與調和結構（HS）的意義；② 將條文 4–10 對應到 PDCA 循環，並比較 42001 與 ISO/IEC 27001 的結構異同；③ 理解適用範圍（條文 1）與引用標準 ISO/IEC 22989（條文 2）；④ 正確解釋條文 3 全部 26 個用語，特別是關注方、風險、控制措施、治理機構、AI 系統衝擊評鑑、資料品質與適用性聲明；⑤ 分辨「應（shall）／宜（should）／可（may/can）」的差異及其稽核意義。</p>
+</blockquote>
+<hr />
+<h2 id="1.1-先看地圖ISOIEC-42001-的整體結構">1.1 先看地圖：ISO/IEC 42001 的整體結構</h2>
+<p>ISO/IEC 42001:2023 於 2023 年 12 月發布，是第一版。整份標準可以分成「前段說明」、「要求事項本體」和「附錄」三大塊：</p>
+<table>
+<thead>
+<tr>
+<th>區塊</th>
+<th>內容</th>
+<th>性質</th>
+<th>一句話說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>介紹</td>
+<td>AI 特有考量、與其他管理系統標準的兼容性</td>
+<td>說明</td>
+<td>為什麼需要 AIMS</td>
+</tr>
+<tr>
+<td>條文 1–3</td>
+<td>適用範圍、引用標準、用語及定義</td>
+<td>基礎</td>
+<td>誰適用、用什麼字典、字怎麼解釋</td>
+</tr>
+<tr>
+<td>條文 4–10</td>
+<td>組織全景、領導、規劃、支援、運作、績效評估、改善</td>
+<td><strong>要求事項（可稽核）</strong></td>
+<td>管理系統怎麼建、怎麼跑</td>
+</tr>
+<tr>
+<td>附錄 A</td>
+<td>參考控制目標與控制措施（表 A.1）</td>
+<td><strong>規範性</strong></td>
+<td>9 大控制目標領域（A.2–A.10）、38 項控制措施</td>
+</tr>
+<tr>
+<td>附錄 B</td>
+<td>人工智慧控制措施之實作指引</td>
+<td><strong>規範性</strong></td>
+<td>每項控制措施「怎麼做」的指引</td>
+</tr>
+<tr>
+<td>附錄 C</td>
+<td>潛在的組織目標與風險來源</td>
+<td>資訊性</td>
+<td>給風險評鑑和目標設定的靈感清單</td>
+</tr>
+<tr>
+<td>附錄 D</td>
+<td>管理系統在各領域或行業中的應用</td>
+<td>資訊性</td>
+<td>跨產業應用與和其他標準整合</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 欸欸，「規範性」和「資訊性」差在哪？聽起來都很像官方用語……</p>
+<p><strong>Allan：</strong> 簡單講：<strong>規範性（normative）</strong>附錄是標準本體的一部分，要用來判定符合與否；<strong>資訊性（informative）</strong>附錄是參考資料，幫助理解，不會拿來開不符合。42001 的附錄 A 和 B 都是規範性，這點和 27001 很不一樣，後面會說明。</p>
+</blockquote>
+<h3>附錄 A 的 9 大控制目標領域速覽</h3>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>控制目標領域</th>
+<th>對應本課程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.2</td>
+<td>人工智慧相關政策</td>
+<td>第3章、第10章</td>
+</tr>
+<tr>
+<td>A.3</td>
+<td>內部組織</td>
+<td>第3章、第10章</td>
+</tr>
+<tr>
+<td>A.4</td>
+<td>人工智慧系統資源</td>
+<td>第10章</td>
+</tr>
+<tr>
+<td>A.5</td>
+<td>人工智慧系統之衝擊評鑑</td>
+<td>第5章、第10章</td>
+</tr>
+<tr>
+<td>A.6</td>
+<td>人工智慧系統生命週期</td>
+<td>第11章</td>
+</tr>
+<tr>
+<td>A.7</td>
+<td>人工智慧系統之資料</td>
+<td>第12章</td>
+</tr>
+<tr>
+<td>A.8</td>
+<td>人工智慧系統之關注方資訊</td>
+<td>第12章</td>
+</tr>
+<tr>
+<td>A.9</td>
+<td>人工智慧系統之使用</td>
+<td>第12章</td>
+</tr>
+<tr>
+<td>A.10</td>
+<td>第三方與客戶之關係</td>
+<td>第12章</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 注意每個領域的編號都從「.2」開始，例如 A.2.2、A.3.2。因為每個領域的「.1」是控制目標本身（附錄 B 中寫成 B.2.1 目標），而不是控制措施。很多人第一次數控制措施數量時會數錯，就是這個原因。</p>
+</blockquote>
+<hr />
+<h2 id="1.2-調和結構HS所有-ISO-管理系統的共同骨架">1.2 調和結構（HS）：所有 ISO 管理系統的共同骨架</h2>
+<h3>什麼是調和結構？</h3>
+<p>標準介紹中的「與其他管理系統標準的兼容性」一節寫道，本文件應用了「為加強管理系統標準 (MSS) 之間的一致性而開發的調和性結構 (相同的條款編號、條款標題、文本和通用術語以及核心定義)」。</p>
+<p>這就是 <strong>Harmonized Structure（HS，調和結構）</strong>，前身是大家熟悉的「高階結構（HLS）」。它規定所有 ISO 管理系統標準都用同一套條文 1–10 骨架、同一批核心文字和定義。所以你會發現 ISO 9001、ISO/IEC 27001、ISO/IEC 27701、ISO/IEC 42001 讀起來「長得很像」。</p>
+<h3>HS 的十個條文</h3>
+<table>
+<thead>
+<tr>
+<th>條文</th>
+<th>標題</th>
+<th>42001 的 AI 特有加料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>適用範圍</td>
+<td>提供或使用 AI 系統的組織</td>
+</tr>
+<tr>
+<td>2</td>
+<td>引用標準</td>
+<td>ISO/IEC 22989:2022</td>
+</tr>
+<tr>
+<td>3</td>
+<td>用語及定義</td>
+<td>新增 AI 系統衝擊評鑑、資料品質、適用性聲明等</td>
+</tr>
+<tr>
+<td>4</td>
+<td>組織全景</td>
+<td>4.1 要決定組織的 <strong>AI 角色</strong>、氣候變遷是否為相關議題</td>
+</tr>
+<tr>
+<td>5</td>
+<td>領導作為</td>
+<td>5.2 <strong>人工智慧政策</strong>，連結 A.2／B.2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>規劃</td>
+<td>6.1.2 AI 風險評鑑、6.1.3 AI 風險處理（含 SoA）、<strong>6.1.4 AI 系統衝擊評鑑</strong>、6.2 AI 目標、6.3 變更之規劃</td>
+</tr>
+<tr>
+<td>7</td>
+<td>支援</td>
+<td>7.1–7.5 資源、能力、認知、溝通、文件化資訊</td>
+</tr>
+<tr>
+<td>8</td>
+<td>運作</td>
+<td>8.2 風險評鑑、8.3 風險處理、<strong>8.4 AI 系統衝擊評鑑</strong>的執行</td>
+</tr>
+<tr>
+<td>9</td>
+<td>績效評估</td>
+<td>9.1 監督量測、9.2 內部稽核、9.3 管理審查</td>
+</tr>
+<tr>
+<td>10</td>
+<td>改善</td>
+<td>10.1 持續改善、10.2 不符合事項及矯正措施</td>
+</tr>
+</tbody>
+</table>
+<h3>HS 與 PDCA 對照</h3>
+<table>
+<thead>
+<tr>
+<th>PDCA</th>
+<th>條文</th>
+<th>在 AIMS 中做什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P（Plan 規劃）</strong></td>
+<td>4 組織全景、5 領導作為、6 規劃、7 支援</td>
+<td>了解全景與 AI 角色、訂政策、做風險評鑑與衝擊評鑑、定目標、備妥資源與能力</td>
+</tr>
+<tr>
+<td><strong>D（Do 執行）</strong></td>
+<td>8 運作</td>
+<td>按規劃執行 AI 生命週期管理、定期與變更時重做風險評鑑與衝擊評鑑、落實風險處理計畫</td>
+</tr>
+<tr>
+<td><strong>C（Check 檢查）</strong></td>
+<td>9 績效評估</td>
+<td>監督量測 AI 系統與 AIMS 績效、內部稽核、管理審查</td>
+</tr>
+<tr>
+<td><strong>A（Act 行動）</strong></td>
+<td>10 改善</td>
+<td>處理不符合、矯正措施、持續改善</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 條文 7「支援」到底屬於 P 還是 D？不同教材有不同畫法。實務上，資源與能力是「規劃時就要備妥」，認知與溝通則「在執行中持續發生」，所以有人把 7 畫在 P 與 D 之間。重點不是背哪一格，而是理解<strong>支援條文是整個循環的燃料</strong>。</p>
+<p><strong>🔍 稽核員視角：</strong> 因為結構一致，已經有 27001 的組織，條文 4、5、7、9、10 很多程序可以共用（例如文件管制、內部稽核、管理審查、矯正措施程序）。但稽核員會特別檢查：共用的程序裡，<strong>有沒有真的把 AI 放進去</strong>。例如內部稽核方案有沒有涵蓋 AIMS、管理審查輸入有沒有 AI 相關議題，而不是只把「資訊安全」字樣換成「人工智慧」。</p>
+</blockquote>
+<hr />
+<h2 id="1.3-ISOIEC-42001-與-ISOIEC-27001-結構比較">1.3 ISO/IEC 42001 與 ISO/IEC 27001 結構比較</h2>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>ISO/IEC 27001:2022</th>
+<th>ISO/IEC 42001:2023</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理對象</td>
+<td>資訊安全（機密性、完整性、可用性）</td>
+<td>人工智慧系統的負責任開發、提供或使用</td>
+</tr>
+<tr>
+<td>結構</td>
+<td>HS 條文 1–10</td>
+<td>HS 條文 1–10</td>
+</tr>
+<tr>
+<td>引用標準</td>
+<td>ISO/IEC 27000</td>
+<td>ISO/IEC 22989</td>
+</tr>
+<tr>
+<td>4.1 特殊要求</td>
+<td>決定內外部議題（含氣候變遷，2024 增修）</td>
+<td>另須<strong>決定組織的 AI 角色</strong>、考慮 AI 系統的預期用途</td>
+</tr>
+<tr>
+<td>風險評鑑</td>
+<td>6.1.2 資訊安全風險評鑑</td>
+<td>6.1.2 AI 風險評鑑（須考慮對個人、群體與社會的潛在後果）</td>
+</tr>
+<tr>
+<td>風險處理與 SoA</td>
+<td>6.1.3，對照附錄 A 產生 SoA</td>
+<td>6.1.3，對照附錄 A 產生 SoA</td>
+</tr>
+<tr>
+<td>衝擊評鑑</td>
+<td>無</td>
+<td><strong>6.1.4 / 8.4 AI 系統衝擊評鑑</strong></td>
+</tr>
+<tr>
+<td>附錄 A</td>
+<td>控制措施清單（規範性），93 項</td>
+<td>9 大領域、38 項控制措施（規範性）</td>
+</tr>
+<tr>
+<td>實作指引</td>
+<td>另一份標準 ISO/IEC 27002</td>
+<td><strong>附錄 B 直接內含</strong>（規範性）</td>
+</tr>
+<tr>
+<td>視角</td>
+<td>以保護組織的資訊資產為主</td>
+<td>除組織本身外，更關注<strong>對個人、群體與社會的衝擊</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 我常跟客戶說：27001 問的是「<strong>你的資訊安不安全</strong>」；42001 問的是「<strong>你的 AI 對別人公不公平、可不可信、出事誰負責</strong>」。兩者的關係是互補，不是取代。很多 AI 風險（例如模型被竊、訓練資料外洩）本身就是資安風險，可以由 27001 的控制措施承接；而偏差、可解釋性、人為監管這些議題，就要靠 42001。</p>
+</blockquote>
+<hr />
+<h2 id="1.4-條文-1適用範圍">1.4 條文 1：適用範圍</h2>
+<h3>條文要求</h3>
+<ul>
+<li>本文件規定「於組織全景內建立、實作、維持及持續改善人工智慧管理系統之要求事項」。</li>
+<li>供「提供或使用人工智慧系統產品或服務的組織」使用，幫助組織「進行負責任開發、提供或使用人工智慧系統，並滿足適用的要求事項、與關注方的義務以及其期望」。</li>
+<li>「適用於任何提供或使用人工智慧系統產品或服務的組織，不論其規模、形式或性質。」</li>
+</ul>
+<h3>白話解說</h3>
+<ol>
+<li><strong>四個動詞：建立、實作、維持、持續改善。</strong>這是所有管理系統標準的共同語言，代表不是寫完文件就好，而是要「跑起來、跑下去、越跑越好」。</li>
+<li><strong>三種動作：開發、提供、使用。</strong>不論你是寫模型的、賣 AI 服務的、還是單純採購 AI 工具來用的，都在範圍內。</li>
+<li><strong>「負責任」是關鍵字。</strong>42001 的目的不是阻止 AI，而是讓組織在追求自己目標的同時，負責任地處理 AI。</li>
+</ol>
+<h3>實務作法 / 建議產出文件</h3>
+<ul>
+<li>在 AIMS 手冊或範圍文件中，說明組織採用 42001 的目的與對應的 AI 活動（開發／提供／使用）。</li>
+<li>搭配第 2 章的 AI 角色盤點，確認組織在每個 AI 系統中扮演什麼角色。</li>
+</ul>
+<h3>管理案例（虛擬案例）</h3>
+<p>「鴻光精密」是一家傳統精密金屬零件製造商，沒有專職的 AI 研發部門，向設備商採購了一套 AOI（自動光學檢測）瑕疵檢測系統（設備商提供相機與基礎模型），再由製程工程師以自家產品影像標記後訓練專屬模型。管理部一開始認為「我們不是 AI 公司，不需要 42001」。</p>
+<ul>
+<li><strong>問題：</strong>該 AOI 模型會直接決定產品是否放行，誤判會影響出貨品質與客戶安全。</li>
+<li><strong>對應條文：</strong>條文 1 明定「使用」AI 系統的組織同樣適用；更何況鴻光還以自有資料訓練模型。</li>
+<li><strong>作法：</strong>將「AOI 瑕疵檢測系統之使用與維運」納入 AIMS 範圍，鴻光的角色是「AI 客戶／使用者」，並因以自有資料訓練模型而兼具「AI 製造者」角色，同時須管理設備商（A.10.3）。</li>
+<li><strong>稽核證據：</strong>範圍文件、AI 系統清冊、與 AOI 供應商的契約與責任分配紀錄。</li>
+</ul>
+<h3>稽核重點</h3>
+<ul>
+<li>稽核員會問：「貴公司在 AI 方面主要是開發、提供，還是使用？」「導入 AIMS 的目的為何？」</li>
+<li>要看的證據：範圍文件、AIMS 手冊或政策中對適用範圍的說明。</li>
+<li>常見缺失：誤以為只是「使用」就可以大量排除條文要求。注意：<strong>條文 4–10 是不可排除的</strong>，可以依角色調整的是附錄 A 控制措施的適用性（在 SoA 中說明）。</li>
+</ul>
+<hr />
+<h2 id="1.5-條文-2引用標準ISOIEC-229892022">1.5 條文 2：引用標準——ISO/IEC 22989:2022</h2>
+<h3>條文要求</h3>
+<ul>
+<li>引用 <strong>ISO/IEC 22989:2022</strong>《資訊科技 — 人工智慧 — 人工智慧概念及詞彙》。</li>
+<li>「已標註日期的引用文件，僅適用所引用的版本。未標註日期的引用文件，適用其最新版本 (含所有補充增修)。」</li>
+</ul>
+<h3>白話解說</h3>
+<p>「引用標準」的意思是：該文件的部分或全部內容「構成本文件的事項」。換句話說，22989 是 42001 的<strong>官方字典</strong>，42001 沒有定義的 AI 用語（例如「人工智慧系統」本身），就要回到 22989 去找。因為這裡標註了年份 2022，所以適用的是 2022 年版。</p>
+<h3>22989 中你一定會遇到的概念</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>白話說明</th>
+<th>在 42001 中出現的地方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人工智慧系統（AI system）</td>
+<td>依人類定義的目標，產生內容、預測、建議或決策等輸出的工程系統</td>
+<td>幾乎全文</td>
+</tr>
+<tr>
+<td>AI 關注方（AI stakeholder）與角色</td>
+<td>提供者、製造者、客戶、合作夥伴、主體、相關當局等</td>
+<td>3.2 註釋、4.1 備考 1</td>
+</tr>
+<tr>
+<td>可信度（trustworthiness）</td>
+<td>可靠、公平、透明、可解釋、安全、隱私保護等特性的總稱</td>
+<td>介紹、A.6、附錄 C</td>
+</tr>
+<tr>
+<td>透明性、可解釋性</td>
+<td>讓關注方理解系統如何運作、為何做出某個輸出</td>
+<td>A.8、附錄 C</td>
+</tr>
+<tr>
+<td>偏差（bias）</td>
+<td>系統對不同對象產生系統性的差別待遇</td>
+<td>A.5、A.7</td>
+</tr>
+<tr>
+<td>機器學習、持續學習</td>
+<td>從資料學習的方法；上線後仍持續改變行為的學習</td>
+<td>介紹、A.6</td>
+</tr>
+<tr>
+<td>人為監管（human oversight）</td>
+<td>人對 AI 系統運作的監督與介入能力</td>
+<td>B.3.2、B.9</td>
+</tr>
+<tr>
+<td>AI 系統生命週期</td>
+<td>從構想、設計開發、驗證確認、部署、運作監控到停用</td>
+<td>A.6</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 所以導入 42001 還要把 22989 也買來讀嗎？</p>
+<p><strong>Allan：</strong> 建議要有一份放在手邊。尤其是 AI 角色的定義，4.1 備考 1 明講「ISO/IEC 22989 對這些角色進行了詳細描述」。稽核時如果雙方對某個名詞理解不同，最終就是回到 22989 和 42001 條文 3 判斷。</p>
+</blockquote>
+<hr />
+<h2 id="1.6-條文-3用語及定義全部-26-個">1.6 條文 3：用語及定義（全部 26 個）</h2>
+<h3>1.6.1 全部用語一覽</h3>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>用語</th>
+<th>定義重點</th>
+<th>白話說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>組織</td>
+<td>為達成其目標而具有責任、權限及關係之本身功能的個人或一群人</td>
+<td>若是大集團的一部分，「組織」只指 AIMS 範圍內那一部分</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><strong>關注方</strong></td>
+<td>可影響、受影響，或知覺本身將受決策或活動影響之個人或組織</td>
+<td>「覺得自己會被影響」也算！詳見下文</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>最高管理階層</td>
+<td>於最高層級指導與控制組織的個人或群體</td>
+<td>有權授權與提供資源；範圍只涵蓋部分組織時，指該部分的最高主管</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>管理系統</td>
+<td>一套相互關聯或交互作用的要素，用以建立政策、目標及達成目標之流程</td>
+<td>要素包括組織結構、角色責任、規劃與營運</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>政策</td>
+<td>由最高管理階層所正式表達之意圖與方向</td>
+<td>必須是「最高管理階層」表達的</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>目標</td>
+<td>要實現的結果</td>
+<td>可為策略、戰術或營運層級；AI 目標須與 AI 政策一致</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td><strong>風險</strong></td>
+<td>不確定性之影響</td>
+<td>影響可以是正向或負向偏離，詳見下文</td>
+</tr>
+<tr>
+<td>3.8</td>
+<td>流程</td>
+<td>一組使用投入以交付預期結果的相互關聯或交互作用活動</td>
+<td>輸入 → 活動 → 輸出</td>
+</tr>
+<tr>
+<td>3.9</td>
+<td>能力</td>
+<td>運用知識及技能達成所預期結果之能力</td>
+<td>英文是 competence（勝任能力），不是 capability</td>
+</tr>
+<tr>
+<td>3.10</td>
+<td>文件化資訊</td>
+<td>被要求由組織控制及維護之資訊，以及其所處的媒介</td>
+<td>涵蓋「文件」與「紀錄」，任何格式媒體皆可</td>
+</tr>
+<tr>
+<td>3.11</td>
+<td>績效</td>
+<td>可量測的結果</td>
+<td>在 42001 中<strong>同時指 AI 系統的結果與 AIMS 的結果</strong></td>
+</tr>
+<tr>
+<td>3.12</td>
+<td>持續改善</td>
+<td>用以提升績效的經常性活動</td>
+<td>「經常性」代表不是一次性</td>
+</tr>
+<tr>
+<td>3.13</td>
+<td>有效性</td>
+<td>實現所規劃活動並達成所規劃結果之程度</td>
+<td>做了＋做到，兩者都要</td>
+</tr>
+<tr>
+<td>3.14</td>
+<td>要求事項</td>
+<td>陳述之需求或期望，通常為隱含或強制</td>
+<td>包括寫明的和「大家默認的」</td>
+</tr>
+<tr>
+<td>3.15</td>
+<td>符合</td>
+<td>滿足要求事項</td>
+<td></td>
+</tr>
+<tr>
+<td>3.16</td>
+<td>不符合</td>
+<td>未滿足要求事項</td>
+<td>稽核開立不符合事項的依據</td>
+</tr>
+<tr>
+<td>3.17</td>
+<td>矯正措施</td>
+<td>為消除不符合的根本原因並防止其再次發生而採取的措施</td>
+<td>重點在「根本原因」與「防止再發」</td>
+</tr>
+<tr>
+<td>3.18</td>
+<td>稽核</td>
+<td>有系統、獨立及文件化，獲取稽核證據並客觀評估，以決定稽核準則符合程度之流程</td>
+<td>第一方（內部）、第二方、第三方；可合併稽核</td>
+</tr>
+<tr>
+<td>3.19</td>
+<td>量測</td>
+<td>決定一個數值的流程</td>
+<td>得到數字</td>
+</tr>
+<tr>
+<td>3.20</td>
+<td>監督</td>
+<td>決定系統、流程或活動的狀態</td>
+<td>得到狀態，可能需要核對、監察或嚴謹觀察</td>
+</tr>
+<tr>
+<td>3.21</td>
+<td><strong>控制措施</strong></td>
+<td>＜風險＞維持和/或修改風險的措施</td>
+<td>來源 ISO 31000，詳見下文</td>
+</tr>
+<tr>
+<td>3.22</td>
+<td><strong>治理機構</strong></td>
+<td>負責組織之績效及符合性之個人或群體</td>
+<td>如董事會；來源 ISO/IEC 38500，詳見下文</td>
+</tr>
+<tr>
+<td>3.23</td>
+<td>資訊安全</td>
+<td>保障資訊的機密性、完整性和可用性</td>
+<td>來源 ISO/IEC 27000</td>
+</tr>
+<tr>
+<td>3.24</td>
+<td><strong>人工智慧系統衝擊評鑑</strong></td>
+<td>以正式且文件化的流程，識別、評估並處理對個人、群體或社會的衝擊</td>
+<td>42001 的招牌概念，詳見下文</td>
+</tr>
+<tr>
+<td>3.25</td>
+<td><strong>資料品質</strong></td>
+<td>資料具備滿足組織對特定全景資料要求事項的特性</td>
+<td>來源 ISO/IEC 5259-1，詳見下文</td>
+</tr>
+<tr>
+<td>3.26</td>
+<td><strong>適用性聲明</strong></td>
+<td>文件化所有必要的控制措施以及包含或排除這些控制措施的理由的文件</td>
+<td>就是 SoA，詳見下文</td>
+</tr>
+</tbody>
+</table>
+<h3>1.6.2 重點用語詳解</h3>
+<h4>關注方（3.2）</h4>
+<ul>
+<li><strong>定義：</strong>「可影響、受影響，或知覺本身將受決策或活動影響之個人或組織。」註釋指出 ISO/IEC 22989:2022 的 5.19 提供了 AI 關注方的概述。</li>
+<li><strong>三種關注方：</strong>
+  1. <strong>可影響</strong>組織的：例如主管機關、客戶、投資人；
+  2. <strong>受影響</strong>的：例如被 AI 評分的貸款申請人、被 AI 篩選的求職者；
+  3. <strong>知覺</strong>自己會被影響的：例如擔心工作被 AI 取代的員工、擔心隱私的社會大眾。即使實際上沒受影響，只要他們「覺得」會受影響，就算關注方。</li>
+<li><strong>AI 的特殊性：</strong>AI 的關注方常常包含<strong>不是你客戶的人</strong>，例如人臉辨識系統拍到的路人、生成式 AI 訓練資料的著作權人。這就是衝擊評鑑要看「個人、群體或社會」的原因。</li>
+</ul>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 那「知覺」受影響這種主觀的東西，怎麼管啊？</p>
+<p><strong>Allan：</strong> 不是要你滿足每一個人的感受，而是要<strong>識別</strong>出來，再決定哪些要求要透過 AIMS 處理（這是 4.2 的要求）。例如員工擔心 AI 取代工作，你可以透過溝通（7.4）和認知訓練（7.3）回應，而不是假裝沒這回事。</p>
+</blockquote>
+<h4>風險（3.7）</h4>
+<ul>
+<li><strong>定義：</strong>「不確定性之影響。」</li>
+<li><strong>四個註釋要點：</strong>
+  1. 影響是對預期值之<strong>正向或負向</strong>偏離，所以風險不一定是壞事，也可能是機會；
+  2. 不確定性是對事件、後果或可能性的資訊不足狀態；
+  3. 風險通常以潛在事件和後果來表徵；
+  4. 風險通常以<strong>後果與可能性的組合</strong>來表達。</li>
+<li><strong>AI 的特殊性：</strong>42001 的 6.1.2 AI 風險評鑑除了評估對組織的後果，還要評估對<strong>個人、群體與社會</strong>的潛在後果。這比 27001 主要聚焦於資訊資產的視角更寬。</li>
+</ul>
+<h4>控制措施（3.21）</h4>
+<ul>
+<li><strong>定義：</strong>「＜風險＞維持和/或修改風險的措施。」來源為 ISO 31000:2018，並增加了「＜風險＞」作為應用領域。</li>
+<li><strong>註釋要點：</strong>控制措施包括修改風險之所有過程、政策、裝置、實務或其他行動；而且「控制措施未必皆發揮所預期或所設想之修改效果」。</li>
+<li><strong>白話：</strong>控制措施不只是技術工具，政策、流程、訓練、人為審核都是。第二個註釋超重要：<strong>有控制措施不等於有效</strong>，所以要監督量測（9.1）。</li>
+<li><strong>舉例：</strong>「樂購電商」在生成式 AI 客服上加了「退款承諾須轉真人確認」的規則，這是一項控制措施；但如果 AI 用另一種說法繞過了規則，就是「未發揮預期效果」，須透過監控發現並改善。</li>
+</ul>
+<h4>治理機構（3.22）</h4>
+<ul>
+<li><strong>定義：</strong>「負責組織之績效及符合性之個人或群體。」來源 ISO/IEC 38500:2015。</li>
+<li><strong>註釋要點：</strong>並非所有組織（特別是小型組織）都有獨立於高層管理的治理機構；治理機構可以包括董事會、董事會委員會、監事會、信託人或監管人。</li>
+<li><strong>與最高管理階層的差別：</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>治理機構</th>
+<th>最高管理階層</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色</td>
+<td>監督、問責（Governance）</td>
+<td>指導與控制（Management）</td>
+</tr>
+<tr>
+<td>典型例子</td>
+<td>董事會、審計委員會、監事會</td>
+<td>總經理、執行長、經營團隊</td>
+</tr>
+<tr>
+<td>在 42001</td>
+<td>為 AI 政策提供資訊（B.2.3 其他資訊）、ISO/IEC 38507 的對象</td>
+<td>條文 5 的主角</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 在台灣上市櫃公司，董事會就是典型的治理機構。我現在輔導時都會建議：AI 治理的重大議題（例如高衝擊 AI 系統上線、AI 重大事故）要有機制向董事會或其功能性委員會報告。這不是 42001 條文 5 的強制要求，但非常符合「治理」的精神。</p>
+</blockquote>
+<h4>人工智慧系統衝擊評鑑（3.24）</h4>
+<ul>
+<li><strong>定義：</strong>「以正式且文件化的流程，通過該流程，開發、提供或使用人工智慧產品或服務的組織識別、評估並處理對個人、群體或社會的衝擊。」</li>
+<li><strong>三個關鍵詞：</strong>
+  1. <strong>正式且文件化</strong>：不能只是開會口頭討論，要有程序和紀錄；
+  2. <strong>識別、評估並處理</strong>：不只找出來，還要處理；
+  3. <strong>個人、群體或社會</strong>：視角是組織外部的人，而非組織自身。</li>
+<li><strong>與風險評鑑的差別：</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>AI 風險評鑑（6.1.2）</th>
+<th>AI 系統衝擊評鑑（6.1.4）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要視角</td>
+<td>對組織達成目標的影響（也須考慮對個人與社會的後果）</td>
+<td>對個人、群體或社會的衝擊</td>
+</tr>
+<tr>
+<td>典型問題</td>
+<td>模型失效會造成多少營運損失？</td>
+<td>模型誤判會讓哪些人失去權益？</td>
+</tr>
+<tr>
+<td>結果用途</td>
+<td>風險處理、SoA</td>
+<td>作為風險評鑑的輸入，並視需要提供予關注方</td>
+</tr>
+<tr>
+<td>相關指引</td>
+<td>ISO/IEC 23894</td>
+<td>ISO/IEC 42005</td>
+</tr>
+</tbody>
+</table>
+<p>詳細作法在第 5 章說明。</p>
+<h4>資料品質（3.25）</h4>
+<ul>
+<li><strong>定義：</strong>「資料具備滿足組織對特定全景資料要求事項的特性。」來源 ISO/IEC 5259-1。</li>
+<li><strong>白話：</strong>資料品質沒有絕對標準，而是「<strong>相對於用途</strong>」。同一份資料，拿來做行銷分群可能夠好，拿來做醫療判讀就不夠。</li>
+<li><strong>常見的資料品質面向：</strong>完整性、正確性、一致性、時效性、代表性（是否涵蓋各族群）、標註正確性。</li>
+<li><strong>相關控制：</strong>A.7.4 要求組織「定義並文件化資料品質之要求，並確保用於開發和運行人工智慧系統的資料符合這些要求」。</li>
+<li><strong>舉例：</strong>「仁心醫院」的影像輔助判讀模型，若訓練資料大多來自某一型號的設備，換了另一廠牌設備的影像，資料品質就可能「對這個全景」不足。</li>
+</ul>
+<h4>適用性聲明（3.26）</h4>
+<ul>
+<li><strong>定義：</strong>「文件化所有必要的控制措施以及包含或排除這些控制措施的理由的文件。」也就是 SoA（Statement of Applicability）。</li>
+<li><strong>註釋要點：</strong>
+  1. 組織可能不需要附錄 A 中所有控制措施，<strong>甚至可以超過</strong>附錄 A，採用自行建立的額外控制措施；
+  2. 所有已識別的風險及為應對這些風險所建立的控制措施，應反映在適用性聲明中。</li>
+<li><strong>白話：</strong>SoA 就像一張「控制措施點菜單」，每一道菜都要說明「點了，為什麼」或「沒點，為什麼」。而且菜單之外，你也可以加自己的私房菜。</li>
+<li><strong>注意：</strong>依附錄 B.1，組織<strong>不需要</strong>在 SoA 中記錄或證明「實作指引」的納入或排除，SoA 處理的是附錄 A 的「控制措施」層級。</li>
+</ul>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> SoA 是稽核員必看文件。我最常開的缺失是：排除理由寫「不適用」三個字就結束。好的排除理由要能連回組織角色和風險評鑑結果，例如「本公司未自行開發 AI 系統，僅使用經評估之外部 AI 服務，故 A.6.2.3 設計與開發之文件化不適用；外部系統之相關要求以 A.10.3 管理」。</p>
+</blockquote>
+<h3>1.6.3 其他容易混淆的用語對照</h3>
+<table>
+<thead>
+<tr>
+<th>容易混淆</th>
+<th>區別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>量測（3.19）vs 監督（3.20）</td>
+<td>量測得到「數值」；監督得到「狀態」。例：量測模型準確率是 92%；監督模型目前「正常運作中」。</td>
+</tr>
+<tr>
+<td>矯正措施（3.17）vs 修正</td>
+<td>修正是把眼前的問題處理掉；矯正措施要消除<strong>根本原因</strong>並防止再發生。</td>
+</tr>
+<tr>
+<td>有效性（3.13）vs 效率</td>
+<td>有效性看是否「達成規劃結果」，不看花了多少資源。</td>
+</tr>
+<tr>
+<td>能力（3.9）vs 認知</td>
+<td>能力是勝任工作的知識與技能（7.2）；認知是知道政策與自己的貢獻（7.3）。</td>
+</tr>
+<tr>
+<td>文件化資訊（3.10）的兩種型態</td>
+<td>「維持」文件化資訊（程序、政策＝文件）；「保存」文件化資訊（結果證據＝紀錄）。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1.7-應shall宜should可maycan的差異與稽核意義">1.7 應（shall）／宜（should）／可（may/can）的差異與稽核意義</h2>
+<h3>用語規則</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>意義</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>應</strong></td>
+<td>shall</td>
+<td><strong>要求事項</strong>，必須做到</td>
+<td>4.3「範圍應以文件化資訊提供」</td>
+</tr>
+<tr>
+<td><strong>宜</strong></td>
+<td>should</td>
+<td><strong>建議</strong>，被推薦的作法</td>
+<td>B.2.2「人工智慧政策宜考慮以下因素」</td>
+</tr>
+<tr>
+<td><strong>可</strong></td>
+<td>may</td>
+<td><strong>允許</strong>，可以這樣做</td>
+<td>6.1.3 備考 2：組織可以設計超出附錄 A 的控制措施</td>
+</tr>
+<tr>
+<td><strong>可／能</strong></td>
+<td>can</td>
+<td><strong>可能性或能力</strong></td>
+<td>3.10 註釋「文件化資訊能採任何格式及媒體」</td>
+</tr>
+</tbody>
+</table>
+<h3>在 42001 中的分布</h3>
+<ul>
+<li><strong>條文 4–10：</strong>以「應」為主，是驗證時的核心稽核準則。</li>
+<li><strong>附錄 A 表 A.1：</strong>控制措施以「應」敘述，例如 A.2.2「組織應制定並文件化一份關於人工智慧系統開發或使用的政策」。但<strong>是否適用</strong>由組織透過風險處理與 SoA 決定（6.1.3），一旦在 SoA 中宣告適用，就必須落實。</li>
+<li><strong>附錄 B：</strong>同一項控制措施改用「宜」敘述，例如 B.2.2「組織宜制定並文件化……」，實作指引也都是「宜」。附錄 B 是規範性，但其實作指引「並非適用於所有情況」，組織可以擴展、修改或自行定義實施方式。</li>
+<li><strong>備考（Note）與註釋：</strong>提供說明與範例，本身不構成要求事項。</li>
+</ul>
+<h3>稽核意義</h3>
+<table>
+<thead>
+<tr>
+<th>狀況</th>
+<th>稽核判斷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未滿足「應」的要求</td>
+<td>可開立<strong>不符合事項</strong>（依嚴重度分主要／次要）</td>
+</tr>
+<tr>
+<td>未採用「宜」的建議</td>
+<td>通常<strong>不構成不符合</strong>，但稽核員可能詢問理由，或提出觀察事項／改善機會</td>
+</tr>
+<tr>
+<td>SoA 宣告適用但未落實的控制措施</td>
+<td><strong>不符合</strong>（違反 6.1.3 與組織自訂的要求）</td>
+</tr>
+<tr>
+<td>組織自訂程序中寫「應」卻沒做</td>
+<td><strong>不符合</strong>——組織自己的文件化要求也是稽核準則</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 有些組織在自己的程序書裡大量使用「應」，結果每一條都變成自己給自己挖的坑。撰寫內部文件時，建議只對真正必要、能被執行和查證的事項用「應」，其餘用「宜」或「得」。</p>
+<p><strong>💡 Allan 講師說：</strong> 我稽核時有一句口頭禪：「標準的『應』是我的準則，你們程序書的『應』也是我的準則。」所以內部文件寫得越誇張，被開不符合的機會就越高。寫你做得到的，做你寫下來的。</p>
+</blockquote>
+<hr />
+<h2 id="1.8-管理案例智聯科技的用語統一專案虛擬案例">1.8 管理案例：智聯科技的「用語統一」專案（虛擬案例）</h2>
+<ul>
+<li><strong>情境：</strong>「智聯科技」是 AI SaaS 提供者，同時已取得 27001。導入 42001 時，工程部說的「風險」是模型準確率下降，法務說的「風險」是被告，客服說的「風險」是客訴。開會常常雞同鴨講。</li>
+<li><strong>問題：</strong>用語不一致，導致風險評鑑結果無法比較、衝擊評鑑與風險評鑑混為一談。</li>
+<li><strong>對應條文：</strong>條文 3 用語定義、條文 2 引用 22989、7.3 認知、7.4 溝通。</li>
+<li><strong>作法：</strong>
+  1. 建立「AIMS 用語對照表」，以 42001 條文 3 與 22989 為準，加上公司內部常用術語的對照；
+  2. 明確區分「AI 風險評鑑」與「AI 系統衝擊評鑑」的目的、負責人與表單；
+  3. 在新進與年度認知訓練中納入用語課程。</li>
+<li><strong>產出文件：</strong>AIMS 用語對照表、AIMS 手冊第 3 章、訓練簽到與測驗紀錄。</li>
+<li><strong>稽核時看什麼證據：</strong>稽核員抽訪不同部門人員「什麼是衝擊評鑑？與風險評鑑有何不同？」，並比對表單與紀錄是否一致使用用語。</li>
+</ul>
+<hr />
+<h2 id="本章重點回顧">本章重點回顧</h2>
+<ul>
+<li>42001 包含介紹、條文 1–10、附錄 A（規範性，9 大領域 38 項控制措施）、附錄 B（規範性實作指引）、附錄 C 與 D（資訊性）。</li>
+<li>採用 <strong>HS 調和結構</strong>，與 9001、27001、27701 共用條文骨架，便於整合。</li>
+<li>PDCA 對照：P＝4、5、6、7；D＝8；C＝9；A＝10。</li>
+<li>與 27001 最大不同：4.1 須決定 <strong>AI 角色</strong>、新增 <strong>6.1.4／8.4 AI 系統衝擊評鑑</strong>、實作指引以<strong>附錄 B</strong> 內含於標準。</li>
+<li>條文 1：適用於任何提供或使用 AI 系統的組織；條文 4–10 不可排除。</li>
+<li>條文 2：唯一引用標準為 <strong>ISO/IEC 22989:2022</strong>。</li>
+<li>條文 3：共 26 個用語，重點為關注方（含「知覺」受影響者）、風險（不確定性之影響，可正可負）、控制措施（未必有效）、治理機構（如董事會）、AI 系統衝擊評鑑（對個人、群體或社會）、資料品質（相對於全景）、適用性聲明（必要控制措施及納入／排除理由）。</li>
+<li><strong>應＝要求、宜＝建議、可＝允許或可能</strong>；組織自訂文件中的「應」也是稽核準則。</li>
+</ul>
+<h2 id="自我檢測">自我檢測</h2>
+<details>
+<summary>Q1. 依 ISO/IEC 42001 條文 3.2，下列何者「不一定」是關注方？(A) 主管機關 (B) 被 AI 評分的貸款申請人 (C) 擔心被 AI 取代的員工 (D) 與組織完全無關、也不認為自己受影響的他國民眾</summary>
+<p><strong>答案：(D)</strong> 解析：關注方是「可影響、受影響，或知覺本身將受決策或活動影響」的個人或組織。(C) 屬於「知覺」受影響者，也是關注方；(D) 三者皆不符合。</p>
+</details>
+<details>
+<summary>Q2. 「控制措施未必皆發揮所預期或所設想之修改效果」這個註釋，在管理系統中代表什麼意涵？</summary>
+<p><strong>答案：</strong> 有控制措施不等於有效，組織必須監督、量測並評估控制措施的有效性。解析：這連結到 9.1 監督、量測、分析及評估，以及 9.2 內部稽核，稽核員也會要求提出控制措施有效運作的證據。</p>
+</details>
+<details>
+<summary>Q3. AI 系統衝擊評鑑（3.24）與 AI 風險評鑑最主要的視角差異為何？</summary>
+<p><strong>答案：</strong> 衝擊評鑑聚焦於 AI 系統對<strong>個人、群體或社會</strong>的衝擊，且須是正式且文件化的流程；風險評鑑則聚焦於影響組織達成 AI 目標的風險。解析：衝擊評鑑的結果是風險評鑑的重要輸入，兩者相輔相成。</p>
+</details>
+<details>
+<summary>Q4. 附錄 A 表 A.1 的控制措施使用「應」，是否代表 38 項控制措施組織全部都必須實施？</summary>
+<p><strong>答案：</strong> 不是。解析：組織依風險處理（6.1.3）決定必要的控制措施，並在適用性聲明中說明納入或排除的理由；組織甚至可以增加附錄 A 以外的控制措施。但一旦宣告適用，就必須落實。</p>
+</details>
+<details>
+<summary>Q5. 稽核員發現組織未依附錄 B 某項「宜」的實作指引執行，但已用其他方式達成控制目標，應如何判斷？</summary>
+<p><strong>答案：</strong> 通常不構成不符合。解析：附錄 B 的實作指引並非適用於所有情況，組織可以擴展、修改或自行定義實施方式。稽核員應確認組織的替代作法能有效達成控制措施與控制目標。</p>
+</details>
+    <div class="pager"><a href="ch00.html"><small>← 上一章</small>課程導覽與 AI 治理趨勢</a><a class="next" href="ch02.html"><small>下一章 →</small>條文 4 組織全景</a></div>
+  </article>
+</div>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<script src="../assets/js/chapters.js"></script>
+<script>
+(function () {
+  var id = "ch01", btn = document.getElementById("markRead");
+  function refresh() {
+    var p = Progress.load();
+    document.querySelectorAll(".toc a[data-id]").forEach(function (a) {
+      a.classList.toggle("ok", !!(p[a.dataset.id] && p[a.dataset.id].text));
+    });
+    if (p[id] && p[id].text) btn.textContent = "✓ 本章已讀完";
+  }
+  btn.onclick = function () { Progress.mark(id, "text"); refresh(); };
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) { Progress.mark(id, "text"); refresh(); }
+  }, { passive: true });
+  document.querySelectorAll(".toc a").forEach(function (a) { a.addEventListener("click", function () { document.querySelector(".toc").classList.remove("open"); }); });
+  refresh();
+})();
+</script>
+</body>
+</html>

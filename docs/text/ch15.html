@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>驗證流程與稽核技巧｜文字教材｜ISO 42001 線上課程</title>
+<link rel="icon" href="../assets/img/allan.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" onclick="document.querySelector('.toc').classList.toggle('open')" aria-label="章節選單">☰ 章節</button>
+  <a class="logo" href="../index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a class="active" href="ch00.html">文字教材</a>
+    <a href="../video.html?ch=ch15">互動影音</a>
+    <a href="../quiz.html">課後測驗</a>
+  </nav>
+</header>
+<div class="reader">
+  <aside class="toc" aria-label="章節選擇"><h4>課程導覽</h4>
+<a data-id="ch00" href="ch00.html">00｜課程導覽與 AI 治理趨勢</a>
+<h4>標準基礎</h4>
+<a data-id="ch01" href="ch01.html">01｜標準架構與用語定義</a>
+<h4>條文詳解</h4>
+<a data-id="ch02" href="ch02.html">02｜條文 4 組織全景</a>
+<a data-id="ch03" href="ch03.html">03｜條文 5 領導作為</a>
+<a data-id="ch04" href="ch04.html">04｜條文 6 風險評鑑與 SoA</a>
+<a data-id="ch05" href="ch05.html">05｜條文 6 衝擊評鑑與目標</a>
+<a data-id="ch06" href="ch06.html">06｜條文 7 支援</a>
+<a data-id="ch07" href="ch07.html">07｜條文 8 運作</a>
+<a data-id="ch08" href="ch08.html">08｜條文 9 績效評估</a>
+<a data-id="ch09" href="ch09.html">09｜條文 10 改善</a>
+<h4>附錄 A/B 控制措施</h4>
+<a data-id="ch10" href="ch10.html">10｜A.2–A.5 控制措施</a>
+<a data-id="ch11" href="ch11.html">11｜A.6 AI 生命週期</a>
+<a data-id="ch12" href="ch12.html">12｜A.7–A.10 控制措施</a>
+<h4>整合與導入</h4>
+<a data-id="ch13" href="ch13.html">13｜附錄 C/D 與整合導入</a>
+<h4>管理案例</h4>
+<a data-id="ch14" href="ch14.html">14｜六大產業管理案例</a>
+<h4>稽核實務</h4>
+<a class="current" data-id="ch15" href="ch15.html">15｜驗證流程與稽核技巧</a>
+<a data-id="ch16" href="ch16.html">16｜常見不符合與檢查表</a>
+<h4>總複習</h4>
+<a data-id="ch17" href="ch17.html">17｜總複習與測驗說明</a></aside>
+  <article class="doc">
+    <h1>第15章　稽核實務（一）：驗證流程、ISO/IEC 42006 與稽核技巧</h1>
+    <div class="doc-actions">
+      <a class="btn pink" href="../video.html?ch=ch15">▶ 觀看本章互動影音</a>
+      <button class="btn soft" id="markRead">✓ 標記本章已讀</button>
+      <button class="btn soft" onclick="window.print()">🖨 列印／存 PDF</button>
+    </div>
+    <details class="mini-toc" open><summary>📑 本章目錄</summary><ol><li><a href="#15.1-為什麼要學稽核不只是給稽核員看的一章">15.1 為什麼要學稽核？——不只是給稽核員看的一章</a></li><li><a href="#15.2-三種稽核第一方第二方第三方">15.2 三種稽核：第一方、第二方、第三方</a></li><li><a href="#15.3-ISO-19011稽核的七大原則">15.3 ISO 19011：稽核的七大原則</a></li><li><a href="#15.4-AIMS-驗證流程全覽">15.4 AIMS 驗證流程全覽</a></li><li><a href="#15.5-ISOIEC-420062025為什麼需要專屬的驗證機構要求">15.5 ISO/IEC 42006:2025：為什麼需要「專屬」的驗證機構要求？</a></li><li><a href="#15.6-第二階段稽核規劃">15.6 第二階段稽核規劃</a></li><li><a href="#15.7-稽核證據與三角驗證">15.7 稽核證據與三角驗證</a></li><li><a href="#15.8-高階主管訪談題庫">15.8 高階主管訪談題庫</a></li><li><a href="#15.9-技術團隊訪談題庫">15.9 技術團隊訪談題庫</a></li><li><a href="#15.10-稽核員如何看技術文件與系統">15.10 稽核員如何看技術文件與系統</a></li><li><a href="#15.11-遠端稽核注意事項">15.11 遠端稽核注意事項</a></li><li><a href="#15.12-管理案例仁心醫院-AIMS-第二階段稽核實錄虛擬案例">15.12 管理案例：仁心醫院 AIMS 第二階段稽核實錄（虛擬案例）</a></li><li><a href="#本章重點回顧">本章重點回顧</a></li><li><a href="#自我檢測">自我檢測</a></li></ol></details>
+    
+<blockquote>
+<p>學習目標：① 分辨第一方、第二方、第三方稽核，並能說出 ISO 19011 的七大稽核原則；② 完整說明 AIMS 驗證流程（申請 → 第一階段 → 第二階段 → 發證 → 監督 → 重新驗證）與各階段重點；③ 理解 ISO/IEC 42006 對驗證機構與稽核員的額外要求；④ 學會以「AI 系統抽樣 + 追蹤稽核法」規劃第二階段稽核，並用三角驗證蒐集稽核證據；⑤ 能運用高階主管與技術團隊訪談題庫，看懂模型卡、驗證報告、監控儀表板與日誌。</p>
+</blockquote>
+<hr />
+<h2 id="15.1-為什麼要學稽核不只是給稽核員看的一章">15.1 為什麼要學稽核？——不只是給稽核員看的一章</h2>
+<p>很多學員以為「稽核」是稽核員的事，導入團隊只要「準備好被稽核」就好。這是錯的。原因有三：</p>
+<ol>
+<li><strong>條文 9.2 要求組織自己做內部稽核</strong>。你的內稽員需要的技巧，跟第三方稽核員幾乎一樣。</li>
+<li><strong>A.10.3 要求你管理 AI 供應商</strong>。你去稽核供應商（第二方稽核）時，就是用本章的方法。</li>
+<li><strong>知道稽核員怎麼想，導入才不會做白工</strong>。稽核員要的是「證據」，不是「漂亮的文件」。</li>
+</ol>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 我當主導稽核員這些年，最常看到的狀況是：程序書寫得像教科書，但問到「請給我看上個月模型重新訓練的核准紀錄」，現場一片安靜。稽核不是考你會不會寫，而是看你有沒有做、做得有沒有效。</p>
+</blockquote>
+<hr />
+<h2 id="15.2-三種稽核第一方第二方第三方">15.2 三種稽核：第一方、第二方、第三方</h2>
+<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>誰稽核誰</th>
+<th>典型情境</th>
+<th>依據</th>
+<th>AI 情境範例（虛擬案例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一方稽核（內部稽核）</td>
+<td>組織稽核自己</td>
+<td>條文 9.2 內部稽核</td>
+<td>ISO 42001 + 組織自訂要求</td>
+<td>福爾摩沙銀行內稽小組稽核「信用評分模型」的變更流程</td>
+</tr>
+<tr>
+<td>第二方稽核</td>
+<td>客戶稽核供應商，或組織稽核其外部提供者</td>
+<td>採購前評估、合約約定的稽核權</td>
+<td>合約、A.10.3、客戶要求</td>
+<td>智聯科技的金融業客戶依合約約定的稽核權，稽核智聯科技的 AI 文件智慧處理 SaaS</td>
+</tr>
+<tr>
+<td>第三方稽核</td>
+<td>獨立驗證機構稽核組織</td>
+<td>取得 ISO 42001 證書</td>
+<td>ISO 42001、ISO/IEC 17021-1、ISO/IEC 42006</td>
+<td>驗證機構對仁心醫院 AIMS 進行驗證稽核</td>
+</tr>
+</tbody>
+</table>
+<h3>三者的關鍵差異</h3>
+<ul>
+<li><strong>獨立性</strong>：第三方最高；第一方要靠「稽核員不稽核自己的工作」來確保客觀與公平（9.2.2 b）。</li>
+<li><strong>結果用途</strong>：第一方用於改善與管審輸入（9.3.2 d）3)）；第二方用於供應商選擇與管理；第三方用於發證與對外公信。</li>
+<li><strong>可追究的依據</strong>：第二方稽核常常還會包括合約中的 SLA、資料使用限制、模型更新通知義務等，超出 42001 本身。</li>
+</ul>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 那如果我們公司請顧問來「模擬稽核」，那算第幾方？</p>
+<p><strong>Allan：</strong> 好問題！顧問受你委託、代表你看自己的系統，本質上是<strong>第一方</strong>稽核的延伸。它可以當作內部稽核的一部分，但要注意：如果同一位顧問也幫你寫了程序書，他去稽核自己寫的東西就有客觀性疑慮，最好另外找人。</p>
+</blockquote>
+<hr />
+<h2 id="15.3-ISO-19011稽核的七大原則">15.3 ISO 19011：稽核的七大原則</h2>
+<p>ISO 19011（管理系統稽核指導綱要）是所有管理系統稽核的共同語言。它的七大原則同樣適用於 AIMS 稽核：</p>
+<table>
+<thead>
+<tr>
+<th>原則</th>
+<th>意義</th>
+<th>在 AI 稽核中的提醒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>誠信 (Integrity)</td>
+<td>專業的基礎，誠實、勤勉、負責</td>
+<td>不懂的技術要承認並請專家協助，不要裝懂</td>
+</tr>
+<tr>
+<td>公正陳述 (Fair presentation)</td>
+<td>如實、準確地報告</td>
+<td>不要因為對方是知名 AI 公司就放水，也不要因不懂而誇大</td>
+</tr>
+<tr>
+<td>專業上應有的注意 (Due professional care)</td>
+<td>審慎判斷</td>
+<td>模型準確率高不代表沒有偏差，要多問一句</td>
+</tr>
+<tr>
+<td>保密 (Confidentiality)</td>
+<td>資訊安全</td>
+<td>訓練資料、模型權重、提示詞常是營業秘密，不要截圖帶走</td>
+</tr>
+<tr>
+<td>獨立性 (Independence)</td>
+<td>公正與客觀的基礎</td>
+<td>稽核員不應稽核自己參與設計的 AI 系統</td>
+</tr>
+<tr>
+<td>基於證據的方法 (Evidence-based approach)</td>
+<td>結論要可查證</td>
+<td>「工程師說有在監控」不是證據，儀表板與告警紀錄才是</td>
+</tr>
+<tr>
+<td>基於風險的方法 (Risk-based approach)</td>
+<td>稽核規劃聚焦重要風險</td>
+<td>高衝擊 AI 系統（信用評分、醫療判讀、人才篩選）要多抽、深抽</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 「基於風險的方法」在 AIMS 稽核特別重要。同一家公司可能有 30 個 AI 系統，從內部文件摘要工具到影響客戶貸款核准的模型都有。稽核時間有限，你一定要把力氣花在衝擊最大的系統上。</p>
+</blockquote>
+<hr />
+<h2 id="15.4-AIMS-驗證流程全覽">15.4 AIMS 驗證流程全覽</h2>
+<p>AIMS 第三方驗證依循 <strong>ISO/IEC 17021-1</strong>（管理系統驗證機構要求）以及補充性的 <strong>ISO/IEC 42006:2025</strong>（2025-07 發布）。流程如下：</p>
+<pre><code>申請與報價 → 合約審查 → 第一階段稽核（文件與準備度）
+   → 第二階段稽核（實施有效性） → 不符合事項矯正
+   → 技術審查與發證決定 → 證書（3 年）
+   → 第 1 年監督稽核 → 第 2 年監督稽核 → 第 3 年重新驗證
+</code></pre>
+<h3>15.4.1 申請與合約審查</h3>
+<p>組織向驗證機構提出申請，通常要填寫申請表，提供：</p>
+<ul>
+<li>擬驗證範圍（組織、場所、AI 系統、AI 角色）</li>
+<li>人員規模、場所數量</li>
+<li><strong>AI 系統的數量、類型與複雜度</strong>（例如是否使用機器學習、是否持續學習、是否屬高衝擊應用）</li>
+<li>組織在 AI 系統中的角色（提供者、開發者、使用者……，參見 4.1 備考 1）</li>
+<li>是否已有其他管理系統驗證（如 ISO/IEC 27001），是否要整合稽核</li>
+<li>委外流程、重要 AI 供應商</li>
+</ul>
+<p>驗證機構進行<strong>合約審查</strong>（application review），確認：</p>
+<ul>
+<li>範圍是否清楚、可驗證？</li>
+<li>機構是否有該技術領域的能力（有沒有合格的稽核員與技術專家）？</li>
+<li>稽核時間（人天）如何計算？——依認證規範與 ISO/IEC 42006 的要求，考量人數、AI 系統複雜度、場所等因素決定，<strong>每家機構會依規則計算，本課程不提供具體數字</strong>。</li>
+<li>是否有利益衝突（例如該機構關係企業曾為客戶提供 AIMS 顧問服務）。</li>
+</ul>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 「範圍寫小一點比較好過」。範圍寫小可以，但必須合理、邊界清楚，而且不能把<strong>會影響範圍內 AI 系統的關鍵活動</strong>排除。例如範圍寫「AI 客服服務」，卻排除「模型訓練由總部資料科學部負責」，稽核員一定會追問：那訓練資料品質誰管？範圍邊界的介面怎麼控制？</p>
+</blockquote>
+<h3>15.4.2 第一階段稽核（Stage 1）</h3>
+<p><strong>目的</strong>：評估組織是否準備好接受第二階段稽核。重點在<strong>文件審查與準備度</strong>，可能部分在現場、部分遠端。</p>
+<p>第一階段要確認的事：</p>
+<ol>
+<li>範圍與邊界是否明確，AI 角色是否決定。</li>
+<li>強制性文件化資訊是否存在。</li>
+<li>是否已完成至少一輪內部稽核與管理審查。</li>
+<li>組織對 AI 系統的理解程度、重要風險與衝擊是否已識別。</li>
+<li>規劃第二階段所需的資訊：場所、AI 系統清單、關鍵人員、抽樣基礎。</li>
+</ol>
+<p>第一階段發現的問題，通常以「關注事項」（area of concern）列出，若未在第二階段前處理，可能在第二階段被開為不符合事項。</p>
+<h3>15.4.3 第一階段文件審查「必看清單」</h3>
+<p>以下是 Allan 在第一階段一定會要的文件清單。左欄是條文依據，右欄是看的重點：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>文件化資訊</th>
+<th>條文依據</th>
+<th>稽核員看什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>AIMS 範圍</td>
+<td>4.3</td>
+<td>邊界、AI 系統、場所、介面、是否考慮 4.1/4.2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>組織全景與 AI 角色分析</td>
+<td>4.1</td>
+<td>是否決定每個 AI 系統的角色、是否評估氣候變遷議題</td>
+</tr>
+<tr>
+<td>3</td>
+<td>關注方與要求事項清單</td>
+<td>4.2</td>
+<td>是否含監管機關、AI 主體、客戶；哪些要求透過 AIMS 處理</td>
+</tr>
+<tr>
+<td>4</td>
+<td>AI 系統清冊</td>
+<td>4.1、6.1、A.4</td>
+<td>是否完整，有無預期用途、負責人、風險等級</td>
+</tr>
+<tr>
+<td>5</td>
+<td>人工智慧政策</td>
+<td>5.2、A.2.2</td>
+<td>a)–d) 四要素、核准、傳達、對外提供</td>
+</tr>
+<tr>
+<td>6</td>
+<td>角色、責任及權限</td>
+<td>5.3、A.3.2</td>
+<td>是否指派 AIMS 負責人與績效報告責任</td>
+</tr>
+<tr>
+<td>7</td>
+<td>AI 風險準則</td>
+<td>6.1.1</td>
+<td>是否區分可接受與不可接受風險</td>
+</tr>
+<tr>
+<td>8</td>
+<td>AI 風險評鑑流程與結果</td>
+<td>6.1.2、8.2</td>
+<td>可重複、一致、可比較；是否考量衝擊評鑑結果</td>
+</tr>
+<tr>
+<td>9</td>
+<td>AI 風險處理流程、處理計畫</td>
+<td>6.1.3、8.3</td>
+<td>是否經指定管理層核准、剩餘風險接受</td>
+</tr>
+<tr>
+<td>10</td>
+<td>適用性聲明（SoA）</td>
+<td>6.1.3 f)</td>
+<td>38 項全列、納入/排除理由；實施狀態非 6.1.3 明文要求，但多數組織會一併記錄</td>
+</tr>
+<tr>
+<td>11</td>
+<td>AI 系統衝擊評鑑流程與結果</td>
+<td>6.1.4、8.4、A.5</td>
+<td>是否涵蓋個人、群體、社會；預期用途與可預見濫用</td>
+</tr>
+<tr>
+<td>12</td>
+<td>AI 目標與達成計畫</td>
+<td>6.2</td>
+<td>可量測、負責人、時程、評估方式</td>
+</tr>
+<tr>
+<td>13</td>
+<td>能力證據</td>
+<td>7.2</td>
+<td>職能需求、訓練紀錄、有效性評估</td>
+</tr>
+<tr>
+<td>14</td>
+<td>運作規劃與控制所需文件</td>
+<td>8.1</td>
+<td>足以證明流程依規劃執行</td>
+</tr>
+<tr>
+<td>15</td>
+<td>監督量測結果</td>
+<td>9.1</td>
+<td>指標、方法、頻率、分析</td>
+</tr>
+<tr>
+<td>16</td>
+<td>內部稽核方案與報告</td>
+<td>9.2</td>
+<td>是否涵蓋全範圍與 AI 技術流程</td>
+</tr>
+<tr>
+<td>17</td>
+<td>管理審查紀錄</td>
+<td>9.3</td>
+<td>9.3.2 a)–e) 輸入是否齊備，9.3.3 決策</td>
+</tr>
+<tr>
+<td>18</td>
+<td>不符合事項與矯正措施紀錄</td>
+<td>10.2</td>
+<td>原因分析、有效性審查</td>
+</tr>
+<tr>
+<td>19</td>
+<td>AI 生命週期程序（需求、設計、驗證確認、部署、運作監控）</td>
+<td>A.6</td>
+<td>是否有發布準則、監控要素</td>
+</tr>
+<tr>
+<td>20</td>
+<td>資料管理程序（獲取、品質、來歷、準備）</td>
+<td>A.7</td>
+<td>是否可追溯到資料來源</td>
+</tr>
+<tr>
+<td>21</td>
+<td>使用者資訊、外部通報、事故溝通計畫</td>
+<td>A.8</td>
+<td>告知使用者正在與 AI 互動、通報管道</td>
+</tr>
+<tr>
+<td>22</td>
+<td>第三方責任分配、供應商管理</td>
+<td>A.10</td>
+<td>合約、責任矩陣、供應商評估紀錄</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 第一階段我最愛先看三份文件：<strong>範圍、AI 系統清冊、SoA</strong>。這三份如果對不起來（例如清冊有 12 個系統，SoA 只談 3 個；範圍說是「提供者」，SoA 卻把 A.6 開發相關控制措施全部排除），我就知道第二階段會很精彩。</p>
+</blockquote>
+<h3>15.4.4 第二階段稽核（Stage 2）</h3>
+<p><strong>目的</strong>：評估 AIMS 的<strong>實施與有效性</strong>，在現場（或遠端）透過訪談、觀察、紀錄查核，確認組織真的「說到做到」，而且做了有效果。</p>
+<p>第二階段涵蓋：</p>
+<ul>
+<li>條文 4–10 全部要求事項的實施證據</li>
+<li>SoA 中納入之控制措施的實施與有效性</li>
+<li>績效監督、內部稽核、管理審查的運作</li>
+<li>最高管理階層的領導與承諾</li>
+<li>法規與契約要求事項的連結（例如 EU AI Act、台灣《人工智慧基本法》帶出的主管機關規範）</li>
+</ul>
+<h3>15.4.5 不符合事項的矯正</h3>
+<p>第二階段若開出不符合事項：</p>
+<ul>
+<li><strong>主要不符合（major）</strong>：通常需在發證決定前完成矯正並提出有效證據，驗證機構可能需要追查稽核（follow-up audit）才能確認。</li>
+<li><strong>次要不符合（minor）</strong>：組織需提出矯正措施計畫，經驗證機構接受，實施有效性通常在下次稽核確認。</li>
+<li>提交時限依各驗證機構規定。</li>
+</ul>
+<p>矯正措施回覆至少要包括：<strong>矯正（立即處理）、原因分析、矯正措施（消除原因）、類似問題水平展開、有效性確認方式</strong>——就是 10.2 a)–e)。下一章會詳細示範寫法。</p>
+<h3>15.4.6 技術審查與發證</h3>
+<p>稽核報告與矯正措施會交由驗證機構內<strong>未參與該次稽核</strong>的人員進行技術審查（independent review），由其做出驗證決定。這是 17021-1 確保公正性的設計。通過後發證，證書載明：</p>
+<ul>
+<li>組織名稱與場所</li>
+<li>驗證範圍（含 AI 系統類型或活動、組織角色）</li>
+<li>標準：ISO/IEC 42001:2023</li>
+<li>有效期（<strong>3 年</strong>）</li>
+</ul>
+<h3>15.4.7 監督稽核與重新驗證</h3>
+<table>
+<thead>
+<tr>
+<th>時間點</th>
+<th>稽核類型</th>
+<th>重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 年</td>
+<td>監督稽核</td>
+<td>內稽、管審、矯正措施有效性、變更、部分條文與控制措施抽查</td>
+</tr>
+<tr>
+<td>第 2 年</td>
+<td>監督稽核</td>
+<td>補足第 1 年未抽到的部分，三年內覆蓋全部</td>
+</tr>
+<tr>
+<td>第 3 年</td>
+<td>重新驗證稽核</td>
+<td>全系統再評估，確認持續的適切性與有效性，換發證書</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> AI 的變更速度比傳統 IT 快很多。監督稽核時，我第一個問題一定是：「去年稽核到現在，新增、下架或重大變更了哪些 AI 系統？」接著對照 8.2、8.4：重大變更時有沒有重做風險評鑑與衝擊評鑑？這一題能抓出一半以上的問題。</p>
+</blockquote>
+<hr />
+<h2 id="15.5-ISOIEC-420062025為什麼需要專屬的驗證機構要求">15.5 ISO/IEC 42006:2025：為什麼需要「專屬」的驗證機構要求？</h2>
+<h3>15.5.1 背景</h3>
+<p>ISO/IEC 17021-1 是所有管理系統驗證機構的通用要求；但 AI 有其特殊性：技術複雜、風險跨越個人與社會、生命週期短、資料與模型難以用傳統方式「看見」。因此 ISO/IEC 42006:2025（2025-07 發布）<strong>補充</strong> 17021-1，規定執行 AIMS 稽核與驗證的機構需額外滿足的要求。</p>
+<h3>15.5.2 重點方向（一般性說明）</h3>
+<table>
+<thead>
+<tr>
+<th>面向</th>
+<th>42006 帶來的額外要求方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>稽核員能力</td>
+<td>稽核員除管理系統稽核能力外，需具備 AI 相關知識，例如 AI 概念與術語（ISO/IEC 22989）、AI 生命週期、資料管理、AI 風險與衝擊評鑑、AI 相關法規與倫理議題</td>
+</tr>
+<tr>
+<td>稽核團隊組成</td>
+<td>稽核團隊<strong>整體</strong>需具備與受稽核組織 AI 技術領域相符的能力；不足時納入技術專家，但結論由稽核員負責</td>
+</tr>
+<tr>
+<td>技術領域</td>
+<td>驗證機構需界定 AI 相關的技術領域，並依領域評估與指派合格人員</td>
+</tr>
+<tr>
+<td>稽核時間</td>
+<td>稽核時間的決定需考量 AI 系統的數量、複雜度、組織角色等因素，不能只用人數計算</td>
+</tr>
+<tr>
+<td>驗證決定人員</td>
+<td>技術審查與發證決定者同樣需具備足夠的 AI 相關知識</td>
+</tr>
+<tr>
+<td>公正性</td>
+<td>對 AI 顧問服務與驗證服務的利益衝突需特別控管</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 「42006 是給組織遵循的標準」。不是！42006 的對象是<strong>驗證機構</strong>。組織導入 AIMS 仍以 42001 為準。不過，了解 42006 能讓你預期稽核員會用什麼能力水準來看你，例如他可能真的會問「你們的資料漂移怎麼偵測」。</p>
+<p><strong>🎀 阿拉蕾發問：</strong> 欸欸欸，那以後稽核員都要會寫程式嗎？</p>
+<p><strong>Allan：</strong> 不用會寫模型，但要「看得懂、問得對」。就像資安稽核員不一定會寫防火牆規則，但看得懂規則表、知道 any-any 是問題。AI 稽核員要看得懂混淆矩陣、知道訓練集和測試集混在一起是大問題。</p>
+</blockquote>
+<hr />
+<h2 id="15.6-第二階段稽核規劃">15.6 第二階段稽核規劃</h2>
+<h3>15.6.1 稽核計畫要素</h3>
+<p>一份好的 AIMS 第二階段稽核計畫應包括：</p>
+<ol>
+<li>稽核目標、準則（ISO 42001、組織 AIMS 文件、適用法規與合約）、範圍</li>
+<li>日程：開場會議 → 各時段訪談對象與主題 → 每日稽核團隊會議 → 結束會議</li>
+<li><strong>AI 系統抽樣清單</strong>與抽樣理由</li>
+<li>稽核團隊分工（稽核員、技術專家、觀察員）</li>
+<li>遠端或現場方式、所需系統存取權限</li>
+<li>保密與資訊處理安排</li>
+</ol>
+<h3>15.6.2 依 AI 系統抽樣</h3>
+<p>AI 系統清冊是抽樣的母體。抽樣考量：</p>
+<table>
+<thead>
+<tr>
+<th>抽樣因子</th>
+<th>優先抽查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>衝擊程度</td>
+<td>影響個人權益（授信、醫療、招募、保險）的系統</td>
+</tr>
+<tr>
+<td>組織角色</td>
+<td>同時擔任開發者與提供者的系統（A.6 控制措施最多）</td>
+</tr>
+<tr>
+<td>學習型態</td>
+<td>持續學習、線上更新的模型</td>
+</tr>
+<tr>
+<td>技術型態</td>
+<td>生成式 AI（幻覺、提示注入、資料外洩風險）</td>
+</tr>
+<tr>
+<td>變更狀況</td>
+<td>近期上線、重大變更、即將退役的系統</td>
+</tr>
+<tr>
+<td>來源</td>
+<td>依賴第三方模型或 API 的系統（A.10）</td>
+</tr>
+<tr>
+<td>過往發現</td>
+<td>上次稽核或內稽有發現的系統</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 我抽樣習慣用「一高、一新、一外」：一個高衝擊系統、一個最新上線或剛變更的系統、一個大量依賴外部供應商的系統。三個系統就能覆蓋大部分的附錄 A 控制措施。</p>
+</blockquote>
+<h3>15.6.3 流程導向稽核（Process approach）</h3>
+<p>不要「條文逐條唸」，而是<strong>按流程稽核</strong>，每個流程同時覆蓋多個條文：</p>
+<table>
+<thead>
+<tr>
+<th>稽核流程</th>
+<th>涵蓋條文 / 控制措施</th>
+<th>主要受訪者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>領導與治理</td>
+<td>4、5、6.2、9.3、A.2、A.3.2</td>
+<td>最高管理階層、AIMS 負責人</td>
+</tr>
+<tr>
+<td>風險與衝擊管理</td>
+<td>6.1、8.2–8.4、A.5</td>
+<td>風險管理、法遵、衝擊評鑑者</td>
+</tr>
+<tr>
+<td>AI 系統開發生命週期</td>
+<td>8.1、A.6、A.4</td>
+<td>產品經理、資料科學家、MLOps</td>
+</tr>
+<tr>
+<td>資料管理</td>
+<td>A.7、A.4.3</td>
+<td>資料工程師、資料治理</td>
+</tr>
+<tr>
+<td>使用與關注方溝通</td>
+<td>7.4、A.8、A.9</td>
+<td>業務單位、客服、公關</td>
+</tr>
+<tr>
+<td>供應商與客戶</td>
+<td>8.1、A.10</td>
+<td>採購、法務、供應商管理</td>
+</tr>
+<tr>
+<td>支援</td>
+<td>7.1–7.5、A.4.6</td>
+<td>人資、文管</td>
+</tr>
+<tr>
+<td>績效與改善</td>
+<td>9.1、9.2、10</td>
+<td>內稽、品質/稽核單位</td>
+</tr>
+</tbody>
+</table>
+<h3>15.6.4 「追蹤稽核法」：跟著一個 AI 系統從需求走到退役</h3>
+<p>這是 AIMS 稽核最有效的技巧。選一個抽樣的 AI 系統，請受稽核方<strong>依時間順序</strong>展示它的一生，每一站都要求證據：</p>
+<table>
+<thead>
+<tr>
+<th>站點</th>
+<th>問題</th>
+<th>預期證據</th>
+<th>條文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 構想與需求</td>
+<td>為什麼要做這個 AI？誰提出？預期用途是什麼？</td>
+<td>需求規格、商業案例、預期用途說明</td>
+<td>A.6.2.2、A.9.4</td>
+</tr>
+<tr>
+<td>② 角色決定</td>
+<td>在這個系統你是開發者、提供者還是使用者？</td>
+<td>角色分析、清冊欄位</td>
+<td>4.1</td>
+</tr>
+<tr>
+<td>③ 風險與衝擊</td>
+<td>上線前做過哪些評鑑？可預見濫用想過嗎？</td>
+<td>風險評鑑表、衝擊評鑑報告、核准紀錄</td>
+<td>6.1.2、6.1.4、A.5</td>
+</tr>
+<tr>
+<td>④ 資料</td>
+<td>訓練資料從哪來？有授權嗎？品質怎麼檢查？</td>
+<td>資料清單、資料來歷紀錄、品質報告</td>
+<td>A.7.2–A.7.6</td>
+</tr>
+<tr>
+<td>⑤ 設計開發</td>
+<td>為什麼選這個演算法？設計決策記在哪？</td>
+<td>設計文件、實驗紀錄、版本控制</td>
+<td>A.6.1.3、A.6.2.3</td>
+</tr>
+<tr>
+<td>⑥ 驗證確認</td>
+<td>測什麼？通過標準是什麼？誰簽核？</td>
+<td>驗證報告、發布準則、簽核紀錄</td>
+<td>A.6.2.4</td>
+</tr>
+<tr>
+<td>⑦ 部署</td>
+<td>部署前滿足哪些要求？使用者被告知了嗎？</td>
+<td>部署計畫、上線檢核表、使用者資訊</td>
+<td>A.6.2.5、A.8.2</td>
+</tr>
+<tr>
+<td>⑧ 運作監控</td>
+<td>怎麼知道模型還準？漂移怎麼偵測？</td>
+<td>監控儀表板、告警紀錄、事件日誌</td>
+<td>A.6.2.6、A.6.2.8、9.1</td>
+</tr>
+<tr>
+<td>⑨ 事件與回饋</td>
+<td>有沒有使用者抱怨或事故？怎麼處理？</td>
+<td>外部通報紀錄、事故溝通紀錄、矯正措施</td>
+<td>A.8.3、A.8.4、10.2</td>
+</tr>
+<tr>
+<td>⑩ 變更</td>
+<td>重新訓練時重做評鑑了嗎？</td>
+<td>變更申請、重新評鑑紀錄</td>
+<td>6.3、8.1、8.2、8.4</td>
+</tr>
+<tr>
+<td>⑪ 退役</td>
+<td>系統停用時資料與模型怎麼處理？使用者怎麼通知？</td>
+<td>退役計畫、資料處置紀錄</td>
+<td>A.6.2、A.4.6</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 追蹤稽核法最大的威力在於「<strong>斷點</strong>」。例如風險評鑑寫「以人工複核降低誤判風險」（③），但到了⑧問客服主管，他說「AI 判斷完直接寄信給客戶，沒有人工複核」。這個斷點就是不符合事項——風險處理計畫未被實施（8.3）。</p>
+</blockquote>
+<hr />
+<h2 id="15.7-稽核證據與三角驗證">15.7 稽核證據與三角驗證</h2>
+<h3>15.7.1 三種證據來源</h3>
+<table>
+<thead>
+<tr>
+<th>來源</th>
+<th>例子</th>
+<th>強度</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件與紀錄</td>
+<td>程序書、風險評鑑表、核准單、驗證報告</td>
+<td>中—高</td>
+<td>可能「事後補做」</td>
+</tr>
+<tr>
+<td>訪談</td>
+<td>主管、資料科學家、使用者的說法</td>
+<td>低—中</td>
+<td>主觀、可能理想化</td>
+</tr>
+<tr>
+<td>觀察 / 系統紀錄</td>
+<td>現場看儀表板、調閱日誌、看 Git 提交歷史、看 MLflow 實驗紀錄</td>
+<td>高</td>
+<td>需要存取權限與判讀能力</td>
+</tr>
+</tbody>
+</table>
+<h3>15.7.2 三角驗證（Triangulation）</h3>
+<p><strong>同一個結論，至少用兩種、最好三種來源互相印證</strong>。</p>
+<p>範例（虛擬案例：才庫人力 AI 履歷篩選）：</p>
+<ul>
+<li><strong>文件</strong>：〈AI 模型公平性測試程序〉規定每季檢測性別、年齡群組的通過率差異。</li>
+<li><strong>訪談</strong>：資料科學家說「我們每季都有跑公平性測試」。</li>
+<li><strong>系統紀錄</strong>：調閱排程系統，發現公平性測試作業最後一次成功執行是 8 個月前，之後因資料欄位改名而失敗，沒有人處理。</li>
+</ul>
+<p>結論：程序存在、人員認知存在，但<strong>實施無效</strong>，應開立不符合事項（A.6.2.6 運作與監控 / 9.1 監督量測）。</p>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 新手稽核員最常犯的錯就是「訪談完就打勾」。記住一句話：<strong>聽到的是線索，看到的才是證據。</strong></p>
+</blockquote>
+<h3>15.7.3 抽樣與時間範圍</h3>
+<ul>
+<li>紀錄抽樣要有時間跨度（例如過去 6–12 個月），避免只看「稽核前一週補的」。</li>
+<li>注意檔案的建立時間、版本歷史、簽核時間戳記是否合理。</li>
+<li>系統紀錄（日誌、Git、工單系統）比 Word 檔更難事後修改，是較強的證據。</li>
+</ul>
+<hr />
+<h2 id="15.8-高階主管訪談題庫">15.8 高階主管訪談題庫</h2>
+<p>最高管理階層訪談通常 30–60 分鐘，目的在驗證條文 5 的「領導及承諾」是真的，不是只有簽名。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>問題</th>
+<th>想驗證什麼</th>
+<th>對應條文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>公司為什麼要導入 AIMS？跟公司策略有什麼關係？</td>
+<td>政策與策略方向相容</td>
+<td>5.1、5.2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>公司目前最重要的 AI 系統是哪幾個？它們可能出什麼事？</td>
+<td>對 AI 風險的理解</td>
+<td>4.1、6.1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>公司對 AI 風險的「可接受程度」是怎麼決定的？您參與了嗎？</td>
+<td>風險準則與風險胃納</td>
+<td>6.1.1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>剩餘風險是誰核准接受的？最近一次核准是什麼？</td>
+<td>指定管理層核准</td>
+<td>6.1.3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>今年的 AI 目標是什麼？現在達成多少？</td>
+<td>目標可量測且受監控</td>
+<td>6.2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>AIMS 需要的人力與預算，去年和今年有什麼變化？</td>
+<td>資源可取得</td>
+<td>5.1、7.1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>誰負責向您報告 AIMS 績效？多久報告一次？</td>
+<td>角色與報告責任</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>8</td>
+<td>上次管理審查做了哪些決定？執行狀況如何？</td>
+<td>管審有效性</td>
+<td>9.3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>如果業務單位想用一個新的生成式 AI 工具，流程是什麼？</td>
+<td>AIMS 整合進營運流程</td>
+<td>5.1、A.9.2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>員工若發現 AI 系統有問題，可以向誰反映？會不會被處罰？</td>
+<td>關注事項通報文化</td>
+<td>A.3.3、5.1 備考 2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>有沒有發生過 AI 相關事件？您怎麼知道的？</td>
+<td>事件升級機制</td>
+<td>A.8.4、10.2</td>
+</tr>
+<tr>
+<td>12</td>
+<td>EU AI Act 或台灣《人工智慧基本法》對我們有什麼影響？</td>
+<td>外部議題與法規要求</td>
+<td>4.1、4.2</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 那如果總經理答不出來，就是不符合嗎？</p>
+<p><strong>Allan：</strong> 不一定。總經理不需要記住每個數字，但要「知道方向、知道誰負責、知道去哪裡看」。如果他說「我們的 AI 風險由資訊長每季跟我報告，最近一次報告提到客服機器人的幻覺率」，這就很好了。若他完全不知道公司有 AIMS 在跑，那 5.1 就很難說有展現領導。</p>
+</blockquote>
+<hr />
+<h2 id="15.9-技術團隊訪談題庫">15.9 技術團隊訪談題庫</h2>
+<h3>15.9.1 資料科學家 / 模型開發者</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>問題</th>
+<th>期待看到的證據</th>
+<th>對應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>這個模型的預期用途和「不該用在哪裡」寫在哪？</td>
+<td>模型卡、需求規格</td>
+<td>A.6.2.2、A.9.4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>訓練資料的來源、取得時間、授權狀態？</td>
+<td>資料清單、資料來歷紀錄</td>
+<td>A.7.3、A.7.5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>資料品質要求是什麼？怎麼確認符合？</td>
+<td>資料品質規則、檢核報告</td>
+<td>A.7.4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>資料清理、標註、特徵工程的準則？標註者怎麼管理？</td>
+<td>資料準備程序、標註指引</td>
+<td>A.7.6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>怎麼切分訓練、驗證、測試集？有沒有資料洩漏的檢查？</td>
+<td>實驗紀錄、切分程式碼</td>
+<td>A.6.2.4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>用哪些指標評估？門檻值誰訂的？為什麼是這個數字？</td>
+<td>驗證報告、發布準則</td>
+<td>A.6.2.4、A.6.2.5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>有沒有針對不同族群做分群評估（公平性、偏差）？</td>
+<td>分群指標報告</td>
+<td>A.5.4、A.6.1.2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>有沒有做穩健性或對抗性測試？</td>
+<td>測試報告</td>
+<td>A.6.2.4</td>
+</tr>
+<tr>
+<td>9</td>
+<td>模型的可解釋性怎麼提供給使用者？</td>
+<td>解釋報告、使用者文件</td>
+<td>A.8.2、A.6.2.7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>你們用了哪些開源模型或預訓練模型？授權條款確認過嗎？</td>
+<td>工具與元件清單</td>
+<td>A.4.4、A.10.3</td>
+</tr>
+</tbody>
+</table>
+<h3>15.9.2 MLOps / 維運工程師</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>問題</th>
+<th>期待看到的證據</th>
+<th>對應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>模型怎麼從開發環境進到正式環境？誰核准？</td>
+<td>CI/CD 流水線、核准紀錄</td>
+<td>A.6.2.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>正式環境的模型版本怎麼追溯到訓練資料與程式碼？</td>
+<td>模型登錄庫（model registry）</td>
+<td>A.7.5、7.5.3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>監控哪些指標？資料漂移、概念漂移怎麼偵測？</td>
+<td>監控儀表板、告警設定</td>
+<td>A.6.2.6、9.1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>告警響了之後誰處理？給我看最近一次告警的處理紀錄。</td>
+<td>工單、事件紀錄</td>
+<td>A.6.2.6、A.8.4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>事件日誌記錄哪些欄位？保存多久？誰能存取？</td>
+<td>日誌設定、留存政策</td>
+<td>A.6.2.8</td>
+</tr>
+<tr>
+<td>6</td>
+<td>模型回滾（rollback）怎麼做？演練過嗎？</td>
+<td>回滾程序、演練紀錄</td>
+<td>A.6.2.6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>運算資源（GPU、雲端服務）怎麼管理？</td>
+<td>資源清單、容量規劃</td>
+<td>A.4.5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>雲端 AI 服務或模型 API 換版時，你們怎麼知道？</td>
+<td>供應商通知、變更紀錄</td>
+<td>A.10.3、8.1</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 問技術人員時，最有效的一句話是：「<strong>可以打開給我看嗎？</strong>」不要讓他講十分鐘架構圖。打開模型登錄庫、打開儀表板、打開最近一張告警工單。真正有在做的團隊，三十秒就打得開。</p>
+</blockquote>
+<hr />
+<h2 id="15.10-稽核員如何看技術文件與系統">15.10 稽核員如何看技術文件與系統</h2>
+<h3>15.10.1 模型卡（Model card）</h3>
+<p>模型卡是 A.6.2.7 技術文件化與 A.8.2 使用者資訊的常見載體。看的重點：</p>
+<ul>
+<li><strong>預期用途與非預期用途</strong>是否寫清楚？與實際使用情況一致嗎？（A.9.4）</li>
+<li>訓練資料描述是否可對應到資料來歷紀錄？（A.7.5）</li>
+<li>評估指標是否有<strong>分群結果</strong>，還是只有一個總體準確率？</li>
+<li>已知限制、偏差、風險是否揭露？是否與衝擊評鑑結果一致？（A.5）</li>
+<li>版本、日期、負責人是否明確？（7.5.2）</li>
+</ul>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 模型卡寫得很漂亮，但版本停在 v1.0，正式環境已經是 v3.2。這就是文件化資訊未維持更新（7.5.3 變更控制）。</p>
+</blockquote>
+<h3>15.10.2 驗證報告（Validation / verification report）</h3>
+<ul>
+<li>是否有<strong>事先定義</strong>的通過準則？還是測完才決定「這樣就夠了」？（A.6.2.4）</li>
+<li>測試資料是否獨立於訓練資料？</li>
+<li>未達標項目如何處置？有沒有經授權的例外核准？</li>
+<li>簽核人是否具有權限（對照 5.3、A.3.2 的角色定義）？</li>
+<li>報告日期是否早於上線日期？</li>
+</ul>
+<h3>15.10.3 監控儀表板</h3>
+<ul>
+<li>看的不是「有沒有儀表板」，而是<strong>指標是否對應風險</strong>：風險評鑑說擔心偏差，儀表板就應有分群指標。</li>
+<li>門檻值與告警規則是否設定？告警發給誰？</li>
+<li>近期是否有超出門檻的情況？後續動作是什麼？</li>
+<li>儀表板資料是否即時？有沒有「資料斷掉三個月沒人發現」的狀況？</li>
+</ul>
+<h3>15.10.4 日誌</h3>
+<ul>
+<li>依 A.6.2.8，<strong>至少在 AI 系統使用時</strong>要啟用事件日誌。</li>
+<li>抽查一筆具體交易：能否從日誌查到當時的輸入、模型版本、輸出、時間？</li>
+<li>日誌留存期間是否符合留存政策與法規？</li>
+<li>日誌含個人資料時，存取控制與保護是否到位（7.5.3 b)、與 ISO/IEC 27701 整合）？</li>
+</ul>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 我最喜歡的測試：「請幫我查 3 月 15 日下午，客戶編號 xxx 的貸款申請，AI 給了幾分？當時是哪個模型版本？」查得到，A.6.2.8 與 A.7.5 一次驗證；查不到，就可以開始問為什麼。</p>
+</blockquote>
+<hr />
+<h2 id="15.11-遠端稽核注意事項">15.11 遠端稽核注意事項</h2>
+<p>AI 團隊常分散各地、系統都在雲端，遠端稽核（ICT 輔助稽核）很常見。注意：</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>注意事項</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事前確認</td>
+<td>確認雙方視訊工具、網路品質、螢幕分享權限；事前測試</td>
+</tr>
+<tr>
+<td>身分確認</td>
+<td>確認受訪者身分與角色，避免「代答」</td>
+</tr>
+<tr>
+<td>證據呈現</td>
+<td>請對方<strong>即時操作</strong>系統而非傳截圖；截圖可能是舊的或修改過的</td>
+</tr>
+<tr>
+<td>保密</td>
+<td>不錄影、不截圖帶走機密資料，除非事先約定；遵守保密原則</td>
+</tr>
+<tr>
+<td>實體場所</td>
+<td>涉及實體作業（如鴻光精密產線 AOI 設備、仁心醫院放射科工作站）時，評估是否需現場或以即時攝影巡視</td>
+</tr>
+<tr>
+<td>時間管理</td>
+<td>遠端專注力較差，訪談分段，每段 60–90 分鐘內較佳</td>
+</tr>
+<tr>
+<td>紀錄</td>
+<td>在稽核報告中載明哪些部分以遠端方式執行，及其限制</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 遠端稽核時，我會請對方「現在打開模型登錄庫，按日期排序，點最新一筆」。這種即時操作，造假成本極高。如果對方說「我等一下寄截圖給你」，就要提高警覺。</p>
+</blockquote>
+<hr />
+<h2 id="15.12-管理案例仁心醫院-AIMS-第二階段稽核實錄虛擬案例">15.12 管理案例：仁心醫院 AIMS 第二階段稽核實錄（虛擬案例）</h2>
+<p><strong>背景</strong>：仁心醫院導入 AIMS，範圍為「醫療影像輔助判讀系統（胸部 X 光）之使用與營運」。醫院角色為 <strong>AI 使用者（部署者）</strong>，模型由外部廠商提供，醫院負責臨床驗證、部署與監控。</p>
+<p><strong>稽核規劃</strong>：抽樣「胸部 X 光結節偵測系統」做追蹤稽核，另抽「病歷摘要生成式 AI 試行專案」。</p>
+<p><strong>稽核過程摘要</strong>：</p>
+<ol>
+<li><strong>高階主管訪談</strong>：院長清楚說明 AI 政策強調「AI 只輔助、醫師做最終判斷」，並出示管理審查紀錄。✔</li>
+<li><strong>衝擊評鑑</strong>（A.5）：評鑑涵蓋誤判對病人的影響、對不同年齡層的表現差異。但<strong>未考慮可預見濫用</strong>：例如實習醫師過度依賴 AI 而不看原圖。△</li>
+<li><strong>驗證確認</strong>（A.6.2.4）：醫院有做本院資料的臨床驗證，發布準則明確（敏感度門檻由醫療品質委員會核准）。✔</li>
+<li><strong>運作監控</strong>：放射科每月抽樣比對 AI 與醫師判讀差異，有紀錄。✔</li>
+<li><strong>供應商</strong>（A.10.2、A.10.3）：合約有約定模型更新需提前通知，但<strong>未約定事故時雙方責任與通報時限</strong>。△</li>
+<li><strong>生成式 AI 試行專案</strong>：資訊室自行試用，<strong>不在 AI 系統清冊中</strong>，也未做風險評鑑。✘</li>
+</ol>
+<p><strong>稽核結論</strong>：
+- 不符合事項：試行專案未納入清冊與風險評鑑（4.3/6.1.2/8.2）；供應商責任分配不完整（A.10.2）。
+- 觀察事項：衝擊評鑑可加入「自動化偏誤（過度依賴）」作為可預見濫用情境。</p>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 試行專案也要管喔？才剛開始玩耶！</p>
+<p><strong>Allan：</strong> 「玩」的時候用的是真的病歷嗎？如果是，那就是真的風險。很多事故都是從「只是試試看」開始的，Samsung 員工把原始碼貼進 ChatGPT 也是這樣。清冊要納入，評鑑可以簡化，但不能沒有。</p>
+</blockquote>
+<hr />
+<h2 id="本章重點回顧">本章重點回顧</h2>
+<ul>
+<li>稽核分第一方（內稽）、第二方（客戶/供應商）、第三方（驗證機構）；ISO 19011 七大原則中，「基於證據」與「基於風險」對 AI 稽核最關鍵。</li>
+<li>驗證流程：申請 → 合約審查 → 第一階段（文件與準備度）→ 第二階段（實施有效性）→ 矯正 → 技術審查發證 → 證書 3 年，每年監督、第 3 年重新驗證。</li>
+<li>ISO/IEC 42006:2025 補充 ISO/IEC 17021-1，要求驗證機構、稽核團隊與決定人員具備 AI 相關能力，稽核時間需考量 AI 系統複雜度。</li>
+<li>第一階段必看：範圍、AI 系統清冊、SoA 三份要能對得起來。</li>
+<li>第二階段：依 AI 系統抽樣（一高、一新、一外），以流程導向稽核，善用追蹤稽核法找「斷點」。</li>
+<li>三角驗證：文件、訪談、觀察/系統紀錄互相印證；聽到的是線索，看到的才是證據。</li>
+<li>看模型卡、驗證報告、儀表板、日誌時，重點在「與風險是否對應、與實際是否一致、能否追溯」。</li>
+<li>遠端稽核要求即時操作，並在報告中註明限制。</li>
+</ul>
+<h2 id="自我檢測">自我檢測</h2>
+<details>
+<summary>Q1. 某驗證機構的稽核員在第一階段發現 AI 系統清冊有 10 個系統，但 SoA 與風險評鑑只涵蓋其中 4 個，最恰當的處理是？</summary>
+<p><strong>答案：</strong> 列為第一階段的關注事項，要求組織在第二階段前釐清範圍與清冊的一致性；若第二階段仍未處理，應依 4.3、6.1.2、6.1.3 開立不符合事項。解析：第一階段的目的是確認準備度，並為第二階段規劃提供資訊，這種範圍與文件不一致的問題是典型的第一階段發現。</p>
+</details>
+<details>
+<summary>Q2. ISO/IEC 42006 的適用對象是誰？</summary>
+<p><strong>答案：</strong> 執行 AIMS 稽核與驗證的驗證機構。解析：42006 補充 ISO/IEC 17021-1，規定驗證機構、稽核員能力與稽核團隊組成等要求；組織建立 AIMS 仍以 ISO/IEC 42001 為依據。</p>
+</details>
+<details>
+<summary>Q3. 何謂「追蹤稽核法」？它最容易發現哪一類問題？</summary>
+<p><strong>答案：</strong> 選定一個 AI 系統，依生命週期從需求、角色、風險與衝擊評鑑、資料、設計、驗證確認、部署、監控、事件、變更到退役逐站查證。解析：最容易發現前後「斷點」，例如風險處理計畫寫了人工複核，實際作業卻沒有，即 8.3 風險處理計畫未被實施。</p>
+</details>
+<details>
+<summary>Q4. 資料科學家說「我們每季都有做公平性測試」，稽核員下一步應怎麼做？</summary>
+<p><strong>答案：</strong> 要求出示程序依據與實際執行紀錄（例如排程系統執行紀錄、最近幾季的測試報告），以文件、訪談、系統紀錄進行三角驗證。解析：訪談只是線索，必須有客觀證據支持，並檢查時間跨度與異常處理。</p>
+</details>
+<details>
+<summary>Q5. 證書有效期與監督頻率為何？</summary>
+<p><strong>答案：</strong> 證書 3 年有效，每年進行監督稽核，第 3 年進行重新驗證稽核。解析：監督稽核在三年週期內應覆蓋全部要求，並特別關注內部稽核、管理審查、矯正措施與變更。</p>
+</details>
+    <div class="pager"><a href="ch14.html"><small>← 上一章</small>六大產業管理案例</a><a class="next" href="ch16.html"><small>下一章 →</small>常見不符合與檢查表</a></div>
+  </article>
+</div>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<script src="../assets/js/chapters.js"></script>
+<script>
+(function () {
+  var id = "ch15", btn = document.getElementById("markRead");
+  function refresh() {
+    var p = Progress.load();
+    document.querySelectorAll(".toc a[data-id]").forEach(function (a) {
+      a.classList.toggle("ok", !!(p[a.dataset.id] && p[a.dataset.id].text));
+    });
+    if (p[id] && p[id].text) btn.textContent = "✓ 本章已讀完";
+  }
+  btn.onclick = function () { Progress.mark(id, "text"); refresh(); };
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) { Progress.mark(id, "text"); refresh(); }
+  }, { passive: true });
+  document.querySelectorAll(".toc a").forEach(function (a) { a.addEventListener("click", function () { document.querySelector(".toc").classList.remove("open"); }); });
+  refresh();
+})();
+</script>
+</body>
+</html>

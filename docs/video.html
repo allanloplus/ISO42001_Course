@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>互動影音｜ISO 42001 線上課程</title>
+<link rel="icon" href="assets/img/allan.webp">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" as="image" href="assets/img/allan.webp">
+<link rel="preload" as="image" href="assets/img/arale.webp">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="text/ch00.html">文字教材</a>
+    <a class="active" href="video.html">互動影音</a>
+    <a href="quiz.html">課後測驗</a>
+  </nav>
+</header>
+<main class="player-page">
+  <div class="player-head">
+    <select id="chapterSelect" aria-label="選擇章節"></select>
+    <a class="btn soft" id="readLink" href="#">📖 本章文字教材</a>
+  </div>
+  <h1 id="chTitle" style="font-size:20px;margin:6px 0 10px">載入中…</h1>
+  <div class="player-layout">
+    <div>
+      <div class="stage" id="stage">
+        <div class="char arale idle" id="arale"><span class="name">助教 阿拉蕾</span><img src="assets/img/arale.webp" alt="助教阿拉蕾" width="420" height="380"></div>
+        <div class="char allan idle" id="allan"><span class="name">Allan 講師</span><img src="assets/img/allan.webp" alt="Allan 講師" width="560" height="946"></div>
+        <div class="slide-card" id="card"></div>
+        <div class="bubble A" id="bubble" aria-live="polite"><div class="who" id="who"></div><div class="txt" id="txt"></div></div>
+        <div class="loading-dot" id="loading">語音載入中…</div>
+        <div class="overlay" id="overlay"><h2>載入中…</h2></div>
+      </div>
+      <div class="segbar" id="segbar" aria-label="段落進度"></div>
+      <div class="controls">
+        <button id="prevScene" title="上一段">⏮</button>
+        <button id="prevLine" title="上一句 (←)">⏪</button>
+        <button id="play" class="primary" title="播放 (空白鍵)">▶</button>
+        <button id="nextLine" title="下一句 (→)">⏩</button>
+        <button id="nextScene" title="下一段">⏭</button>
+        <select id="rate" title="播放速度">
+          <option value="0.8">0.8x</option><option value="1" selected>1.0x</option><option value="1.2">1.2x</option>
+          <option value="1.5">1.5x</option><option value="1.75">1.75x</option>
+        </select>
+        <button id="subs">字幕：開</button>
+        <button id="fs" title="全螢幕 (F)">⛶</button>
+        <span class="time" id="time">0:00 / 0:00</span>
+      </div>
+      <details class="transcript">
+        <summary>📝 本章逐字稿（可搭配閱讀或搜尋）</summary>
+        <div id="transcriptBody"></div>
+      </details>
+    </div>
+    <aside class="scene-list">
+      <h4>📑 本章段落（點選跳轉）</h4>
+      <div id="sceneList"></div>
+    </aside>
+  </div>
+</main>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜語音為 AI 合成</footer>
+<script src="assets/js/chapters.js"></script>
+<script src="assets/js/player.js"></script>
+</body>
+</html>

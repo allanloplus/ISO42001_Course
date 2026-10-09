@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課程導覽與 AI 治理趨勢｜文字教材｜ISO 42001 線上課程</title>
+<link rel="icon" href="../assets/img/allan.webp">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-btn" onclick="document.querySelector('.toc').classList.toggle('open')" aria-label="章節選單">☰ 章節</button>
+  <a class="logo" href="../index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a class="active" href="ch00.html">文字教材</a>
+    <a href="../video.html?ch=ch00">互動影音</a>
+    <a href="../quiz.html">課後測驗</a>
+  </nav>
+</header>
+<div class="reader">
+  <aside class="toc" aria-label="章節選擇"><h4>課程導覽</h4>
+<a class="current" data-id="ch00" href="ch00.html">00｜課程導覽與 AI 治理趨勢</a>
+<h4>標準基礎</h4>
+<a data-id="ch01" href="ch01.html">01｜標準架構與用語定義</a>
+<h4>條文詳解</h4>
+<a data-id="ch02" href="ch02.html">02｜條文 4 組織全景</a>
+<a data-id="ch03" href="ch03.html">03｜條文 5 領導作為</a>
+<a data-id="ch04" href="ch04.html">04｜條文 6 風險評鑑與 SoA</a>
+<a data-id="ch05" href="ch05.html">05｜條文 6 衝擊評鑑與目標</a>
+<a data-id="ch06" href="ch06.html">06｜條文 7 支援</a>
+<a data-id="ch07" href="ch07.html">07｜條文 8 運作</a>
+<a data-id="ch08" href="ch08.html">08｜條文 9 績效評估</a>
+<a data-id="ch09" href="ch09.html">09｜條文 10 改善</a>
+<h4>附錄 A/B 控制措施</h4>
+<a data-id="ch10" href="ch10.html">10｜A.2–A.5 控制措施</a>
+<a data-id="ch11" href="ch11.html">11｜A.6 AI 生命週期</a>
+<a data-id="ch12" href="ch12.html">12｜A.7–A.10 控制措施</a>
+<h4>整合與導入</h4>
+<a data-id="ch13" href="ch13.html">13｜附錄 C/D 與整合導入</a>
+<h4>管理案例</h4>
+<a data-id="ch14" href="ch14.html">14｜六大產業管理案例</a>
+<h4>稽核實務</h4>
+<a data-id="ch15" href="ch15.html">15｜驗證流程與稽核技巧</a>
+<a data-id="ch16" href="ch16.html">16｜常見不符合與檢查表</a>
+<h4>總複習</h4>
+<a data-id="ch17" href="ch17.html">17｜總複習與測驗說明</a></aside>
+  <article class="doc">
+    <h1>第0章　課程導覽：為什麼需要 ISO 42001？AI 治理與法規趨勢</h1>
+    <div class="doc-actions">
+      <a class="btn pink" href="../video.html?ch=ch00">▶ 觀看本章互動影音</a>
+      <button class="btn soft" id="markRead">✓ 標記本章已讀</button>
+      <button class="btn soft" onclick="window.print()">🖨 列印／存 PDF</button>
+    </div>
+    <details class="mini-toc" open><summary>📑 本章目錄</summary><ol><li><a href="#0.1-歡迎來到-AI-管理系統的世界">0.1 歡迎來到 AI 管理系統的世界</a></li><li><a href="#0.2-AI-帶來哪些新風險從標準介紹讀起">0.2 AI 帶來哪些「新」風險？——從標準「介紹」讀起</a></li><li><a href="#0.3-生成式-AI-時代的企業痛點">0.3 生成式 AI 時代的企業痛點</a></li><li><a href="#0.4-知名事件警示前車之鑑">0.4 知名事件警示：前車之鑑</a></li><li><a href="#0.5-法規趨勢EU-AI-Act台灣-AI-基本法NIST-AI-RMF">0.5 法規趨勢：EU AI Act、台灣 AI 基本法、NIST AI RMF</a></li><li><a href="#0.6-ISOIEC-AI-標準家族地圖">0.6 ISO/IEC AI 標準家族地圖</a></li><li><a href="#0.7-為什麼要取得-42001-驗證">0.7 為什麼要取得 42001 驗證？</a></li><li><a href="#0.8-誰最需要導入-42001">0.8 誰最需要導入 42001？</a></li><li><a href="#0.9-本課程地圖與學習方式">0.9 本課程地圖與學習方式</a></li><li><a href="#本章重點回顧">本章重點回顧</a></li><li><a href="#自我檢測">自我檢測</a></li></ol></details>
+    
+<blockquote>
+<p>學習目標：① 說明 AI 相較傳統 IT 系統帶來的三大「新」風險特性（不透明、資料驅動、持續學習）；② 列舉生成式 AI 時代企業常見的治理痛點，並能以知名事件說明治理缺口；③ 比較 EU AI Act、台灣《人工智慧基本法》與 NIST AI RMF 的定位與重點；④ 描繪 ISO/IEC AI 標準家族地圖，理解 ISO/IEC 42001 在其中的位置與驗證價值；⑤ 掌握本課程的章節地圖、學習方式與證書取得規則。</p>
+</blockquote>
+<hr />
+<h2 id="0.1-歡迎來到-AI-管理系統的世界">0.1 歡迎來到 AI 管理系統的世界</h2>
+<p>各位學員好，歡迎加入「ISO/IEC 42001:2023 人工智慧管理系統（AIMS）完整線上課程」。</p>
+<p>本課程由兩位夥伴陪你一路走完：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>介紹</th>
+<th>在課程中的任務</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>講師 Allan</strong></td>
+<td>台灣資深 ISMS/PIMS 輔導顧問、驗證機構主導稽核員，長年專注資安與企業 MIS 管理，看過大大小小的導入專案與稽核現場。</td>
+<td>拆解條文、分享顧問與稽核現場經驗、告訴你「稽核員真正會看什麼」。</td>
+</tr>
+<tr>
+<td><strong>助教阿拉蕾</strong></td>
+<td>活潑、好奇、天真可愛的年輕助教，最擅長問出大家心裡想問又不敢問的「笨問題」。</td>
+<td>幫你提問、打比方、吐槽、整理重點，讓硬梆梆的條文變得好消化。</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> んちゃ～！Allan 老師，我們公司只是「用」ChatGPT 寫寫文案，也需要學 ISO 42001 嗎？那不是開發 AI 的大公司才要管的嗎？</p>
+<p><strong>Allan：</strong> 這是第一個好問題！標準第 1 章適用範圍寫得很清楚：「本文件適用於任何提供<strong>或使用</strong>人工智慧系統產品或服務的組織，不論其規模、形式或性質。」所以只要你在用 AI，就有 AI 風險要管。差別只在於你扮演的「角色」不同，要管的深淺不同而已，這在第 2 章會詳細說明。</p>
+</blockquote>
+<p>本章是整門課的「為什麼」：先理解 AI 到底帶來什麼不一樣的風險，再看全球法規與標準怎麼回應，最後告訴你這門課怎麼學、怎麼拿證書。</p>
+<hr />
+<h2 id="0.2-AI-帶來哪些新風險從標準介紹讀起">0.2 AI 帶來哪些「新」風險？——從標準「介紹」讀起</h2>
+<p>很多人第一次接觸 42001 會問：「我們已經有 ISO 27001 了，資安都管好了，AI 不就是另一套系統嗎？」答案就藏在標準的「介紹」裡。標準指出，AI「可能會提出具體的考慮因素」，並點出三個關鍵特性：</p>
+<h3>特性一：自動決策，而且可能不透明、不可解釋</h3>
+<p>標準原文：「使用人工智慧進行自動決策，有時以不透明和不可解釋的方式進行，可能需要超越傳統 IT 系統管理的具體管理。」</p>
+<p>傳統系統的邏輯是工程師寫的 if-else，出了錯可以逐行追查；但深度學習模型的判斷依據往往藏在數百萬個參數裡。當 AI 拒絕了一筆貸款、篩掉一份履歷，被影響的人有權知道「為什麼」，組織卻可能答不出來。</p>
+<h3>特性二：資料驅動，而非人類編碼的邏輯</h3>
+<p>標準原文：「使用資料分析、洞察力和機器學習，而不是人類編碼的邏輯來設計系統，既增加了人工智慧系統的應用機會，又改變了此類系統的開發、論證和部署方式。」</p>
+<p>AI 的「行為」是從資料學來的。資料有偏差，模型就有偏差；資料過時，模型就失準。所以 42001 特別重視<strong>資料品質</strong>（3.25）、<strong>資料來歷</strong>（A.7.5）、<strong>資料準備</strong>（A.7.6），這是傳統 ISMS 很少深入的領域。</p>
+<h3>特性三：持續學習，行為會在使用中改變</h3>
+<p>標準原文：「執行持續學習的人工智慧系統會在使用流程中改變其行為。他們需要特別考量，以確保他們在行為的改變時仍持續地負責任使用著。」</p>
+<p>一套上線時表現良好的模型，半年後可能因為使用者行為改變（資料漂移）、或持續學習吸收了錯誤回饋而變質。傳統的「上線驗收一次就結束」思維不夠用，必須有<strong>持續監控</strong>（A.6.2.6）與<strong>變更規劃</strong>（6.3）。</p>
+<h3>一張表看懂差異</h3>
+<table>
+<thead>
+<tr>
+<th>面向</th>
+<th>傳統 IT 系統</th>
+<th>AI 系統</th>
+<th>42001 的管理回應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邏輯來源</td>
+<td>人類撰寫的規則</td>
+<td>從資料學習的模型</td>
+<td>資料管理（A.7）、資料品質（A.7.4）</td>
+</tr>
+<tr>
+<td>可解釋性</td>
+<td>可逐行追查</td>
+<td>可能是黑箱</td>
+<td>透明與使用者資訊（A.8.2）、技術文件（A.6.2.7）</td>
+</tr>
+<tr>
+<td>行為穩定性</td>
+<td>不改程式就不變</td>
+<td>可能漂移、持續學習</td>
+<td>運作與監控（A.6.2.6）、事件日誌（A.6.2.8）</td>
+</tr>
+<tr>
+<td>影響對象</td>
+<td>主要是組織本身（CIA）</td>
+<td>個人、群體、社會</td>
+<td>AI 系統衝擊評鑑（6.1.4、A.5）</td>
+</tr>
+<tr>
+<td>錯誤型態</td>
+<td>Bug、當機</td>
+<td>偏差、幻覺、歧視、誤判</td>
+<td>驗證與確認（A.6.2.4）、人為監管</td>
+</tr>
+<tr>
+<td>責任歸屬</td>
+<td>開發/維運清楚</td>
+<td>供應鏈多方（模型商、平台、整合商）</td>
+<td>責任分配（A.10.2）、供應商（A.10.3）</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 我在稽核 27001 時，看的是「資訊」有沒有被保護好：機密性、完整性、可用性。但 42001 的視角更大，它還要問：「這個 AI 做出的決定，對<strong>人</strong>和<strong>社會</strong>公平嗎？可以被解釋嗎？出事時誰負責？」這就是為什麼標準要有「人工智慧系統衝擊評鑑」這個 27001 沒有的東西。</p>
+</blockquote>
+<h3>標準的關鍵提醒：聚焦在 AI 獨有的部分</h3>
+<p>標準介紹中還有一句很重要的話：「組織應將其要求事項的應用重點放在人工智慧獨有的功能上。」意思是：已經有 27001、27701、9001 的組織，不需要把所有東西重做一遍，而是<strong>在既有管理系統上，補強 AI 特有的風險</strong>。標準也說「採用人工智慧管理系統來擴展現有的管理結構是組織的策略決策」，並且「宜與組織之各項流程和整體管理結構整合」。</p>
+<hr />
+<h2 id="0.3-生成式-AI-時代的企業痛點">0.3 生成式 AI 時代的企業痛點</h2>
+<p>自從生成式 AI 進入辦公室，幾乎每一家企業都遇到以下幾種「頭痛」。我們用虛擬案例來看看：</p>
+<table>
+<thead>
+<tr>
+<th>痛點</th>
+<th>典型情境（虛擬案例）</th>
+<th>潛在後果</th>
+<th>42001 對應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>影子 AI（Shadow AI）</strong></td>
+<td>「鴻光精密」業務人員自行把客戶圖面上傳到免費 AI 工具做翻譯，IT 部門完全不知道。</td>
+<td>營業秘密外洩、違反客戶保密契約</td>
+<td>5.2 AI 政策、A.9.2 負責任使用流程、7.3 認知</td>
+</tr>
+<tr>
+<td><strong>機密與個資外洩</strong></td>
+<td>「福爾摩沙銀行」客服人員把含身分證字號的客訴內容貼進聊天機器人摘要。</td>
+<td>違反個資法、金融監理裁處</td>
+<td>A.7 資料、與 27701 整合、A.10.3 供應商</td>
+</tr>
+<tr>
+<td><strong>幻覺（Hallucination）</strong></td>
+<td>「樂購電商」的生成式 AI 客服自信滿滿地回答了一個不存在的退貨政策。</td>
+<td>消費糾紛、商譽受損、法律責任</td>
+<td>A.6.2.4 驗證與確認、A.8.2 使用者資訊、人為監管</td>
+</tr>
+<tr>
+<td><strong>偏差與歧視</strong></td>
+<td>「才庫人力」的 AI 履歷篩選模型，因歷史資料偏頗而對特定族群評分偏低。</td>
+<td>就業歧視爭議、主管機關調查</td>
+<td>6.1.4 衝擊評鑑、A.5.4、A.7.4 資料品質</td>
+</tr>
+<tr>
+<td><strong>智慧財產權疑慮</strong></td>
+<td>行銷部用 AI 生成的圖片被發現與某知名作品高度相似。</td>
+<td>侵權訴訟、下架</td>
+<td>A.7.3 資料獲取、A.10 第三方關係</td>
+</tr>
+<tr>
+<td><strong>責任不清</strong></td>
+<td>「仁心醫院」AI 輔助判讀漏看病灶，醫師、院方、設備商互推責任。</td>
+<td>醫療糾紛、病人安全</td>
+<td>5.3 角色責任、A.3.2、A.10.2 責任分配</td>
+</tr>
+<tr>
+<td><strong>供應商依賴與變更失控</strong></td>
+<td>「智聯科技」使用的第三方大型語言模型無預警改版，回答風格與準確度驟變。</td>
+<td>服務品質不穩、客戶抱怨</td>
+<td>6.3 變更之規劃、A.10.3 供應商、A.6.2.6 監控</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="warn">
+<p><strong>⚠️ 常見誤區：</strong> 「我們全面禁止員工使用生成式 AI，就沒有 AI 風險了。」——錯！全面禁止往往只會把使用行為推向地下化（影子 AI），反而更難管。比較好的作法是透過 AI 政策明訂「可以用什麼、怎麼用、哪些資料不能放」，再搭配認知訓練與技術控管。</p>
+</blockquote>
+<hr />
+<h2 id="0.4-知名事件警示前車之鑑">0.4 知名事件警示：前車之鑑</h2>
+<p>以下三個公開事件常被拿來當作 AI 治理的教材。我們只看「事件重點」和「背後的治理缺口」，並思考如果有 AIMS，可以在哪裡把關。</p>
+<h3>事件一：AI 履歷篩選工具的性別偏差（2018 年報導）</h3>
+<ul>
+<li><strong>事件重點：</strong> 2018 年媒體報導，Amazon 一套實驗性的 AI 履歷篩選工具，對女性求職者產生偏差，公司後來停用了這套工具。</li>
+<li><strong>治理缺口：</strong> 模型從歷史資料學習，而歷史資料本身就反映了過去的不平衡；在開發階段缺乏足夠的偏差檢測與衝擊評估。</li>
+<li><strong>42001 可以怎麼把關：</strong></li>
+<li>6.1.4／A.5.4：在上線前評鑑對「個人或群體」的潛在衝擊，招募 AI 顯然影響求職者權益。</li>
+<li>A.7.4 資料品質、A.7.5 資料來歷：檢視訓練資料的代表性與偏差。</li>
+<li>A.6.2.4 驗證與確認：把「公平性」納入驗收準則，而不只看準確率。</li>
+</ul>
+<h3>事件二：員工將機密原始碼貼入 ChatGPT（2023 年）</h3>
+<ul>
+<li><strong>事件重點：</strong> 2023 年 Samsung 發生員工將機密原始碼貼入 ChatGPT 的事件，之後公司限制了生成式 AI 的使用。</li>
+<li><strong>治理缺口：</strong> 員工不清楚把資料輸入外部 AI 服務的風險，組織也尚未建立明確的使用規範。</li>
+<li><strong>42001 可以怎麼把關：</strong></li>
+<li>5.2 AI 政策＋A.2.2：明確規範可使用的 AI 工具與禁止輸入的資料類型。</li>
+<li>A.9.2／A.9.3：定義負責任使用的流程與目標。</li>
+<li>7.3 認知：讓每位員工知道 AI 政策與違反的後果。</li>
+<li>A.2.3：確保 AI 政策與資安政策、資料分級政策一致。</li>
+</ul>
+<h3>事件三：航空公司客服聊天機器人的錯誤回覆（2024 年）</h3>
+<ul>
+<li><strong>事件重點：</strong> 2024 年加拿大航空的客服聊天機器人向旅客提供了錯誤的退款政策資訊，旅客提告，法庭判決航空公司須為聊天機器人的說法負責（Moffatt v. Air Canada）。</li>
+<li><strong>治理缺口：</strong> 組織以為「是機器人說錯，不是公司說錯」，但對外部關注方而言，聊天機器人就是公司的代表。</li>
+<li><strong>42001 可以怎麼把關：</strong></li>
+<li>A.6.2.4 驗證與確認：上線前用真實情境測試回答正確性。</li>
+<li>A.6.2.6 運作與監控：持續監控回答品質與客訴。</li>
+<li>A.8.2 使用者資訊：清楚告知使用者正在與 AI 互動及其限制。</li>
+<li>A.9.4 預期用途：明確界定聊天機器人「能回答什麼、不能承諾什麼」。</li>
+</ul>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 我在稽核現場最常問的一句話是：「如果明天這個 AI 出錯上了新聞，你們能拿出什麼證據證明你們已經盡到合理管理責任？」衝擊評鑑紀錄、驗證報告、監控紀錄、使用者告知內容……這些「文件化資訊」就是組織最好的護身符。</p>
+</blockquote>
+<hr />
+<h2 id="0.5-法規趨勢EU-AI-Act台灣-AI-基本法NIST-AI-RMF">0.5 法規趨勢：EU AI Act、台灣 AI 基本法、NIST AI RMF</h2>
+<p>AI 治理正從「自律」走向「法制」。以下三個框架是台灣企業最常被問到的。</p>
+<h3>0.5.1 歐盟人工智慧法（EU AI Act）</h3>
+<ul>
+<li>正式名稱為 Regulation (EU) 2024/1689，<strong>2024-08-01 生效</strong>。</li>
+<li>核心精神是<strong>風險分級</strong>：
+  1. <strong>禁止</strong>（不可接受風險）的 AI 實務；
+  2. <strong>高風險</strong> AI 系統：須符合一系列嚴格義務；
+  3. <strong>有限風險／透明義務</strong>：例如須讓人知道正在與 AI 互動；
+  4. <strong>最低風險</strong>：基本上自由使用。</li>
+<li>適用時程（分階段）：</li>
+<li>禁止性規定：<strong>2025-02-02</strong> 起適用；</li>
+<li>通用目的 AI（GPAI）義務：<strong>2025-08-02</strong> 起適用；</li>
+<li>2026 年通過「Digital Omnibus on AI」修法延後高風險義務：附件 III 獨立高風險系統 <strong>2027-12-02</strong> 起適用、附件 I 產品內嵌 AI <strong>2028-08-02</strong> 起適用。</li>
+<li>對台灣企業的意義：如果你的 AI 產品或服務要進入歐盟市場，或是歐盟客戶的供應鏈一環，就很可能被要求證明合規能力。</li>
+</ul>
+<h3>0.5.2 台灣《人工智慧基本法》</h3>
+<ul>
+<li><strong>2025-12-23</strong> 立法院三讀通過，<strong>2026-01-14</strong> 總統公布施行，共 <strong>20 條</strong>。</li>
+<li>中央主管機關為<strong>國科會</strong>；行政院設<strong>國家人工智慧戰略特別委員會</strong>。</li>
+<li>揭示<strong>七大原則</strong>：永續發展與福祉、人類自主、隱私保護與資料治理、資安與安全、透明與可解釋、公平與不歧視、問責。</li>
+<li>屬<strong>原則性立法</strong>：授權<strong>數位發展部</strong>訂定 AI 風險分類框架，各<strong>目的事業主管機關</strong>訂定以風險為基礎的管理規範。也就是說，具體要求會陸續由各主管機關落實。</li>
+</ul>
+<h3>0.5.3 美國 NIST AI 風險管理框架（AI RMF 1.0）</h3>
+<ul>
+<li>2023-01 發布，屬<strong>自願性框架</strong>。</li>
+<li>四大功能：<strong>Govern（治理）、Map（映射）、Measure（量測）、Manage（管理）</strong>。</li>
+<li>2024-07 另發布生成式 AI Profile（NIST AI 600-1），專門處理生成式 AI 的風險。</li>
+<li>有趣的是，42001 條文 4.1 備考 1 就直接引用了 NIST AI RMF，說明 AI 角色類型與生命週期的關係。</li>
+</ul>
+<h3>0.5.4 三者與 ISO/IEC 42001 比較表</h3>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>EU AI Act</th>
+<th>台灣 AI 基本法</th>
+<th>NIST AI RMF</th>
+<th>ISO/IEC 42001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性質</td>
+<td>具拘束力的法規</td>
+<td>具拘束力的原則性法律</td>
+<td>自願性框架</td>
+<td>自願性、<strong>可驗證</strong>的管理系統標準</td>
+</tr>
+<tr>
+<td>發布/生效</td>
+<td>2024-08-01 生效</td>
+<td>2026-01-14 公布施行</td>
+<td>2023-01 發布</td>
+<td>2023-12 發布</td>
+</tr>
+<tr>
+<td>核心方法</td>
+<td>依風險等級課予義務</td>
+<td>七大原則＋授權主管機關訂規範</td>
+<td>Govern/Map/Measure/Manage</td>
+<td>PDCA 管理系統＋附錄 A 控制措施</td>
+</tr>
+<tr>
+<td>管理對象</td>
+<td>AI 系統提供者、部署者等角色</td>
+<td>政府推動與產業規範框架</td>
+<td>任何設計、開發、部署 AI 的組織</td>
+<td>任何提供或使用 AI 的組織</td>
+</tr>
+<tr>
+<td>是否可第三方驗證</td>
+<td>高風險系統有符合性評估機制</td>
+<td>視後續子法</td>
+<td>否</td>
+<td><strong>是</strong>（依 ISO/IEC 17021-1＋ISO/IEC 42006）</td>
+</tr>
+<tr>
+<td>對企業的用途</td>
+<td>進入歐盟市場的門檻</td>
+<td>國內合規方向指引</td>
+<td>風險管理方法論參考</td>
+<td>建立制度並向外部證明</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="arale"><p class="who"><img class="avatar" src="../assets/img/arale.webp" alt="助教阿拉蕾"><strong>🎀 阿拉蕾發問：</strong> 欸欸欸，那拿到 42001 證書，是不是就等於符合 EU AI Act 了？</p>
+<p><strong>Allan：</strong> ㄏㄡˊ～這個誤會很常見！42001 是<strong>管理系統標準</strong>，它幫你建立「持續識別法規要求並落實」的能力，但它<strong>不是</strong>法規的合規證明。不過，條文 4.1 要求組織決定適用的法律要求事項、4.2 要求決定關注方的要求，所以一套運作良好的 AIMS，會是你面對各國法規時最好的底盤。</p>
+<p><strong>⚠️ 常見誤區：</strong> 把 42001 證書當成「免死金牌」。驗證證明的是「管理系統符合標準且有效運作」，不代表每一個 AI 系統都沒有風險，也不代表自動符合任何特定法規。</p>
+</blockquote>
+<hr />
+<h2 id="0.6-ISOIEC-AI-標準家族地圖">0.6 ISO/IEC AI 標準家族地圖</h2>
+<p>ISO/IEC 42001 不是孤軍奮戰，它是一整個 AI 標準家族的「管理中樞」。下表依功能分層：</p>
+<table>
+<thead>
+<tr>
+<th>層次</th>
+<th>標準</th>
+<th>重點</th>
+<th>和 42001 的關係</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基礎語言</strong></td>
+<td>ISO/IEC 22989:2022</td>
+<td>AI 概念與術語</td>
+<td>42001 唯一的<strong>引用標準</strong>（條文 2）</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO/IEC 23053</td>
+<td>使用機器學習的 AI 系統框架</td>
+<td>理解 ML 系統組成</td>
+</tr>
+<tr>
+<td><strong>管理系統（可驗證）</strong></td>
+<td><strong>ISO/IEC 42001:2023</strong></td>
+<td>AI 管理系統要求事項</td>
+<td>本課程主角</td>
+</tr>
+<tr>
+<td><strong>風險與衝擊</strong></td>
+<td>ISO/IEC 23894:2023</td>
+<td>AI 風險管理指引（以 ISO 31000 為基礎）</td>
+<td>支援 6.1.2、6.1.3 風險評鑑與處理</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO/IEC 42005:2025（2025-05 發布）</td>
+<td>AI 系統衝擊評鑑指引</td>
+<td>支援 6.1.4、A.5 衝擊評鑑</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 31000</td>
+<td>風險管理通用指引</td>
+<td>風險概念的母體</td>
+</tr>
+<tr>
+<td><strong>治理</strong></td>
+<td>ISO/IEC 38507</td>
+<td>AI 使用對組織治理的影響</td>
+<td>5.2 備考引用，政策制定參考</td>
+</tr>
+<tr>
+<td><strong>生命週期與工程</strong></td>
+<td>ISO/IEC 5338</td>
+<td>AI 系統生命週期流程</td>
+<td>支援 A.6 生命週期控制</td>
+</tr>
+<tr>
+<td><strong>資料</strong></td>
+<td>ISO/IEC 5259 系列</td>
+<td>分析與 ML 的資料品質</td>
+<td>3.25 資料品質定義來源、支援 A.7</td>
+</tr>
+<tr>
+<td><strong>可信度專題</strong></td>
+<td>ISO/IEC TR 24027</td>
+<td>AI 偏差</td>
+<td>公平性議題</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO/IEC TR 24029-1</td>
+<td>神經網路穩健性評估</td>
+<td>驗證與確認</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO/IEC TR 24368</td>
+<td>倫理與社會議題概述</td>
+<td>衝擊評鑑、政策原則</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO/IEC 25059</td>
+<td>AI 系統品質模型</td>
+<td>品質要求與量測</td>
+</tr>
+<tr>
+<td><strong>稽核與驗證</strong></td>
+<td>ISO/IEC 42006:2025（2025-07 發布）</td>
+<td>AIMS 稽核與驗證機構要求（補充 ISO/IEC 17021-1）</td>
+<td>規範驗證機構怎麼稽核你</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 19011</td>
+<td>管理系統稽核指引</td>
+<td>內部稽核（9.2）方法</td>
+</tr>
+<tr>
+<td><strong>整合夥伴</strong></td>
+<td>ISO/IEC 27001、ISO/IEC 27701、ISO 9001</td>
+<td>資安、隱私、品質管理系統</td>
+<td>同為 HS 結構，可整合導入</td>
+</tr>
+<tr>
+<td></td>
+<td>ISO 37002</td>
+<td>吹哨管理系統指引</td>
+<td>支援 A.3.3 關注事項通報</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 記憶小訣竅：<strong>22989 是字典、23894 是風險手冊、42005 是衝擊評鑑手冊、42001 是管理總部、42006 是考官手冊。</strong>導入時以 42001 為主幹，遇到特定議題再去翻對應的指引標準，就不會迷路。</p>
+</blockquote>
+<hr />
+<h2 id="0.7-為什麼要取得-42001-驗證">0.7 為什麼要取得 42001 驗證？</h2>
+<h3>0.7.1 驗證的價值</h3>
+<table>
+<thead>
+<tr>
+<th>價值</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>建立信任</strong></td>
+<td>對客戶、投資人、主管機關證明你「負責任地」開發或使用 AI，標準介紹也提到符合本標準的組織「可以產生其在人工智慧系統方面的角色和責任及當責性的證據」。</td>
+</tr>
+<tr>
+<td><strong>供應鏈門票</strong></td>
+<td>愈來愈多企業採購 AI 服務時，會把 AI 治理能力列入供應商評選。</td>
+</tr>
+<tr>
+<td><strong>法規準備</strong></td>
+<td>面對 EU AI Act、台灣 AI 基本法後續子法，AIMS 提供識別與回應法規的機制。</td>
+</tr>
+<tr>
+<td><strong>內部秩序</strong></td>
+<td>盤點 AI 系統、釐清責任、降低影子 AI，讓創新有規則可循。</td>
+</tr>
+<tr>
+<td><strong>整合效益</strong></td>
+<td>與 27001／27701／9001 共用 HS 結構，可合併稽核、共用文件與流程。</td>
+</tr>
+<tr>
+<td><strong>平衡創新與治理</strong></td>
+<td>標準介紹提到「需要在治理機制和創新之間取得適當的平衡」，以風險為基礎，避免一刀切。</td>
+</tr>
+</tbody>
+</table>
+<h3>0.7.2 驗證流程概要（第 15 章會深入）</h3>
+<ol>
+<li><strong>第一階段稽核</strong>：文件與準備度審查，確認範圍、政策、風險評鑑、適用性聲明等是否到位。</li>
+<li><strong>第二階段稽核</strong>：實施有效性稽核，到現場驗證制度是否真的在運作。</li>
+<li><strong>發證</strong>：證書 <strong>3 年</strong>有效。</li>
+<li><strong>監督稽核</strong>：每年一次。</li>
+<li><strong>重新驗證</strong>：第 3 年進行。</li>
+</ol>
+<p>驗證機構依 <strong>ISO/IEC 17021-1 + ISO/IEC 42006</strong> 的要求執行。</p>
+<blockquote class="audit">
+<p><strong>🔍 稽核員視角：</strong> 第一階段最常卡關的三件事：範圍寫得太模糊（第 2 章會教）、AI 系統清冊不完整、適用性聲明的排除理由交代不清。先把這三件事做紮實，就成功一半了。</p>
+</blockquote>
+<hr />
+<h2 id="0.8-誰最需要導入-42001">0.8 誰最需要導入 42001？</h2>
+<table>
+<thead>
+<tr>
+<th>組織類型</th>
+<th>典型虛擬案例</th>
+<th>導入動機</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 產品/服務提供者</td>
+<td>「智聯科技」AI SaaS 平台</td>
+<td>客戶要求、國際市場、差異化</td>
+</tr>
+<tr>
+<td>金融業</td>
+<td>「福爾摩沙銀行」AI 信用評分與反詐騙</td>
+<td>主管機關關注、消費者保護</td>
+</tr>
+<tr>
+<td>製造業</td>
+<td>「鴻光精密」AOI 瑕疵檢測</td>
+<td>品質穩定、客戶稽核、與 9001 整合</td>
+</tr>
+<tr>
+<td>電商與服務業</td>
+<td>「樂購電商」生成式 AI 客服</td>
+<td>消費糾紛風險、品牌信任</td>
+</tr>
+<tr>
+<td>醫療院所</td>
+<td>「仁心醫院」醫療影像輔助判讀</td>
+<td>病人安全、責任界定</td>
+</tr>
+<tr>
+<td>人力資源業</td>
+<td>「才庫人力」AI 履歷篩選</td>
+<td>公平性與反歧視</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="0.9-本課程地圖與學習方式">0.9 本課程地圖與學習方式</h2>
+<h3>0.9.1 課程地圖</h3>
+<table>
+<thead>
+<tr>
+<th>單元</th>
+<th>章節</th>
+<th>主題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>入門</strong></td>
+<td>第0章</td>
+<td>課程導覽：為什麼需要 ISO 42001？AI 治理與法規趨勢</td>
+</tr>
+<tr>
+<td></td>
+<td>第1章</td>
+<td>標準架構、適用範圍與用語定義（條文 1–3）</td>
+</tr>
+<tr>
+<td><strong>條文篇（PDCA）</strong></td>
+<td>第2章</td>
+<td>條文 4：組織全景與 AI 角色定位</td>
+</tr>
+<tr>
+<td></td>
+<td>第3章</td>
+<td>條文 5：領導作為與人工智慧政策</td>
+</tr>
+<tr>
+<td></td>
+<td>第4章</td>
+<td>條文 6.1.1–6.1.3：AI 風險評鑑、風險處理與適用性聲明</td>
+</tr>
+<tr>
+<td></td>
+<td>第5章</td>
+<td>條文 6.1.4、6.2、6.3：AI 系統衝擊評鑑、AI 目標與變更規劃</td>
+</tr>
+<tr>
+<td></td>
+<td>第6章</td>
+<td>條文 7：支援</td>
+</tr>
+<tr>
+<td></td>
+<td>第7章</td>
+<td>條文 8：運作</td>
+</tr>
+<tr>
+<td></td>
+<td>第8章</td>
+<td>條文 9：績效評估</td>
+</tr>
+<tr>
+<td></td>
+<td>第9章</td>
+<td>條文 10：改善</td>
+</tr>
+<tr>
+<td><strong>控制措施篇</strong></td>
+<td>第10章</td>
+<td>附錄 A/B（一）：A.2–A.5</td>
+</tr>
+<tr>
+<td></td>
+<td>第11章</td>
+<td>附錄 A/B（二）：A.6 人工智慧系統生命週期</td>
+</tr>
+<tr>
+<td></td>
+<td>第12章</td>
+<td>附錄 A/B（三）：A.7–A.10</td>
+</tr>
+<tr>
+<td><strong>整合與案例篇</strong></td>
+<td>第13章</td>
+<td>附錄 C/D、與 27001/27701/9001 整合及導入路徑</td>
+</tr>
+<tr>
+<td></td>
+<td>第14章</td>
+<td>管理案例集：六大產業 AIMS 實戰</td>
+</tr>
+<tr>
+<td><strong>稽核實務篇</strong></td>
+<td>第15章</td>
+<td>驗證流程、ISO/IEC 42006 與稽核技巧</td>
+</tr>
+<tr>
+<td></td>
+<td>第16章</td>
+<td>常見不符合事項、開立寫法與稽核檢查表</td>
+</tr>
+<tr>
+<td><strong>總結</strong></td>
+<td>第17章</td>
+<td>總複習與課後測驗說明</td>
+</tr>
+</tbody>
+</table>
+<h3>0.9.2 學習方式</h3>
+<ol>
+<li><strong>文字教材</strong>：每章都有完整講義，包含條文要求、白話解說、實務作法、虛擬管理案例與稽核重點，適合精讀與日後查閱。</li>
+<li><strong>互動影音</strong>：Allan 與阿拉蕾的對話式動畫，用輕鬆的方式帶你抓重點；影片中穿插「隨堂小挑戰」，答題後會即時顯示解析。</li>
+<li><strong>自我檢測</strong>：每章末有 3–5 題自我檢測，點開即可看答案與解析。</li>
+<li><strong>課後測驗與證書</strong>：完成所有章節後參加課後測驗，<strong>80 分以上通過</strong>即可<strong>下載結業證書</strong>。</li>
+</ol>
+<blockquote class="allan"><p class="who"><img class="avatar" src="../assets/img/allan.webp" alt="Allan 講師"><strong>💡 Allan 講師說：</strong> 建議學習順序是「先看影音抓輪廓 → 再讀文字教材補細節 → 最後做自我檢測確認理解」。手邊最好準備一份標準原文，邊讀邊對照條文編號，效果最好。</p>
+<p><strong>🎀 阿拉蕾發問：</strong> 那如果我考 79 分怎麼辦？</p>
+<p><strong>Allan：</strong> 那就再複習一下回去挑戰啊！不過說真的，證書只是起點，真正的價值是你回到公司後，能看懂自己組織的 AI 風險在哪裡。</p>
+</blockquote>
+<hr />
+<h2 id="本章重點回顧">本章重點回顧</h2>
+<ul>
+<li>42001 適用於<strong>任何提供或使用</strong> AI 系統的組織，不論規模、形式或性質。</li>
+<li>標準「介紹」點出 AI 三大特性：<strong>不透明的自動決策、資料驅動而非人類編碼、持續學習而改變行為</strong>，這些需要超越傳統 IT 管理的作法。</li>
+<li>組織應把要求事項的應用重點放在 <strong>AI 獨有的功能</strong>上，並與既有管理系統整合。</li>
+<li>生成式 AI 痛點：影子 AI、資料外洩、幻覺、偏差、智財、責任不清、供應商變更。</li>
+<li>三個警示事件：AI 履歷篩選偏差、機密原始碼輸入生成式 AI、聊天機器人錯誤回覆判公司負責。</li>
+<li><strong>EU AI Act</strong>：風險分級、分階段適用；<strong>台灣 AI 基本法</strong>：20 條、七大原則、國科會為主管機關、原則性立法；<strong>NIST AI RMF</strong>：Govern/Map/Measure/Manage。</li>
+<li>42001 是<strong>可驗證</strong>的管理系統標準，但不等於任何法規的合規證明。</li>
+<li>AI 標準家族：22989（術語，唯一引用標準）、23894（風險）、42005（衝擊評鑑）、42006（驗證機構要求）等。</li>
+<li>驗證：第一階段（文件與準備度）、第二階段（實施有效性）、證書 3 年、每年監督、第 3 年重新驗證。</li>
+<li>課後測驗 <strong>80 分</strong>通過可下載證書。</li>
+</ul>
+<h2 id="自我檢測">自我檢測</h2>
+<details>
+<summary>Q1. 依 ISO/IEC 42001 第 1 章適用範圍，下列哪個組織「不」適用本標準？(A) 開發 AI 模型的新創 (B) 只使用外部 AI 服務的中小企業 (C) 政府機關 (D) 以上皆適用</summary>
+<p><strong>答案：(D)</strong> 解析：標準明定適用於「任何提供或使用人工智慧系統產品或服務的組織，不論其規模、形式或性質」。只使用 AI 的組織同樣適用，差別在於扮演的 AI 角色不同，適用的控制措施範圍也不同。</p>
+</details>
+<details>
+<summary>Q2. 標準「介紹」中提到 AI 需要超越傳統 IT 管理的三個特性是什麼？</summary>
+<p><strong>答案：</strong> ① 以不透明、不可解釋的方式進行自動決策；② 以資料分析與機器學習取代人類編碼的邏輯來設計系統；③ 持續學習的 AI 系統會在使用中改變行為。解析：這三點說明了為什麼需要衝擊評鑑、資料管理與持續監控等 AI 特有的控制。</p>
+</details>
+<details>
+<summary>Q3. 某公司取得 ISO/IEC 42001 驗證後，對外宣稱「本公司已完全符合 EU AI Act」，這樣的說法恰當嗎？</summary>
+<p><strong>答案：</strong> 不恰當。解析：42001 是自願性的管理系統標準，驗證證明的是 AIMS 符合標準且有效運作。它能協助組織識別並回應法規要求（如 4.1、4.2），但不等於任何特定法規的合規證明。</p>
+</details>
+<details>
+<summary>Q4. ISO/IEC 42001 唯一的引用標準是哪一份？另外，規範 AIMS 驗證機構要求的是哪一份標準？</summary>
+<p><strong>答案：</strong> 引用標準為 ISO/IEC 22989:2022（AI 概念與術語）；驗證機構要求為 ISO/IEC 42006:2025，補充 ISO/IEC 17021-1。</p>
+</details>
+<details>
+<summary>Q5. 加拿大航空聊天機器人事件給組織的主要啟示是什麼？可對應 42001 哪些控制措施？</summary>
+<p><strong>答案：</strong> 組織須為其 AI 系統對外提供的資訊負責，不能以「是機器說錯」推卸。解析：可對應 A.6.2.4 驗證與確認、A.6.2.6 運作與監控、A.8.2 系統文件化與使用者資訊、A.9.4 預期用途等，確保上線前測試、上線後監控，並清楚界定 AI 的能力邊界。</p>
+</details>
+    <div class="pager"><span></span><a class="next" href="ch01.html"><small>下一章 →</small>標準架構與用語定義</a></div>
+  </article>
+</div>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<script src="../assets/js/chapters.js"></script>
+<script>
+(function () {
+  var id = "ch00", btn = document.getElementById("markRead");
+  function refresh() {
+    var p = Progress.load();
+    document.querySelectorAll(".toc a[data-id]").forEach(function (a) {
+      a.classList.toggle("ok", !!(p[a.dataset.id] && p[a.dataset.id].text));
+    });
+    if (p[id] && p[id].text) btn.textContent = "✓ 本章已讀完";
+  }
+  btn.onclick = function () { Progress.mark(id, "text"); refresh(); };
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 300) { Progress.mark(id, "text"); refresh(); }
+  }, { passive: true });
+  document.querySelectorAll(".toc a").forEach(function (a) { a.addEventListener("click", function () { document.querySelector(".toc").classList.remove("open"); }); });
+  refresh();
+})();
+</script>
+</body>
+</html>

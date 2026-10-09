@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISO 42001 線上課程｜人工智慧管理系統</title>
+<meta name="description" content="ISO/IEC 42001:2023 人工智慧管理系統線上課程：標準條文詳解、管理案例與稽核實務，含文字教材、互動影音與課後測驗。">
+<link rel="icon" href="assets/img/allan.webp">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="index.html">ISO <span>42001</span> 線上課程</a>
+  <nav>
+    <a class="active" href="index.html">首頁</a>
+    <a href="text/ch00.html">文字教材</a>
+    <a href="video.html">互動影音</a>
+    <a href="quiz.html">課後測驗</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="tag">ISO/IEC 42001:2023・AIMS</span>
+      <h1>人工智慧管理系統<br>標準詳解 × 管理案例 × 稽核實務</h1>
+      <p>由資深 ISMS／PIMS 輔導顧問暨驗證稽核員 Allan 講師，搭配超有活力的助教阿拉蕾，帶你從條文、控制措施、產業案例一路走到驗證稽核現場。</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="video.html?ch=ch00">▶ 從第一章影音開始</a>
+        <a class="btn ghost" href="text/ch00.html">📖 閱讀文字教材</a>
+      </div>
+    </div>
+    <div class="art"><img src="assets/img/hero.webp" alt="Allan 講師與助教阿拉蕾" width="1024" height="1024"></div>
+  </section>
+
+  <section class="cards">
+    <div class="card"><div class="ico">📖</div><h3>文字教材</h3><p>18 章完整講義：條文要求、白話解說、實務作法、管理案例、稽核重點與自我檢測，適合深入研讀與查閱。</p><a class="btn soft" href="text/ch00.html">開始閱讀</a></div>
+    <div class="card"><div class="ico">🎬</div><h3>互動影音</h3><p>講師與助教對話式教學，逐句語音快速載入，可選章節、跳段、調速、看逐字稿，並有隨堂互動題。</p><a class="btn soft" href="video.html">開始觀看</a></div>
+    <div class="card"><div class="ico">🏅</div><h3>課後測驗</h3><p>10 題測驗，80 分以上通過，即可下載結業證書（附題目與解答）；未通過可重新閱讀或再次測驗。</p><a class="btn soft" href="quiz.html">前往測驗</a></div>
+  </section>
+
+  <h2 class="section-title">建議學習路徑</h2>
+  <div class="path">
+    <div class="card"><h3>🧑‍🏫 已參加實體課程</h3><ol>
+      <li>依課堂筆記挑選不熟的章節觀看影音複習</li>
+      <li>閱讀第 10–12 章控制措施與第 14 章案例補充</li>
+      <li>研讀第 15–16 章稽核實務與檢查表</li>
+      <li>完成課後測驗、下載證書</li></ol></div>
+    <div class="card"><h3>💻 純線上學習</h3><ol>
+      <li>依序觀看第 0–17 章互動影音（約 3–4 小時）</li>
+      <li>每章看完後閱讀對應文字教材並做自我檢測</li>
+      <li>以第 17 章總複習掌握高頻考點</li>
+      <li>完成課後測驗、下載證書</li></ol></div>
+  </div>
+
+  <h2 class="section-title">章節選擇</h2>
+  <div class="filter" id="filter"></div>
+  <table class="chapter-table">
+    <thead><tr><th style="width:52px">章</th><th>章節名稱</th><th class="hide-sm" style="width:120px">學習進度</th><th style="width:190px">教材</th></tr></thead>
+    <tbody id="chapters"></tbody>
+  </table>
+
+  <h2 class="section-title">講師與助教</h2>
+  <div class="team">
+    <div class="card"><img src="assets/img/allan.webp" alt="Allan 講師"><div><h3>Allan 講師</h3><p>資深 ISMS／PIMS 輔導顧問，兼任驗證機構稽核員，專長資訊安全與企業 MIS 管理。擅長把條文翻成「人話」，再用稽核現場故事告訴你怎麼做才過得了關。</p></div></div>
+    <div class="card"><img src="assets/img/arale.webp" alt="助教阿拉蕾"><div><h3>助教 阿拉蕾</h3><p>好奇心爆棚的元氣助教，專門替大家問出心中的「笨問題」，負責吐槽、比喻和幫你整理重點。んちゃ～</p></div></div>
+  </div>
+</main>
+<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜學習進度僅儲存在您的瀏覽器｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<script src="assets/js/chapters.js"></script>
+<script>
+(function () {
+  var tb = document.getElementById("chapters"), filter = document.getElementById("filter");
+  var groups = ["全部"];
+  COURSE.chapters.forEach(function (c) { if (groups.indexOf(c.group) < 0) groups.push(c.group); });
+  var cur = "全部";
+  function draw() {
+    var p = Progress.load();
+    tb.innerHTML = "";
+    COURSE.chapters.forEach(function (c, i) {
+      if (cur !== "全部" && c.group !== cur) return;
+      var s = p[c.id] || {};
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + String(i).padStart(2, "0") + "</td>" +
+        "<td><span class='grp'>" + c.group + "</span>" + c.title + "</td>" +
+        "<td class='hide-sm'>" + (s.text ? "<span class='done'>✓ 已讀</span> " : "") + (s.video ? "<span class='done'>✓ 已看</span>" : "") + (!s.text && !s.video ? "<span style='color:var(--muted);font-size:13px'>未開始</span>" : "") + "</td>" +
+        "<td class='links'><a href='text/" + c.id + ".html'>📖 文字</a><a href='video.html?ch=" + c.id + "'>▶ 影音</a></td>";
+      tb.appendChild(tr);
+    });
+  }
+  groups.forEach(function (g) {
+    var b = document.createElement("button");
+    b.textContent = g; if (g === cur) b.className = "on";
+    b.onclick = function () { cur = g; filter.querySelectorAll("button").forEach(function (x) { x.className = x === b ? "on" : ""; }); draw(); };
+    filter.appendChild(b);
+  });
+  draw();
+})();
+</script>
+</body>
+</html>
