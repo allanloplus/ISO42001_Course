@@ -83,18 +83,22 @@ def line_hash(sp: str, text: str) -> str:
 async def synth(sem, sp, text, path: Path):
     v = VOICES[sp]
     async with sem:
-        for attempt in range(5):
+        base = normalize(text)
+        # 線上 TTS 偶爾會拒絕特定句型（回傳 NoAudioReceived），依序改用替代標點重試
+        variants = [base, base.replace("？", "。"), base.replace("，", " ").replace("？", "。"), base.replace("？", "")]
+        for attempt in range(6):
             try:
                 tmp = path.with_suffix(".tmp")
-                await edge_tts.Communicate(normalize(text), v["voice"], rate=v["rate"], pitch=v["pitch"]).save(str(tmp))
+                say = variants[min(attempt, len(variants) - 1)]
+                await edge_tts.Communicate(say, v["voice"], rate=v["rate"], pitch=v["pitch"]).save(str(tmp))
                 if tmp.stat().st_size < 1000:
                     raise RuntimeError("audio too small")
                 tmp.rename(path)
                 return
             except Exception as e:  # 網路不穩時重試
-                if attempt == 4:
+                if attempt == 5:
                     raise
-                await asyncio.sleep(2 * (attempt + 1))
+                await asyncio.sleep(1 + attempt)
 
 
 async def build(ch: str, sem):
