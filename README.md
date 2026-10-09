@@ -28,9 +28,13 @@
 
 ## 發布到 GitHub Pages
 
-1. GitHub 儲存庫 → **Settings → Pages**
-2. Source 選 **Deploy from a branch**，Branch 選 `main`（或本分支），資料夾選 **`/docs`**
-3. 網址通常是 `https://allanloplus.github.io/ISO42001_Couse/`（簡報第 65 張已預填這個網址，若不同請自行修改）
+課程網址：**https://allanloplus.github.io/ISO42001_Course/**
+
+1. 先把本分支合併到 `main`（或在 Pages 設定中直接選本分支）。
+2. GitHub 儲存庫 → **Settings → Pages** → Source 選 **Deploy from a branch**，Branch 選 `main`，資料夾選以下其一：
+   - **`/ (root)`**：根目錄的 `index.html` 會自動轉到 `docs/` 課程首頁（課程頁網址為 `…/ISO42001_Course/docs/`）。
+   - **`/docs`**：課程首頁直接就在 `…/ISO42001_Course/`。
+3. 儲存庫名稱需為 `ISO42001_Course`，Pages 網址才會是上面這個路徑。簡報第 65 張已改為這個網址。
 
 也可以在 `docs` 資料夾內直接用任何靜態網站伺服器開啟（例如 `npx http-server docs`）。
 

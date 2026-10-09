@@ -955,7 +955,7 @@ async function build() {
       { icon: "FaAward", title: "課後測驗", text: ["10 題，80 分通過", "下載結業證書（附題目與解答）", "未通過可重讀後再測"] }
     ], { x: MX, y: 1.45, w: W - 2 * MX, h: 3.2, cols: 3, textSize: 15 });
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: MX, y: 4.95, w: W - 2 * MX, h: 0.8, rectRadius: 0.1, fill: { color: C.text2 }, line: { color: C.text2 }, objectName: oid("url-box") });
-    s.addText("課程網站：https://allanloplus.github.io/ISO42001_Couse/", { x: MX + 0.3, y: 4.95, w: W - 2 * MX - 0.6, h: 0.8, fontSize: 18, bold: true, color: C.background1, valign: "middle", isTextBox: true, margin: 0, objectName: oid("url") });
+    s.addText("課程網站：https://allanloplus.github.io/ISO42001_Course/", { x: MX + 0.3, y: 4.95, w: W - 2 * MX - 0.6, h: 0.8, fontSize: 18, bold: true, color: C.background1, valign: "middle", isTextBox: true, margin: 0, objectName: oid("url") });
     bubble(s, "R", "測驗沒過不要哭，回去看影音就會了～んちゃ！", MX, 5.95, 7.5, 0.8, 15);
   }
   {
