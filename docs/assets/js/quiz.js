@@ -229,15 +229,11 @@
     c.fillStyle = "rgba(198,47,60,.9)"; c.font = `900 56px ${FONT}`; c.fillText("PASS", 0, 12); c.font = `700 24px ${FONT}`; c.fillText("測驗通過", 0, 52);
     c.restore();
     // 講師與助教
-    if (arale) drawRound(c, arale, 120, 420, 230, 208);
-    if (allan) drawRound(c, allan, W - 330, 360, 200, 338);
+    // 講師與助教（半身、透明背景）
+    if (arale) { const h = 300, w = h * arale.naturalWidth / arale.naturalHeight; c.drawImage(arale, 110, 110, w, h); }
+    if (allan) { const h = 330, w = h * allan.naturalWidth / allan.naturalHeight; c.drawImage(allan, W - 110 - w, 100, w, h); }
   }
-  function drawRound(c, img, x, y, w, h) {
-    c.save(); c.beginPath();
-    const r = 24; c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath();
-    c.fillStyle = "#fff"; c.fill(); c.clip(); c.drawImage(img, x, y, w, h); c.restore();
-    c.strokeStyle = "#dde2ec"; c.lineWidth = 3; c.strokeRect(x, y, w, h);
-  }
+
 
   // ---------- 題目與解答頁（A4 直式） ----------
   function wrap(c, text, maxW) {

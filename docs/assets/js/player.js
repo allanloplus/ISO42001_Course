@@ -8,6 +8,37 @@
   if (!chapters.some(c => c.id === chId)) chId = chapters[0].id;
   const chIndex = chapters.findIndex(c => c.id === chId);
   const NAMES = { A: "Allan 講師", R: "助教 阿拉蕾" };
+  // 依台詞內容挑選表情（表情圖每張約 15 KB）
+  const EXPR = {
+    A: ["smile", "laugh", "think", "confused", "surprised", "point", "wink", "talk"],
+    R: ["laugh", "think", "surprised", "confused", "talk", "sad", "thumbsup", "excited"]
+  };
+  const faceUrl = (s, e) => `assets/img/expr/${s === "A" ? "allan" : "arale"}_${e}.webp`;
+  let lineNo = 0;
+  function exprFor(s, t) {
+    lineNo++;
+    if (s === "A") {
+      if (/哈|笑/.test(t)) return "laugh";
+      if (/竟然|居然|嚇|天啊/.test(t)) return "surprised";
+      if (/頭痛|傷腦筋|麻煩|糟/.test(t)) return "confused";
+      if (/注意|重點|記住|記得|一定要|關鍵|千萬|常見|缺失|不行|不能|最愛問|口訣/.test(t)) return "point";
+      if (/沒錯|答對|完美|很好|說得好|聰明|厲害/.test(t)) return "wink";
+      if (/[？?]$/.test(t)) return "think";
+      return lineNo % 2 ? "talk" : "smile";
+    }
+    if (/哈|嘻|好耶|耶！|開心/.test(t)) return "laugh";
+    if (/嗚|難過|好慘|好難|哭|崩潰/.test(t)) return "sad";
+    if (/讚|懂了|學會|好棒|原來如此|整理|記下來|收到/.test(t)) return "thumbsup";
+    if (/哇|天啊|真的假的|什麼！|居然|竟然/.test(t)) return "surprised";
+    if (/蛤|怎麼辦|為什麼|搞不懂|聽不懂|欸欸/.test(t)) return "confused";
+    if (/[？?]/.test(t)) return "think";
+    if (/！/.test(t)) return "excited";
+    return "talk";
+  }
+  // 背景預載表情圖
+  window.addEventListener("load", () => setTimeout(() => {
+    for (const s in EXPR) EXPR[s].forEach(e => { const i = new Image(); i.src = faceUrl(s, e); });
+  }, 1500));
   const POS_KEY = "iso42001-video-pos-" + chId;
 
   const $ = s => document.querySelector(s);
@@ -115,15 +146,27 @@
         else if (i === k) b.classList.add("wrong");
       });
       const ok = k === s.answer;
+      setSpeaker("R", "", ok ? "thumbsup" : "sad");
       card.querySelector(".explain")?.remove();
       card.appendChild(el("div", "explain", `${ok ? "🎉 答對了！" : "😅 差一點！正確答案是 " + "ABCD"[s.answer]}　${esc(s.explain)}`));
-      if (speak) { stopAudio(); st.phase = "after"; st.li = 0; st.playing = true; updatePlayBtn(); playLine(); }
+      if (speak) {
+        // 先讓阿拉蕾給出反應，再接講師解析
+        stopAudio(); st.phase = "after"; st.li = 0; st.playing = true; updatePlayBtn();
+        txt.textContent = ok ? "答對了！好棒～給你一個讚！" : "哎呀答錯了…沒關係，聽老師解析！";
+        st.timer = setTimeout(playLine, 1400);
+      }
     }
     function answer(k) { if (st.answers[st.si] == null) showAnswer(k, true); }
 
-    function setSpeaker(s) {
+    const face = $("#face");
+    function setFace(s, e) {
+      const url = faceUrl(s, e);
+      if (!face.src.endsWith(url)) { face.src = url; face.style.animation = "none"; void face.offsetWidth; face.style.animation = ""; }
+    }
+    function setSpeaker(s, t, e) {
       bubble.className = "bubble " + s + (st.subs ? "" : " hidden-sub");
       who.textContent = NAMES[s];
+      setFace(s, e || exprFor(s, t || ""));
       for (const k in chars) {
         chars[k].classList.toggle("idle", k !== s);
         chars[k].classList.toggle("talking", k === s && st.playing);
@@ -167,7 +210,7 @@
       const lines = list_();
       const line = lines[st.li];
       if (!line) return next();
-      setSpeaker(line.s);
+      setSpeaker(line.s, line.t);
       txt.textContent = line.t;
       updateProgress();
       if (!st.playing) return;
@@ -276,7 +319,7 @@
     $("#startBtn").onclick = () => start(0);
     if (saved > 0) $("#resumeBtn").onclick = () => start(saved);
     renderScene();
-    setSpeaker(scenes[0].lines[0].s);
+    setSpeaker(scenes[0].lines[0].s, scenes[0].lines[0].t);
     txt.textContent = scenes[0].lines[0].t;
     updateProgress();
     // 預先載入第一句語音，按下播放可立即發聲

@@ -22,8 +22,8 @@ def load_chapters():
 
 
 CALLOUTS = [
-    ("💡", "allan", "../assets/img/allan.webp", "Allan 講師"),
-    ("🎀", "arale", "../assets/img/arale.webp", "助教阿拉蕾"),
+    ("💡", "allan", "../assets/img/expr/allan_point.webp", "Allan 講師"),
+    ("🎀", "arale", "../assets/img/expr/arale_think.webp", "助教阿拉蕾"),
     ("⚠️", "warn", None, None),
     ("🔍", "audit", None, None),
 ]
@@ -76,7 +76,7 @@ PAGE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{short}｜文字教材｜ISO 42001 線上課程</title>
-<link rel="icon" href="../assets/img/allan.webp">
+<link rel="icon" href="../assets/img/expr/allan_smile.webp">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

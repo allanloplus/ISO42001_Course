@@ -54,7 +54,7 @@ pip install -r tools/requirements.txt
 python3 tools/build_site.py                # Markdown → docs/text/*.html
 python3 tools/build_audio.py [ch04 ...]    # 影音腳本 → 語音 + docs/data/video/*.js（只重產有修改的句子）
 cd tools && npm install && cd .. && node tools/build_pptx.js   # 重新產生 PPTX
-python3 tools/crop_characters.py tools/source_illustration.webp  # 由原始插圖裁切角色圖
+python3 tools/crop_characters.py          # 由角色設定圖裁切半身、全身與表情包
 ```
 
 修改教材的流程：編輯 `content/text/*.md` 或 `content/video/*.json` → 執行上面對應的指令 → commit。
@@ -64,4 +64,4 @@ python3 tools/crop_characters.py tools/source_illustration.webp  # 由原始插�
 - 標準條文內容依 ISO/IEC 42001:2023 中文譯本整理；譯本聲明「各項原義應當以英文為唯一詮釋依據」。
 - 管理案例中的公司（福爾摩沙銀行、鴻光精密、樂購電商、仁心醫院、才庫人力、智聯科技、海遠國際）皆為虛擬。
 - 語音由 Microsoft Edge 線上 TTS 合成。
-- 角色圖裁切自講師提供的插圖。阿拉蕾是既有動漫角色，若課程要商業販售或公開推廣，建議先確認角色的使用授權。
+- 角色圖（半身、全身、各 8 種表情）裁切自講師提供的角色設定圖 `tools/allan_sheet.jpg`、`tools/arale_sheet.jpg`；互動影音與簡報對話框會依台詞內容自動切換表情。

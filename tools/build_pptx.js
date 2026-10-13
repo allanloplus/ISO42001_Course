@@ -104,8 +104,31 @@ function sectionSlide(no, title, sub, minutes, notes) {
   s.addShape(pres.shapes.OVAL, { x: 0.75, y: 2.6, w: 1.25, h: 1.25, fill: { color: C.accent2 }, line: { color: C.accent2 }, objectName: oid("section-num") });
   s.addText(String(no), { x: 0.75, y: 2.6, w: 1.25, h: 1.25, fontSize: 40, bold: true, color: C.background1, align: "center", valign: "middle", isTextBox: true, margin: 0, objectName: oid("section-num-text") });
   if (minutes) s.addText(`⏱ 建議時間 ${minutes} 分鐘`, { x: 2.3, y: 5.15, w: 6, h: 0.4, fontSize: 14, color: C.accent3, isTextBox: true, margin: 0, objectName: oid("section-time") });
-  s.addImage({ path: ASSET("allan.png"), x: 10.35, y: 2.55, w: 2.3, h: 2.3 * 948 / 560, objectName: oid("allan"), altText: "Allan 講師" });
+  s.addImage({ path: ASSET("allan.png"), x: 10.25, y: 2.2, w: 2.4, h: 2.4 * 793 / 678, objectName: oid("allan"), altText: "Allan 講師" });
   return s;
+}
+
+// 依台詞挑選表情（與互動影音播放器相同規則）
+let exprN = 0;
+function exprFor(who, t) {
+  exprN++;
+  if (who === "A") {
+    if (/哈|笑/.test(t)) return "laugh";
+    if (/竟然|居然|嚇|天啊/.test(t)) return "surprised";
+    if (/頭痛|傷腦筋|麻煩|糟/.test(t)) return "confused";
+    if (/注意|重點|記住|記得|一定要|關鍵|千萬|常見|缺失|不行|不能|最愛問|口訣/.test(t)) return "point";
+    if (/沒錯|答對|完美|很好|說得好|聰明|厲害|對！/.test(t)) return "wink";
+    if (/[？?]$/.test(t)) return "think";
+    return exprN % 2 ? "talk" : "smile";
+  }
+  if (/哈|嘻|好耶|開心/.test(t)) return "laugh";
+  if (/嗚|難過|好慘|好難|哭|崩潰/.test(t)) return "sad";
+  if (/讚|懂了|學會|好棒|原來|整理|記下來|收到/.test(t)) return "thumbsup";
+  if (/哇|天啊|真的假的|居然|竟然/.test(t)) return "surprised";
+  if (/蛤|怎麼辦|為什麼|搞不懂|聽不懂|欸欸|跟得上/.test(t)) return "confused";
+  if (/[？?]/.test(t)) return "think";
+  if (/！/.test(t)) return "excited";
+  return "talk";
 }
 
 // 講師／助教對話框（本簡報的視覺主軸）
@@ -113,7 +136,7 @@ function bubble(s, who, text, x, y, w, h, fs = 14) {
   fs += 2;
   const isA = who === "A";
   const color = isA ? C.accent4 : C.accent2;
-  s.addImage({ path: ASSET(isA ? "allan_head.png" : "arale_head.png"), x, y: y + (h - 0.9) / 2, w: 0.9, h: 0.9, rounding: true, objectName: oid(isA ? "allan-avatar" : "arale-avatar"), altText: isA ? "Allan 講師" : "助教阿拉蕾" });
+  s.addImage({ path: ASSET(`${isA ? "allan" : "arale"}_${exprFor(who, text)}.png`), x, y: y + (h - 0.95) / 2, w: 0.95, h: 0.95, objectName: oid(isA ? "allan-avatar" : "arale-avatar"), altText: isA ? "Allan 講師" : "助教阿拉蕾" });
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: x + 1.05, y, w: w - 1.05, h, rectRadius: 0.12, fill: { color: isA ? "EAF0FF" : "FFE8EE" }, line: { color, width: 1.25 }, objectName: oid("bubble") });
   s.addText([
     { text: (isA ? "Allan 講師：" : "阿拉蕾："), options: { bold: true, color } },
@@ -214,19 +237,19 @@ async function build() {
     s.addText("ISO/IEC 42001:2023\n人工智慧管理系統", { placeholder: "title" });
     s.addText("標準詳解 × 管理案例 × 稽核實務\n講師 Allan｜助教 阿拉蕾", { placeholder: "body" });
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.75, y: 0.75, w: 4.0, h: 6.0, rectRadius: 0.2, fill: { color: C.background1 }, line: { color: C.background1 }, objectName: oid("hero-frame") });
-    s.addImage({ path: ASSET("allan.png"), x: 9.85, y: 1.0, w: 2.75, h: 2.75 * 948 / 560, objectName: oid("hero-allan"), altText: "Allan 講師" });
-    s.addImage({ path: ASSET("arale.png"), x: 8.85, y: 4.35, w: 2.2, h: 2.2 * 380 / 420, objectName: oid("hero-arale"), altText: "助教阿拉蕾" });
+    s.addImage({ path: ASSET("allan_full.png"), x: 9.9, y: 0.95, w: 5.6 * 678 / 1372, h: 5.6, objectName: oid("hero-allan"), altText: "Allan 講師" });
+    s.addImage({ path: ASSET("arale_full.png"), x: 8.95, y: 3.7, w: 2.85 * 322 / 662, h: 2.85, objectName: oid("hero-arale"), altText: "助教阿拉蕾" });
     tag(s, "實體課程 3 小時", 0.7, 5.75, 2.4, C.accent2);
     tag(s, "含線上影音與課後測驗", 3.3, 5.75, 3.0, C.accent1);
   }
   {
     const s = slideOf("CONTENT", "今天的講師與助教", N("3 分鐘", "介紹講師背景：長期擔任 ISMS／PIMS 輔導顧問並兼任驗證機構稽核員，看過很多組織從 27001 走到 27701、現在走到 42001。說明助教阿拉蕾會在簡報中以對話框出現，代表學員心中的疑問。", "阿拉蕾：「老師，我只聽得懂 AI，聽不懂 ISO 怎麼辦？」——回答：今天就是要把條文翻成人話。"));
-    s.addImage({ path: ASSET("allan.png"), x: 0.9, y: 1.45, w: 2.6, h: 2.6 * 948 / 560, objectName: oid("allan-full"), altText: "Allan 講師" });
+    s.addImage({ path: ASSET("allan.png"), x: 0.8, y: 1.5, w: 2.8, h: 2.8 * 793 / 678, objectName: oid("allan-full"), altText: "Allan 講師" });
     await cards(s, [
       { icon: "FaUserTie", title: "Allan 講師", text: ["資深 ISMS／PIMS 輔導顧問", "驗證機構稽核員（第三方稽核）", "專長：資訊安全、企業 MIS 管理", "口頭禪：「證據呢？」"] },
       { icon: "FaSmile", title: "助教 阿拉蕾", color: C.accent2, text: ["元氣滿滿的好奇寶寶", "幫大家問出「不敢問的笨問題」", "負責比喻、吐槽、整理重點", "招呼語：「んちゃ～」"] }
     ], { x: 4.0, y: 1.5, w: 8.7, h: 3.0, cols: 2 });
-    s.addImage({ path: ASSET("arale.png"), x: 4.05, y: 4.8, w: 1.95, h: 1.95 * 380 / 420, objectName: oid("arale-full"), altText: "助教阿拉蕾" });
+    s.addImage({ path: ASSET("arale.png"), x: 4.2, y: 4.7, w: 1.55, h: 1.55 * 585 / 430, objectName: oid("arale-full"), altText: "助教阿拉蕾" });
     bubble(s, "R", "老師～我只懂 AI、不懂 ISO，今天跟得上嗎？", 6.25, 5.05, 6.45, 0.95, 15);
   }
   {
@@ -587,7 +610,7 @@ async function build() {
       { badge: "3", title: "衝擊與濫用", text: "誰會受影響？可預見的濫用是什麼？" },
       { badge: "4", title: "控制措施", text: "挑 3–5 個附錄 A 控制措施並說明理由" }
     ], { x: MX, y: 1.45, w: W - 2 * MX, h: 2.6, cols: 4, gap: 0.25, titleSize: 16 });
-    s.addImage({ path: ASSET("arale.png"), x: MX, y: 4.35, w: 2.3, h: 2.3 * 380 / 420, objectName: oid("arale-ex"), altText: "助教阿拉蕾" });
+    s.addImage({ path: ASSET("arale.png"), x: MX + 0.3, y: 4.3, w: 1.75, h: 1.75 * 585 / 430, objectName: oid("arale-ex"), altText: "助教阿拉蕾" });
     bubble(s, "R", "計時 6 分鐘！每組派一位報告，講最有梗的那一個風險就好～", 3.15, 4.55, 9.58, 1.0, 16);
     tag(s, "⏱ 6 分鐘", 3.15, 5.85, 1.8, C.accent2);
   }
@@ -595,7 +618,7 @@ async function build() {
     const s = slideOf("TITLE", null, N("10 分鐘", "休息 10 分鐘。提醒學員：線上影音第 4、5 章可以複習剛才的內容。"));
     s.addText("休息 10 分鐘 ☕", { placeholder: "title" });
     s.addText("下一節：條文 7–10 支援、運作、績效評估與改善\n阿拉蕾：「要準時回來喔，不然我會用 んちゃ 光線喚醒你！」", { placeholder: "body" });
-    s.addImage({ path: ASSET("arale.png"), x: 9.3, y: 2.0, w: 3.3, h: 3.3 * 380 / 420, objectName: oid("arale-break"), altText: "助教阿拉蕾" });
+    s.addImage({ path: ASSET("arale_full.png"), x: 10.0, y: 1.5, w: 4.6 * 322 / 662, h: 4.6, objectName: oid("arale-break"), altText: "助教阿拉蕾" });
   }
 
   // ---------- 五、條文 7–10 ----------
@@ -837,7 +860,7 @@ async function build() {
       { badge: "Q2", title: "優先控制措施", text: "客戶最在意哪些？（提示：A.10、A.6.2.7、A.8.2）" },
       { badge: "Q3", title: "時程與證據", text: "半年內要累積哪些運作紀錄才過得了第二階段？" }
     ], { x: MX, y: 1.45, w: W - 2 * MX, h: 2.8, cols: 3 });
-    s.addImage({ path: ASSET("allan.png"), x: MX, y: 4.45, w: 1.4, h: 1.4 * 948 / 560, objectName: oid("allan-ex"), altText: "Allan 講師" });
+    s.addImage({ path: ASSET("allan.png"), x: MX, y: 4.45, w: 1.5, h: 1.5 * 793 / 678, objectName: oid("allan-ex"), altText: "Allan 講師" });
     bubble(s, "A", "給大家 3 分鐘討論。提示：先問「客戶要的是證書，還是要的是信任？」", 2.3, 4.7, 10.43, 1.0, 16);
   }
 
@@ -963,8 +986,8 @@ async function build() {
     s.addText("Q & A\n謝謝大家！", { placeholder: "title" });
     s.addText("Allan 講師 × 助教阿拉蕾\n「AI 要管，也管得動。」", { placeholder: "body" });
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.75, y: 0.75, w: 4.0, h: 6.0, rectRadius: 0.2, fill: { color: C.background1 }, line: { color: C.background1 }, objectName: oid("end-frame") });
-    s.addImage({ path: ASSET("allan.png"), x: 9.85, y: 1.0, w: 2.75, h: 2.75 * 948 / 560, objectName: oid("end-allan"), altText: "Allan 講師" });
-    s.addImage({ path: ASSET("arale.png"), x: 8.85, y: 4.35, w: 2.2, h: 2.2 * 380 / 420, objectName: oid("end-arale"), altText: "助教阿拉蕾" });
+    s.addImage({ path: ASSET("allan_full.png"), x: 9.9, y: 0.95, w: 5.6 * 678 / 1372, h: 5.6, objectName: oid("end-allan"), altText: "Allan 講師" });
+    s.addImage({ path: ASSET("arale_full.png"), x: 8.95, y: 3.7, w: 2.85 * 322 / 662, h: 2.85, objectName: oid("end-arale"), altText: "助教阿拉蕾" });
   }
 
   await pres.writeFile({ fileName: OUT });
