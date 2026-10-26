@@ -68,5 +68,5 @@ python3 tools/crop_characters.py          # 由角色設定圖裁切半身、全
 
 ## 著作權
 
-教材規劃製作：Allan Lo顧問（http://www.123hi.org）
-Copyright © 2027 Allan Lo. All rights reserved.
+教材規劃製作：Allan Lo顧問（http://www.123hi.org）・2026 年 10 月
+Copyright © 2026 Allan Lo. All rights reserved.

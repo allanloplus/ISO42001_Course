@@ -7,7 +7,7 @@
   const LABEL = { company: "公司名稱", unit: "單位", name: "姓名", title: "職稱", email: "E-mail" };
   const SS = "iso42001-quiz-info";
   const FONT = '"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",sans-serif';
-  const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）　Copyright © 2027 Allan Lo. All rights reserved.";
+  const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）・2026 年 10 月　Copyright © 2026 Allan Lo. All rights reserved.";
   const SERIF = '"Noto Serif TC","Songti TC","PMingLiU","MingLiU",serif';
   let info = null, paper = null, result = null;
 

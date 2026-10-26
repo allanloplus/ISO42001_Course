@@ -39,7 +39,7 @@ const C = pres.SchemeColor;
 const W = 13.333, H = 7.5, MX = 0.6;
 
 // ---------- 版面（layouts） ----------
-const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）｜Copyright © 2027 Allan Lo. All rights reserved.";
+const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）・2026 年 10 月｜Copyright © 2026 Allan Lo. All rights reserved.";
 const footer = [
   { text: { text: "ISO/IEC 42001:2023 人工智慧管理系統｜" + CREDIT, options: { x: MX, y: 7.02, w: 11.4, h: 0.3, fontSize: 10, color: "8A93A6", margin: 0 } } }
 ];
