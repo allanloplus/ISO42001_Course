@@ -104,7 +104,7 @@
 
   function report() {
     if (!CFG.submitUrl) return;
-    const body = JSON.stringify(Object.assign({}, info, { score: result.score, passed: result.passed, certNo: result.certNo, date: result.date, course: CFG.courseName }));
+    const body = JSON.stringify(Object.assign({}, info, { score: result.score, passed: result.passed, certNo: result.certNo, date: result.date, course: CFG.courseName, license: window.LICENSE ? window.LICENSE.company + "（" + (window.LICENSE.no || "") + "）" : "" }));
     fetch(CFG.submitUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body }).catch(() => { });
   }
 
@@ -223,6 +223,11 @@
     c.font = `italic 700 70px "Brush Script MT","Segoe Script",cursive`; c.fillStyle = "#1f2a44"; c.fillText(CFG.instructor, W - 520, 1150);
     c.strokeStyle = "#333"; c.lineWidth = 2; c.beginPath(); c.moveTo(W - 700, 1175); c.lineTo(W - 340, 1175); c.stroke();
     c.font = `500 32px ${FONT}`; c.fillStyle = "#555"; c.fillText(`課程講師　${CFG.instructor}`, W - 520, 1222);
+    // 授權版：證書加註授權單位（公開版不顯示）
+    if (window.LICENSE) {
+      c.textAlign = "left"; c.fillStyle = "#555"; c.font = `500 32px ${FONT}`;
+      c.fillText(`授權單位：${window.LICENSE.company}${window.LICENSE.dept ? " " + window.LICENSE.dept : ""}`, 200, 1070);
+    }
     // 教材製作與著作權聲明
     c.textAlign = "center"; c.fillStyle = "#8a94a8"; c.font = `400 24px ${FONT}`; c.fillText(CREDIT, W / 2, 1300);
     // 通過章戳
@@ -278,7 +283,7 @@
       put(`解析：${p.explain}`, `400 21px ${FONT}`, "#555", 32, 24);
       y += 22;
     });
-    pages.forEach((p, i) => { const cc = p.getContext("2d"); cc.fillStyle = "#999"; cc.font = `400 18px ${FONT}`; cc.textAlign = "center"; cc.fillText(`第 ${i + 1} / ${pages.length} 頁`, W / 2, H - 45); cc.font = `400 16px ${FONT}`; cc.fillText(CREDIT, W / 2, H - 72); });
+    pages.forEach((p, i) => { const cc = p.getContext("2d"); cc.fillStyle = "#999"; cc.font = `400 18px ${FONT}`; cc.textAlign = "center"; cc.fillText(`第 ${i + 1} / ${pages.length} 頁`, W / 2, H - 45); cc.font = `400 16px ${FONT}`; cc.fillText(CREDIT, W / 2, H - 72); if (window.LICENSE) cc.fillText(window.licenseText(), W / 2, H - 96); });
     return pages;
   }
 })();

@@ -41,3 +41,55 @@ window.Progress = {
   },
   get(id) { return this.load()[id] || {}; }
 };
+
+/* 授權資訊顯示（公開版 COURSE_LICENSE = null，不顯示任何授權資訊）
+ * 授權版會在：頁首授權標籤、首頁「○○ 內部教育訓練專用」、每頁頁尾、結業證書與解答頁顯示授權公司；
+ * 授權到期或網站不在授權網域時，頁面頂端顯示紅色提醒。 */
+(function () {
+  const L = window.COURSE_LICENSE;
+  const LIC = (L && L.company) ? L : null;
+  window.LICENSE = LIC;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  window.licenseText = function () {
+    if (!LIC) return "";
+    const who = LIC.company + (LIC.dept ? " " + LIC.dept : "");
+    const period = (LIC.start || LIC.end) ? `授權期間 ${LIC.start || ""}${LIC.end ? " ～ " + LIC.end : " 起"}` : "";
+    const meta = [LIC.no ? `授權編號 ${LIC.no}` : "", period].filter(Boolean).join("，");
+    return `本教材經授權供「${who}」${LIC.note || "內部教育訓練使用"}${meta ? `（${meta}）` : ""}。未經授權，請勿轉載、複製或對外公開。`;
+  };
+  if (!LIC) return;
+  function warnings() {
+    const w = [], today = new Date().toISOString().slice(0, 10);
+    if (LIC.end && today > LIC.end) w.push(`本教材授權已於 ${LIC.end} 到期，請洽 Allan Lo顧問（www.123hi.org）續約。`);
+    const host = location.hostname;
+    if (LIC.domains && LIC.domains.length && host && !/^(localhost|127\.|\[::1\])/.test(host) &&
+        !LIC.domains.some(d => host === d || host.endsWith("." + d)))
+      w.push(`此網站（${host}）不在授權網域內，請洽 Allan Lo顧問（www.123hi.org）。`);
+    return w;
+  }
+  function apply() {
+    const warns = warnings();
+    if (warns.length) {
+      const b = document.createElement("div");
+      b.className = "lic-warn"; b.textContent = warns.join(" ");
+      document.body.insertBefore(b, document.body.firstChild);
+    }
+    const logo = document.querySelector(".topbar .logo");
+    if (logo) {
+      const tag = document.createElement("span");
+      tag.className = "lic-badge"; tag.title = window.licenseText();
+      tag.textContent = "授權：" + LIC.company;
+      logo.insertAdjacentElement("afterend", tag);
+    }
+    document.querySelectorAll("[data-lic-company]").forEach(el => {
+      el.textContent = LIC.company + (LIC.dept ? " " + LIC.dept : "") + "　內部教育訓練專用"; el.hidden = false;
+    });
+    const foot = document.querySelector("footer.site");
+    if (foot) {
+      const d = document.createElement("div");
+      d.className = "lic-line"; d.innerHTML = esc(window.licenseText());
+      foot.insertBefore(d, foot.firstChild);
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
+})();
