@@ -32,15 +32,24 @@ const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5 in
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
 pres.title = "ISO/IEC 42001:2023 人工智慧管理系統 實體課程";
-pres.author = "Allan";
+pres.author = "Allan Lo";
+pres.company = "Allan Lo（www.123hi.org）";
 pres.subject = "ISO/IEC 42001 標準詳解、管理案例與稽核實務";
 const C = pres.SchemeColor;
 const W = 13.333, H = 7.5, MX = 0.6;
 
 // ---------- 版面（layouts） ----------
+const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）｜Copyright © 2027 Allan Lo. All rights reserved.";
+const footer = [
+  { text: { text: "ISO/IEC 42001:2023 人工智慧管理系統｜" + CREDIT, options: { x: MX, y: 7.02, w: 11.4, h: 0.3, fontSize: 10, color: "8A93A6", margin: 0 } } }
+];
+const darkFooter = [
+  { text: { text: CREDIT, options: { x: MX, y: 6.98, w: 11.4, h: 0.3, fontSize: 10, color: "9FB0D0", margin: 0 } } }
+];
 pres.defineSlideMaster({
   title: "TITLE", background: { color: C.text2 },
   objects: [
+    ...darkFooter,
     { placeholder: { options: { name: "title", type: "title", x: 0.7, y: 1.55, w: 7.6, h: 2.0, fontSize: 40, bold: true, color: C.background1, valign: "bottom", align: "left", margin: 0 }, text: "" } },
     { placeholder: { options: { name: "body", type: "body", x: 0.7, y: 3.75, w: 7.6, h: 1.6, fontSize: 20, color: C.background2, valign: "top", align: "left", margin: 0 }, text: "" } }
   ]
@@ -48,13 +57,11 @@ pres.defineSlideMaster({
 pres.defineSlideMaster({
   title: "SECTION", background: { color: C.text2 },
   objects: [
+    ...darkFooter,
     { placeholder: { options: { name: "title", type: "title", x: 2.3, y: 2.55, w: 8.2, h: 1.1, fontSize: 40, bold: true, color: C.background1, valign: "middle", align: "left", margin: 0 }, text: "" } },
     { placeholder: { options: { name: "body", type: "body", x: 2.3, y: 3.7, w: 8.2, h: 1.3, fontSize: 20, color: C.background2, valign: "top", align: "left", margin: 0 }, text: "" } }
   ]
 });
-const footer = [
-  { text: { text: "ISO/IEC 42001:2023 人工智慧管理系統｜講師 Allan", options: { x: MX, y: 7.02, w: 7, h: 0.3, fontSize: 10, color: "8A93A6", margin: 0 } } }
-];
 pres.defineSlideMaster({
   title: "CONTENT", background: { color: C.background1 },
   slideNumber: { x: 12.2, y: 7.02, w: 0.6, h: 0.3, fontSize: 10, color: "8A93A6", align: "right" },

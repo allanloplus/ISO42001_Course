@@ -7,6 +7,7 @@
   const LABEL = { company: "公司名稱", unit: "單位", name: "姓名", title: "職稱", email: "E-mail" };
   const SS = "iso42001-quiz-info";
   const FONT = '"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",sans-serif';
+  const CREDIT = "教材規劃製作：Allan Lo顧問（www.123hi.org）　Copyright © 2027 Allan Lo. All rights reserved.";
   const SERIF = '"Noto Serif TC","Songti TC","PMingLiU","MingLiU",serif';
   let info = null, paper = null, result = null;
 
@@ -222,6 +223,8 @@
     c.font = `italic 700 70px "Brush Script MT","Segoe Script",cursive`; c.fillStyle = "#1f2a44"; c.fillText(CFG.instructor, W - 520, 1150);
     c.strokeStyle = "#333"; c.lineWidth = 2; c.beginPath(); c.moveTo(W - 700, 1175); c.lineTo(W - 340, 1175); c.stroke();
     c.font = `500 32px ${FONT}`; c.fillStyle = "#555"; c.fillText(`課程講師　${CFG.instructor}`, W - 520, 1222);
+    // 教材製作與著作權聲明
+    c.textAlign = "center"; c.fillStyle = "#8a94a8"; c.font = `400 24px ${FONT}`; c.fillText(CREDIT, W / 2, 1300);
     // 通過章戳
     c.save(); c.translate(W / 2, 1150); c.rotate(-0.18);
     c.strokeStyle = "rgba(198,47,60,.85)"; c.lineWidth = 8; c.beginPath(); c.arc(0, 0, 105, 0, Math.PI * 2); c.stroke();
@@ -275,7 +278,7 @@
       put(`解析：${p.explain}`, `400 21px ${FONT}`, "#555", 32, 24);
       y += 22;
     });
-    pages.forEach((p, i) => { const cc = p.getContext("2d"); cc.fillStyle = "#999"; cc.font = `400 18px ${FONT}`; cc.textAlign = "center"; cc.fillText(`第 ${i + 1} / ${pages.length} 頁`, W / 2, H - 45); });
+    pages.forEach((p, i) => { const cc = p.getContext("2d"); cc.fillStyle = "#999"; cc.font = `400 18px ${FONT}`; cc.textAlign = "center"; cc.fillText(`第 ${i + 1} / ${pages.length} 頁`, W / 2, H - 45); cc.font = `400 16px ${FONT}`; cc.fillText(CREDIT, W / 2, H - 72); });
     return pages;
   }
 })();

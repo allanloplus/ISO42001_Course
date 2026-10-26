@@ -104,7 +104,7 @@ PAGE = """<!doctype html>
     <div class="pager">{prev}{next}</div>
   </article>
 </div>
-<footer class="site">ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</footer>
+<footer class="site"><div>ISO/IEC 42001:2023 人工智慧管理系統線上課程｜講師 Allan・助教 阿拉蕾｜標準條文以 ISO/IEC 42001:2023 英文版為唯一詮釋依據</div><div class="credit">教材規劃製作：Allan Lo顧問（<a href="http://www.123hi.org" target="_blank" rel="noopener">www.123hi.org</a>）<br>Copyright © 2027 Allan Lo. All rights reserved.</div></footer>
 <script src="../assets/js/chapters.js"></script>
 <script>
 (function () {{

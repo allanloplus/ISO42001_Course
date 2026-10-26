@@ -65,3 +65,8 @@ python3 tools/crop_characters.py          # 由角色設定圖裁切半身、全
 - 管理案例中的公司（福爾摩沙銀行、鴻光精密、樂購電商、仁心醫院、才庫人力、智聯科技、海遠國際）皆為虛擬。
 - 語音由 Microsoft Edge 線上 TTS 合成。
 - 角色圖（半身、全身、各 8 種表情）裁切自講師提供的角色設定圖 `tools/allan_sheet.jpg`、`tools/arale_sheet.jpg`；互動影音與簡報對話框會依台詞內容自動切換表情。
+
+## 著作權
+
+教材規劃製作：Allan Lo顧問（http://www.123hi.org）
+Copyright © 2027 Allan Lo. All rights reserved.

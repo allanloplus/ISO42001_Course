@@ -235,7 +235,9 @@ article.doc pre { background: var(--surface-2); padding: 12px; border-radius: 10
 .progress-q { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: 6px 0 14px; }
 .progress-q i { display: block; height: 100%; background: var(--brand); width: 0; transition: width .2s; }
 
-footer.site { text-align: center; color: var(--muted); font-size: 13px; padding: 26px 16px 40px; }
+footer.site { text-align: center; color: var(--muted); font-size: 13px; padding: 26px 16px 40px; line-height: 1.7; }
+footer.site .credit { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); display: inline-block; }
+footer.site a { color: var(--muted); }
 
 /* ---------- 響應式 ---------- */
 @media (max-width: 980px) {
@@ -268,7 +270,7 @@ footer.site { text-align: center; color: var(--muted); font-size: 13px; padding:
   .bubble .face { width: 46px; }
 }
 @media print {
-  .topbar, .toc, .doc-actions, .pager, footer.site { display: none !important; }
+  .topbar, .toc, .doc-actions, .pager { display: none !important; }
   .reader { display: block; }
   article.doc { box-shadow: none; border: 0; }
 }
