@@ -6,7 +6,7 @@ window.QUIZ_CONFIG = {
      留空則所有資料只留在學員自己的瀏覽器。範例程式見 tools/google_apps_script.gs */
   submitUrl: "",
   courseName: "ISO/IEC 42001:2023 人工智慧管理系統 線上課程",
-  instructor: "Allan"
+  instructor: "Allan Lo"
 };
 
 window.QUIZ = [

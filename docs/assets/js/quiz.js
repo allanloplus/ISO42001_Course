@@ -228,7 +228,7 @@
       c.font = `italic 700 70px "Brush Script MT","Segoe Script",cursive`; c.fillStyle = "#1f2a44"; c.fillText(CFG.instructor, W - 520, 1150);
     }
     c.strokeStyle = "#333"; c.lineWidth = 2; c.beginPath(); c.moveTo(W - 700, 1175); c.lineTo(W - 340, 1175); c.stroke();
-    c.font = `500 32px ${FONT}`; c.fillStyle = "#555"; c.fillText(`課程講師　${CFG.instructor}`, W - 520, 1222);
+    c.font = `500 32px ${FONT}`; c.fillStyle = "#555"; c.fillText(`課程講師：${CFG.instructor}`, W - 520, 1222);
     // 授權版：證書加註授權單位（公開版不顯示）
     if (window.LICENSE) {
       c.textAlign = "left"; c.fillStyle = "#555"; c.font = `500 32px ${FONT}`;
