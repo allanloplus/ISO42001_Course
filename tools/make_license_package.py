@@ -36,7 +36,7 @@ EXCLUDE_FILES = {
     "README.md", ".gitignore", os.path.join("content", "SPEC.md"),
     *(os.path.join("tools", f) for f in (
         "make_license_package.py", "build_pptx.js", "package.json", "package-lock.json",
-        "crop_characters.py", "allan_sheet.jpg", "arale_sheet.jpg")),
+        "crop_characters.py", "allan_sheet.jpg", "arale_sheet.jpg", "signature_source.webp")),
 }
 EXCLUDE_PATTERNS = [r"\.pptx$", r"\.pyc$", r"\.tmp$"]
 

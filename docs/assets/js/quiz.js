@@ -144,12 +144,12 @@
         ${p.options.map((o, k) => `<span style="${k === p.answer ? "color:var(--ok);font-weight:700" : ""}">(${"ABCD"[k]}) ${esc(o)}${k === p.answer ? " ✔" : ""}</span>`).join("<br>")}
         <br><small>您的答案：(${"ABCD"[p.pick]}) ${p.pick === p.answer ? "✅ 正確" : "❌ 錯誤"}　｜　解析：${esc(p.explain)}</small></li>`).join("")}</ol>
       <a class="btn soft" href="index.html">回到課程首頁</a>`;
-    const imgs = loadImgs(["assets/img/allan.webp", "assets/img/arale.webp"]);
-    imgs.then(([a, r]) => {
+    const imgs = loadImgs(["assets/img/allan.webp", "assets/img/arale.webp", "assets/img/signature.png"]);
+    imgs.then(([a, r, sig]) => {
       const cv = $("#certCanvas");
-      drawCert(cv, a, r);
+      drawCert(cv, a, r, sig);
       // 以 file:// 開啟時圖片會污染 canvas，改為不含頭像重繪以便下載
-      try { cv.toDataURL(); } catch (e) { drawCert(cv, null, null); }
+      try { cv.toDataURL(); } catch (e) { drawCert(cv, null, null, null); }
     });
     const base = `ISO42001結業證書_${info.name}_${result.certNo}`;
     $("#dlPng").onclick = () => download($("#certCanvas").toDataURL("image/png"), base + ".png");
@@ -189,7 +189,7 @@
     let s = size;
     do { ctx.font = `${weight} ${s}px ${family}`; s -= 2; } while (ctx.measureText(text).width > maxW && s > 16);
   }
-  function drawCert(cv, allan, arale) {
+  function drawCert(cv, allan, arale, sig) {
     const c = cv.getContext("2d"), W = cv.width, H = cv.height;
     // 背景與邊框
     const g = c.createLinearGradient(0, 0, W, H);
@@ -220,7 +220,13 @@
     c.fillText(`E-mail：${info.email}`, 200, 1220);
     // 講師簽名
     c.textAlign = "center";
-    c.font = `italic 700 70px "Brush Script MT","Segoe Script",cursive`; c.fillStyle = "#1f2a44"; c.fillText(CFG.instructor, W - 520, 1150);
+    if (sig) {
+      // 講師親筆簽名（透明背景 PNG），底部貼齊簽名線
+      const sw = 300, sh = sw * sig.naturalHeight / sig.naturalWidth;
+      c.drawImage(sig, W - 520 - sw / 2, 1185 - sh, sw, sh);
+    } else {
+      c.font = `italic 700 70px "Brush Script MT","Segoe Script",cursive`; c.fillStyle = "#1f2a44"; c.fillText(CFG.instructor, W - 520, 1150);
+    }
     c.strokeStyle = "#333"; c.lineWidth = 2; c.beginPath(); c.moveTo(W - 700, 1175); c.lineTo(W - 340, 1175); c.stroke();
     c.font = `500 32px ${FONT}`; c.fillStyle = "#555"; c.fillText(`課程講師　${CFG.instructor}`, W - 520, 1222);
     // 授權版：證書加註授權單位（公開版不顯示）
